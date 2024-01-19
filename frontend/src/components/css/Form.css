@@ -1,0 +1,30 @@
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
+  text-decoration: underline;
+  font-weight: 500;
+  font-family: monospace;
+  font-size: 2.5rem;
+}
+
+.input-fields--heading {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+.error-text {
+  color: red;
+  font-size: 14px;
+  margin-left: 15px;
+  max-width: 20rem;
+}
+
+.form_submit--button {
+  background-color: #52d3d8;
+}
+
+.box__input {
+  height: 3rem;
+  font-size: 1rem;
+}
