@@ -1,6 +1,6 @@
 import Joi from "joi";
 
-export interface FormData {
+export interface UserFormData {
   name: string;
   email: string;
   password: string;
@@ -16,7 +16,7 @@ const schema = Joi.object({
 });
 
 export const validateSignupInput = (
-  data: FormData,
+  data: UserFormData,
   { abortEarlyProp = true } = {}
 ) => {
   const { error } = schema.validate(data, { abortEarly: abortEarlyProp });

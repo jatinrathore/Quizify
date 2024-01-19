@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { FaLock, FaUser } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Form } from "react-router-dom";
-import { FormData, validateSignupInput } from "../models/Signup";
+import { UserFormData, validateSignupInput } from "../models/Signup";
 import {
   Input,
   Button,
@@ -16,6 +15,8 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import "./css/Form.css";
+import registerUser from "../services/registerUser";
+import { toast } from "react-toastify";
 
 interface Props {
   onSignUpSuccess: () => void;
@@ -26,15 +27,11 @@ const SignUpForm = ({ onSignUpSuccess }: Props) => {
   const [show, setShow] = useState(false);
 
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
-  const [formData, setFormData] = useState<FormData>({
+  const [formData, setFormData] = useState<UserFormData>({
     name: "",
     email: "",
     password: "",
   });
-
-  //   useEffect(() => {
-  //     if (isLoggedIn) navigate("/home");
-  //   }, []);
 
   const passwordRequirements =
     "Password should be at least 8 characters, including at least one capital letter and one numeric or special character.";
@@ -57,7 +54,8 @@ const SignUpForm = ({ onSignUpSuccess }: Props) => {
     }));
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     const validationErrors = validateSignupInput(formData, {
       abortEarlyProp: false,
     });
@@ -67,6 +65,23 @@ const SignUpForm = ({ onSignUpSuccess }: Props) => {
 
     setErrors({});
 
+    //saving data in the database
+    try {
+      const data = await registerUser(formData);
+
+      //Checking if result is data or error message(in case of user already registered)
+      if (typeof data === "string" && data.includes("already"))
+        return toast.warn(
+          "An account with this email address is already registered.\nPlease log in or use a different email.",
+          {
+            style: { backgroundColor: "#F24C3D" },
+            toastId: "customId",
+          }
+        );
+    } catch (error) {
+      console.log("Error during registration", error);
+    }
+
     // Clearing the input fields after successful submission
     setFormData({
       name: "",
@@ -74,12 +89,6 @@ const SignUpForm = ({ onSignUpSuccess }: Props) => {
       password: "",
     });
 
-    //react-toastify for showing alerts
-    const customID = "custom-id-yes";
-
-    toast.info("User successfully created. Please Log in", {
-      toastId: customID,
-    });
     onSignUpSuccess();
   };
 

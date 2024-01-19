@@ -27,11 +27,6 @@ const LoginForm = () => {
   const passwordRequirements =
     "Password should be at least 8 characters, including at least one capital letter and one numeric or special character.";
 
-  //checking for user, if logged in or not
-  //   useEffect(() => {
-  //     if (isLoggedIn) navigate("/home");
-  //   }, []);
-
   //event handlers
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
