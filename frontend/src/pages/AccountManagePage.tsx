@@ -1,4 +1,3 @@
-import React from "react";
 import NavBar from "../components/NavBar";
 import SignInSignUp from "../components/SignInSignUp";
 import GitFooter from "../components/GitFooter";

@@ -1,7 +1,7 @@
 const express = require('express');
 const { validate, User } = require('../models/user');
 const router = express.Router();
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
 router.post("/", async (req, res) => {
 
@@ -33,9 +33,23 @@ router.post("/", async (req, res) => {
     } catch (error) {
 
         console.error(error);
-        res.status(500).json({ error: 'Internal Server Error - Users' });
+        res.status(500).json({ error: 'Internal Server Error - Users<Post>' });
 
     }
 });
 
+router.get("/:email", async (req, res) => {
+    try {
+        const user = await User.findOne({ email: req.params.email })
+
+        if (!user) return res.status(404).send("User not found!")
+
+        res.send(user);
+    } catch (error) {
+
+        console.error(error);
+        res.status(500).json({ error: 'Internal Server Error - Users<Get>' });
+
+    }
+});
 exports.users = router;

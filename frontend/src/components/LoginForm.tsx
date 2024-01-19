@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaLock } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import { Form } from "react-router-dom";
+import { Form, useNavigate } from "react-router-dom";
 import { LoginFormData, validateLoginInput } from "../models/Login";
 import {
   Box,
@@ -14,9 +14,13 @@ import {
   Text,
 } from "@chakra-ui/react";
 import "./css/Form.css";
+import loginUser from "../services/loginUser";
+import { toast } from "react-toastify";
+import bcryptjs from "bcryptjs";
 
 const LoginForm = () => {
   const [show, setShow] = useState(false);
+  const navigate = useNavigate();
 
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [formData, setFormData] = useState<LoginFormData>({
@@ -46,13 +50,45 @@ const LoginForm = () => {
   };
 
   //handle login form submit
-  const handleLogin = async () => {
+  const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
     const validationErrors = validateLoginInput(formData, {
       abortEarlyProp: false,
     });
     if (Object.keys(validationErrors).length > 0)
       return setErrors(validationErrors);
     setErrors({});
+
+    try {
+      const data = await loginUser(formData);
+
+      if (typeof data === "string" && data.includes("not")) {
+        return toast.warn(
+          "An account with this email is not registered. Please register first.",
+          {
+            style: { backgroundColor: "#F24C3D" },
+            toastId: "customId",
+          }
+        );
+      }
+
+      const passwordsMatch = await bcryptjs.compare(
+        formData.password,
+        data.password
+      );
+
+      if (!passwordsMatch)
+        return toast.warn("Wrong password.Please enter the correct password.", {
+          style: { backgroundColor: "#F24C3D" },
+          toastId: "customId",
+        });
+
+      //Redirecting user to home page after successful login
+      navigate("/home");
+    } catch (error) {
+      console.log("Error during login", error);
+    }
   };
 
   return (
