@@ -16,7 +16,6 @@ import {
 import "./css/Form.css";
 import loginUser from "../services/loginUser";
 import { toast } from "react-toastify";
-import bcryptjs from "bcryptjs";
 
 const LoginForm = () => {
   const [show, setShow] = useState(false);
@@ -63,27 +62,14 @@ const LoginForm = () => {
     try {
       const data = await loginUser(formData);
 
-      if (typeof data === "string" && data.includes("not")) {
-        return toast.warn(
-          "An account with this email is not registered. Please register first.",
-          {
-            style: { backgroundColor: "#F24C3D" },
-            toastId: "customId",
-          }
-        );
-      }
-
-      const passwordsMatch = await bcryptjs.compare(
-        formData.password,
-        data.password
-      );
-
-      if (!passwordsMatch)
-        return toast.warn("Wrong password.Please enter the correct password.", {
+      if (data.message && data.message.includes("Invalid")) {
+        return toast.warn("Invalid Email or Password", {
           style: { backgroundColor: "#F24C3D" },
           toastId: "customId",
         });
+      }
 
+      toast.info("Logged in successfully!");
       //Redirecting user to home page after successful login
       navigate("/home");
     } catch (error) {

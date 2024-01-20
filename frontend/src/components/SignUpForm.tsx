@@ -69,10 +69,17 @@ const SignUpForm = ({ onSignUpSuccess }: Props) => {
     try {
       const data = await registerUser(formData);
 
+      //Checking for internal server error message
+      if (data.message.includes("Internal Server Error"))
+        return toast.warn("Something went wrong!", {
+          style: { backgroundColor: "#F24C3D" },
+          toastId: "customId",
+        });
+
       //Checking if result is data or error message(in case of user already registered)
-      if (typeof data === "string" && data.includes("already"))
+      if (data.message.includes("already"))
         return toast.warn(
-          "An account with this email address is already registered.\nPlease log in or use a different email.",
+          "An account with this email address is already registered.",
           {
             style: { backgroundColor: "#F24C3D" },
             toastId: "customId",
@@ -89,6 +96,7 @@ const SignUpForm = ({ onSignUpSuccess }: Props) => {
       password: "",
     });
 
+    toast.info("User created successfully, Please Login.");
     onSignUpSuccess();
   };
 

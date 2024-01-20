@@ -2,12 +2,14 @@ import axios, { AxiosError } from "axios";
 import { LoginFormData } from "../models/Login";
 
 const loginUser = async (userData: LoginFormData) => {
-  const endpoint = `http://localhost:3000/api/users/${userData.email}`;
+  const Q_METER = "QM-token";
+  const endpoint = `http://localhost:3000/api/auth`;
 
   try {
-    const response = await axios.get(endpoint);
+    const { data: res } = await axios.post(endpoint, userData);
+    localStorage.setItem(Q_METER, JSON.stringify(res.data));
 
-    return response.data;
+    return res.message;
   } catch (error) {
     if (axios.isAxiosError(error)) {
       const axiosError: AxiosError = error;
