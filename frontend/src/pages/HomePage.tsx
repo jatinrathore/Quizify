@@ -1,17 +1,33 @@
+import { Grid, GridItem } from "@chakra-ui/react";
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
+import NavBar from "../components/NavBar";
+import { useAuth } from "../hooks/useAuth";
 
 const HomePage = () => {
   const navigate = useNavigate();
 
-  const Q_METER = "QM-token";
-  const isLoggedIn = !!localStorage.getItem(Q_METER);
+  const { isLoggedIn } = useAuth();
 
   useEffect(() => {
     if (!isLoggedIn) navigate("/");
   }, [isLoggedIn]);
 
-  return <div>HomePage</div>;
+  return (
+    <Grid
+      templateAreas={`"nav"
+                      "main"`}
+    >
+      <GridItem area="nav">
+        <div style={{ borderBottom: "2px solid #E1F0DA" }}>
+          <NavBar />
+        </div>
+      </GridItem>
+      <GridItem area="main">
+        <Outlet />
+      </GridItem>
+    </Grid>
+  );
 };
 
 export default HomePage;

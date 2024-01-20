@@ -7,6 +7,12 @@
   justify-content: center;
 }
 
+.box {
+  background-color: #fff7d4;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .box--content {
   padding: 0 20px;
   display: flex;
@@ -16,14 +22,14 @@
 .box--button {
   background: none;
   font-size: 15px;
-  color: #7bd3ea;
-  border: 2px solid #7bd3ea;
+  color: #ff9843;
+  border: 2px solid #ff9843;
   border-radius: 10px;
   padding: 12px 15px;
   font-weight: 600;
 }
 
 .box--button:hover {
-  background-color: #7bd3ea;
+  background-color: #ff9843;
   color: white;
 }

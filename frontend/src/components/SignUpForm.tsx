@@ -165,7 +165,7 @@ const SignUpForm = ({ onSignUpSuccess }: Props) => {
           className="buttons"
           style={{ textAlign: "center", marginTop: "30px" }}
         >
-          <Button colorScheme="linkedin" type="submit">
+          <Button colorScheme="orange" type="submit" marginBottom="1rem">
             Sign up
           </Button>
         </Box>

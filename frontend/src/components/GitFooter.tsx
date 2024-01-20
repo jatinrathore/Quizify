@@ -17,7 +17,7 @@ const GitFooter = () => {
       <div style={{ display: "flex", alignItems: "center" }}>
         <FaRegCopyright style={{ fontSize: "12px", color: "#8c8c8c" }} />
         <Text style={{ color: "#8c8c8c", marginLeft: "5px" }}>
-          2023 Quiz-e-meter -
+          2023 Quizify -
           <Link
             href={"https://github.com/jatinrathore"}
             style={{ color: "#8c8c8c", textDecoration: "none" }}

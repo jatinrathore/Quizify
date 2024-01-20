@@ -19,6 +19,7 @@ import { toast } from "react-toastify";
 
 const LoginForm = () => {
   const [show, setShow] = useState(false);
+
   const navigate = useNavigate();
 
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
@@ -26,9 +27,6 @@ const LoginForm = () => {
     email: "",
     password: "",
   });
-
-  const passwordRequirements =
-    "Password should be at least 8 characters, including at least one capital letter and one numeric or special character.";
 
   //event handlers
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -69,9 +67,9 @@ const LoginForm = () => {
         });
       }
 
+      navigate("/home");
       toast.info("Logged in successfully!");
       //Redirecting user to home page after successful login
-      navigate("/home");
     } catch (error) {
       console.log("Error during login", error);
     }
@@ -121,16 +119,13 @@ const LoginForm = () => {
                 </Button>
               </InputRightElement>
             </InputGroup>
-            {errors.password && (
-              <Text className="error-text">{passwordRequirements}</Text>
-            )}
           </Stack>
         </div>
         <Box
           className="buttons"
           style={{ textAlign: "center", marginTop: "30px" }}
         >
-          <Button colorScheme="linkedin" type="submit">
+          <Button colorScheme="orange" type="submit" marginBottom="1rem">
             Log in
           </Button>
         </Box>
