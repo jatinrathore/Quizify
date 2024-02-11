@@ -13,6 +13,9 @@ import {
   InputLeftElement,
   InputRightElement,
   Stack,
+  Spinner,
+  Alert,
+  AlertIcon,
 } from "@chakra-ui/react";
 import "./css/Form.css";
 import registerUser from "../services/registerUser";
@@ -25,6 +28,7 @@ interface Props {
 const SignUpForm = ({ onSignUpSuccess }: Props) => {
   //password input state handler
   const [show, setShow] = useState(false);
+  const [isLoading, setLoading] = useState(false);
 
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [formData, setFormData] = useState<UserFormData>({
@@ -42,22 +46,14 @@ const SignUpForm = ({ onSignUpSuccess }: Props) => {
 
     setFormData((prevData) => ({ ...prevData, [name]: value }));
 
-    const validationErrors = validateSignupInput({
-      ...formData,
-      [name]: value,
-    });
-
-    setErrors((prevErrors) => ({
-      ...prevErrors,
-      ...validationErrors,
-      [name]: "",
-    }));
+    if (errors.name || errors.email || errors.password) setErrors({});
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     const validationErrors = validateSignupInput(formData, {
-      abortEarlyProp: false,
+      abortEarlyProp: true,
     });
 
     if (Object.keys(validationErrors).length > 0)
@@ -65,19 +61,26 @@ const SignUpForm = ({ onSignUpSuccess }: Props) => {
 
     setErrors({});
 
+    setLoading(true);
+
     //saving data in the database
     try {
       const data = await registerUser(formData);
 
       //Checking for internal server error message
-      if (data.message.includes("Internal Server Error"))
+      if (data.message.includes("Internal Server Error")) {
+        setLoading(false);
+
         return toast.warn("Something went wrong!", {
           style: { backgroundColor: "#F24C3D" },
           toastId: "customId",
         });
+      }
 
       //Checking if result is data or error message(in case of user already registered)
-      if (data.message.includes("already"))
+      if (data.message.includes("already")) {
+        setLoading(false);
+
         return toast.warn(
           "An account with this email address is already registered.",
           {
@@ -85,6 +88,7 @@ const SignUpForm = ({ onSignUpSuccess }: Props) => {
             toastId: "customId",
           }
         );
+      }
     } catch (error) {
       console.log("Error during registration", error);
     }
@@ -123,7 +127,6 @@ const SignUpForm = ({ onSignUpSuccess }: Props) => {
                 name="name"
               />
             </InputGroup>
-            {errors.name && <Text className="error-text">{errors.name}</Text>}
 
             <InputGroup>
               <InputLeftElement pointerEvents="none">
@@ -131,13 +134,11 @@ const SignUpForm = ({ onSignUpSuccess }: Props) => {
               </InputLeftElement>
               <Input
                 placeholder="Enter email"
-                type="email"
                 onChange={handleChange}
                 value={formData.email}
                 name="email"
               />
             </InputGroup>
-            {errors.email && <Text className="error-text">{errors.email}</Text>}
 
             <InputGroup size="md">
               <InputLeftElement>
@@ -156,17 +157,45 @@ const SignUpForm = ({ onSignUpSuccess }: Props) => {
                 </Button>
               </InputRightElement>
             </InputGroup>
-            {errors.password && (
-              <Text className="error-text">{passwordRequirements}</Text>
+            {(errors.name || errors.email || errors.password) && (
+              <Alert
+                status="error"
+                maxWidth="26rem"
+                borderRadius="5px"
+                fontSize=".9rem"
+              >
+                <AlertIcon />
+                {errors.password
+                  ? passwordRequirements
+                  : errors.name
+                  ? errors.name
+                  : errors.email}
+              </Alert>
             )}
+            {/* {errors.password && (
+              <Text className="error-text">{passwordRequirements}</Text>
+            )} */}
           </Stack>
         </div>
         <Box
           className="buttons"
           style={{ textAlign: "center", marginTop: "30px" }}
         >
-          <Button colorScheme="orange" type="submit" marginBottom="1rem">
-            Sign up
+          <Button
+            colorScheme="orange"
+            type="submit"
+            marginBottom="1rem"
+            isDisabled={isLoading}
+          >
+            {isLoading ? "Signing up..." : "Sign up"}
+            {isLoading && (
+              <Spinner
+                thickness="2px"
+                emptyColor="gray.200"
+                size="sm"
+                color="orange"
+              />
+            )}
           </Button>
         </Box>
       </Form>

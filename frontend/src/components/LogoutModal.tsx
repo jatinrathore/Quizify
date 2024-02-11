@@ -15,16 +15,14 @@ import { GrCircleAlert } from "react-icons/gr";
 import { TbLogout2 } from "react-icons/tb";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { useAuth } from "../hooks/useAuth";
 
 const LogoutModal = () => {
   const navigate = useNavigate();
 
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const { logout } = useAuth();
 
   const handleClick = () => {
-    logout();
+    localStorage.removeItem("quizify-token");
     toast.info("Logged out Successfully!");
     navigate("/");
   };

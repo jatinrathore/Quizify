@@ -2,12 +2,11 @@ import { Grid, GridItem } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import NavBar from "../components/NavBar";
-import { useAuth } from "../hooks/useAuth";
 
 const HomePage = () => {
   const navigate = useNavigate();
 
-  const { isLoggedIn } = useAuth();
+  const isLoggedIn = !!localStorage.getItem("quizify-token");
 
   useEffect(() => {
     if (!isLoggedIn) navigate("/");

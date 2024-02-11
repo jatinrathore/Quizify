@@ -13,10 +13,9 @@ import {
 import scriptlyLogo from "../assets/quizify-high-resolution-logo-transparent.png";
 import { PiUserSquareDuotone } from "react-icons/pi";
 import LogoutModal from "./LogoutModal";
-import { useAuth } from "../hooks/useAuth";
 
 const NavBar = () => {
-  const { isLoggedIn } = useAuth();
+  const isLoggedIn = !!localStorage.getItem("quizify-token");
   return (
     <Box
       margin="10px 0 10px 10px"

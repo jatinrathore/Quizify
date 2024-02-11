@@ -14,13 +14,6 @@
   text-decoration: none;
 }
 
-.error-text {
-  color: red;
-  font-size: 14px;
-  margin-left: 15px;
-  max-width: 20rem;
-}
-
 .box__input {
   height: 3rem;
   font-size: 1rem;

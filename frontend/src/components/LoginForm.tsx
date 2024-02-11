@@ -4,12 +4,15 @@ import { MdEmail } from "react-icons/md";
 import { Form, useNavigate } from "react-router-dom";
 import { LoginFormData, validateLoginInput } from "../models/Login";
 import {
+  Alert,
+  AlertIcon,
   Box,
   Button,
   Input,
   InputGroup,
   InputLeftElement,
   InputRightElement,
+  Spinner,
   Stack,
   Text,
 } from "@chakra-ui/react";
@@ -19,6 +22,7 @@ import { toast } from "react-toastify";
 
 const LoginForm = () => {
   const [show, setShow] = useState(false);
+  const [isLoading, setLoading] = useState(false);
 
   const navigate = useNavigate();
 
@@ -34,16 +38,7 @@ const LoginForm = () => {
 
     setFormData((prevData) => ({ ...prevData, [name]: value }));
 
-    const validationErrors = validateLoginInput({
-      ...formData,
-      [name]: value,
-    });
-
-    setErrors((prevErrors) => ({
-      ...prevErrors,
-      ...validationErrors,
-      [name]: "",
-    }));
+    if (errors.email || errors.password) setErrors({});
   };
 
   //handle login form submit
@@ -57,19 +52,32 @@ const LoginForm = () => {
       return setErrors(validationErrors);
     setErrors({});
 
+    setLoading(true);
+
     try {
       const data = await loginUser(formData);
 
+      if (data.message.includes("Internal Server Error")) {
+        setLoading(false);
+
+        return toast.warn("Something went wrong!", {
+          style: { backgroundColor: "#F24C3D" },
+          toastId: "customId",
+        });
+      }
+
       if (data.message && data.message.includes("Invalid")) {
+        setLoading(false);
+
         return toast.warn("Invalid Email or Password", {
           style: { backgroundColor: "#F24C3D" },
           toastId: "customId",
         });
       }
 
+      //Redirecting user to home page after successful login
       navigate("/home");
       toast.info("Logged in successfully!");
-      //Redirecting user to home page after successful login
     } catch (error) {
       console.log("Error during login", error);
     }
@@ -98,7 +106,6 @@ const LoginForm = () => {
                 className="box__input"
               />
             </InputGroup>
-            {errors.email && <Text className="error-text">{errors.email}</Text>}
 
             <InputGroup>
               <InputLeftElement>
@@ -119,14 +126,33 @@ const LoginForm = () => {
                 </Button>
               </InputRightElement>
             </InputGroup>
+            {errors.email && (
+              <Alert status="error" borderRadius="5px" fontSize=".9rem">
+                <AlertIcon />
+                {errors.email}
+              </Alert>
+            )}
           </Stack>
         </div>
         <Box
           className="buttons"
           style={{ textAlign: "center", marginTop: "30px" }}
         >
-          <Button colorScheme="orange" type="submit" marginBottom="1rem">
-            Log in
+          <Button
+            colorScheme="orange"
+            type="submit"
+            marginBottom="1rem"
+            isDisabled={isLoading}
+          >
+            {isLoading ? "Logging in..." : "Log in"}
+            {isLoading && (
+              <Spinner
+                thickness="2px"
+                emptyColor="gray.200"
+                size="sm"
+                color="orange"
+              />
+            )}
           </Button>
         </Box>
       </Form>
