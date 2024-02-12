@@ -40,6 +40,13 @@ const SignUpForm = ({ onSignUpSuccess }: Props) => {
   const passwordRequirements =
     "Password should be at least 8 characters, including at least one capital letter and one numeric or special character.";
 
+  const showErrorAlert = (message: string) => {
+    toast.warn(message, {
+      style: { backgroundColor: "#F24C3D" },
+      toastId: "customId",
+    });
+  };
+
   //Event handlers - handle input field values on change
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -60,48 +67,35 @@ const SignUpForm = ({ onSignUpSuccess }: Props) => {
       return setErrors(validationErrors);
 
     setErrors({});
-
     setLoading(true);
 
-    //saving data in the database
     try {
       const data = await registerUser(formData);
 
-      //Checking for internal server error message
-      if (data.message.includes("Internal Server Error")) {
-        setLoading(false);
-
-        return toast.warn("Something went wrong!", {
-          style: { backgroundColor: "#F24C3D" },
-          toastId: "customId",
-        });
-      }
-
-      //Checking if result is data or error message(in case of user already registered)
-      if (data.message.includes("already")) {
-        setLoading(false);
-
-        return toast.warn(
-          "An account with this email address is already registered.",
-          {
-            style: { backgroundColor: "#F24C3D" },
-            toastId: "customId",
-          }
+      if (typeof data === "string" && data === "Network Error") {
+        showErrorAlert("Network error occurred. Please try again later.");
+      } else if (
+        data?.message &&
+        data.message.includes("Internal Server Error")
+      ) {
+        showErrorAlert(
+          "Internal server error occurred. Please try again later."
         );
+      } else if (data?.message && data.message.includes("already")) {
+        showErrorAlert(
+          "An account with this email address is already registered."
+        );
+      } else {
+        setFormData({ name: "", email: "", password: "" });
+        toast.info("User created successfully, Please Login.");
+        onSignUpSuccess();
       }
     } catch (error) {
-      console.log("Error during registration", error);
+      console.error("Error during registration", error);
+      showErrorAlert("An unexpected error occurred. Please try again later.");
+    } finally {
+      setLoading(false);
     }
-
-    // Clearing the input fields after successful submission
-    setFormData({
-      name: "",
-      email: "",
-      password: "",
-    });
-
-    toast.info("User created successfully, Please Login.");
-    onSignUpSuccess();
   };
 
   return (
@@ -172,9 +166,6 @@ const SignUpForm = ({ onSignUpSuccess }: Props) => {
                   : errors.email}
               </Alert>
             )}
-            {/* {errors.password && (
-              <Text className="error-text">{passwordRequirements}</Text>
-            )} */}
           </Stack>
         </div>
         <Box

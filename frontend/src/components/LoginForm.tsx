@@ -23,7 +23,6 @@ import { toast } from "react-toastify";
 const LoginForm = () => {
   const [show, setShow] = useState(false);
   const [isLoading, setLoading] = useState(false);
-
   const navigate = useNavigate();
 
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
@@ -31,6 +30,13 @@ const LoginForm = () => {
     email: "",
     password: "",
   });
+
+  const showErrorAlert = (message: string) => {
+    toast.warn(message, {
+      style: { backgroundColor: "#F24C3D" },
+      toastId: "customId",
+    });
+  };
 
   //event handlers
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -48,8 +54,10 @@ const LoginForm = () => {
     const validationErrors = validateLoginInput(formData, {
       abortEarlyProp: false,
     });
+
     if (Object.keys(validationErrors).length > 0)
       return setErrors(validationErrors);
+
     setErrors({});
 
     setLoading(true);
@@ -57,29 +65,27 @@ const LoginForm = () => {
     try {
       const data = await loginUser(formData);
 
-      if (data.message.includes("Internal Server Error")) {
-        setLoading(false);
-
-        return toast.warn("Something went wrong!", {
-          style: { backgroundColor: "#F24C3D" },
-          toastId: "customId",
-        });
+      if (typeof data === "string" && data === "Network Error") {
+        showErrorAlert("Network error occurred. Please try again later.");
+      } else if (
+        data?.message &&
+        data.message.includes("Internal Server Error")
+      ) {
+        showErrorAlert(
+          "Internal server error occurred. Please try again later."
+        );
+      } else if (data?.message && data.message.includes("Invalid")) {
+        showErrorAlert("Invalid email or password.");
+      } else {
+        //navigate to home on successfull login
+        navigate("/home");
+        toast.info("Logged in successfully!");
       }
-
-      if (data.message && data.message.includes("Invalid")) {
-        setLoading(false);
-
-        return toast.warn("Invalid Email or Password", {
-          style: { backgroundColor: "#F24C3D" },
-          toastId: "customId",
-        });
-      }
-
-      //Redirecting user to home page after successful login
-      navigate("/home");
-      toast.info("Logged in successfully!");
     } catch (error) {
-      console.log("Error during login", error);
+      console.error("Error during login", error);
+      showErrorAlert("An unexpected error occurred. Please try again later.");
+    } finally {
+      setLoading(false);
     }
   };
 
