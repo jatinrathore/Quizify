@@ -1,0 +1,11 @@
+.learning-page-container {
+  display: grid;
+  grid-template-columns: 15rem 1fr;
+}
+
+.container-aside {
+  padding: 10px;
+  border-right: 1px solid black;
+  min-height: 85dvh;
+  height: auto;
+}

@@ -1,0 +1,29 @@
+.question-options {
+  margin-left: 10px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.opt-area {
+  margin-right: 10px;
+  max-width: fit-content;
+}
+.opt-box {
+  display: inline;
+  margin-right: 10px;
+}
+
+.opt-text {
+  display: inline;
+}
+
+.green .opt-text {
+  color: green;
+}
+
+.crossed .opt-text {
+  text-decoration: line-through;
+}
