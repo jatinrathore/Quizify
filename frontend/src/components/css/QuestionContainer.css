@@ -2,3 +2,9 @@ html {
   scroll-behavior: smooth;
   scroll-padding: 12px;
 }
+
+.question-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

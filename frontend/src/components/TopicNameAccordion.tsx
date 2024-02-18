@@ -25,19 +25,19 @@ const TopicNameAccordion = ({ title, genre }: Props) => {
 
   const setSelectedGenre = useQuestionsStore((s) => s.setSelectedGenre);
   return (
-    <AccordionItem style={{ border: "none", borderRadius: "10px" }} mb="14px">
+    <AccordionItem style={{ border: "none", borderRadius: "10px" }} mb="20px">
       <h2>
         <AccordionButton
           _expanded={{
-            bg: "#332941",
-            color: "#f3ccf3",
+            bg: "#D8B4F8",
+            color: "white",
           }}
           onClick={handleClickAccordion}
           className="accordion-btn"
           padding="13px"
           _hover={{
-            bg: "#332941",
-            color: "#f3ccf3",
+            bg: "#D8B4F8",
+            color: "white",
           }}
         >
           <Box as="span" flex="1" textAlign="left" className="accordion-text">

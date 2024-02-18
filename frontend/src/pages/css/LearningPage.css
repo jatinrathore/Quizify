@@ -11,7 +11,7 @@
   padding: 10px;
   min-height: 85dvh;
   height: auto;
-  background: #f1eaff;
+  border-right: 2px solid #80808038;
   border-radius: 10px;
   margin: 10px;
 }
@@ -20,5 +20,4 @@
   margin: 10px;
   padding: 10px;
   border-radius: 10px;
-  background: #f1eaff;
 }

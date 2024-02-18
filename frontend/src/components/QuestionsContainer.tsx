@@ -29,7 +29,7 @@ const QuestionsContainer = () => {
   };
 
   return (
-    <div id="question-box">
+    <div className="question-box">
       {updatedData?.map((question, idx) => (
         <QuestionCard
           key={question.questionId}
