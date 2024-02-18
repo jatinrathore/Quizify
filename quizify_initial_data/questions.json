@@ -2402,8 +2402,8 @@
   {
     "questionId": "js_1",
     "questionTitle": "What is the result of the following JavaScript expression: 2 + 2 + '2'?",
-    "options": ["422", "6", "22", "4"],
-    "answer": "422",
+    "options": ["42", "6", "22", "4"],
+    "answer": "42",
     "points": 2,
     "topicName": "javascript",
     "difficultyLevel": "easy"

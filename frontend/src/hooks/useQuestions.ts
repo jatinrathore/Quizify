@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useQuery } from "react-query";
 
-interface QuestionsType {
+export interface QuestionsType {
   questionId: string;
   questionTitle: string;
   options: [string];

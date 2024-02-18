@@ -1,10 +1,7 @@
 import { Accordion } from "@chakra-ui/react";
 import TopicNameAccordion from "./TopicNameAccordion";
 
-interface Props {
-  onChangeGenre: (genre: string) => void;
-}
-const SideBar = ({ onChangeGenre }: Props) => {
+const SideBar = () => {
   const topics = [
     { id: 1, title: "English", genre: "english" },
     { id: 2, title: "General Knowledge", genre: "general knowledge" },
@@ -24,7 +21,6 @@ const SideBar = ({ onChangeGenre }: Props) => {
             key={topic.id}
             title={topic.title}
             genre={topic.genre}
-            onChangeGenre={(genre) => onChangeGenre(genre)}
           />
         ))}
       </Accordion>

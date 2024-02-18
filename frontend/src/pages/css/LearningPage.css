@@ -1,11 +1,24 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
 .learning-page-container {
   display: grid;
-  grid-template-columns: 15rem 1fr;
+  grid-template-columns: 18rem 1fr 18rem;
 }
 
 .container-aside {
   padding: 10px;
-  border-right: 1px solid black;
   min-height: 85dvh;
   height: auto;
+  background: #f1eaff;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.container-main {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background: #f1eaff;
 }

@@ -1,14 +1,25 @@
-import { Box, Text } from "@chakra-ui/react";
-import "./css/QuestionCard.css";
+import { Box } from "@chakra-ui/react";
 import useQuestions from "../hooks/useQuestions";
-import { useState } from "react";
+import { ReactNode, useState } from "react";
+import { TiTick } from "react-icons/ti";
+import { RiEnglishInput } from "react-icons/ri";
+import "./css/QuestionCard.css";
+
 interface Props {
   question: string;
   options: string[];
   id: string;
+  questionNo: number;
+  children: ReactNode;
 }
 
-const QuestionCard = ({ question, options, id }: Props) => {
+const QuestionCard = ({
+  question,
+  options,
+  id,
+  questionNo,
+  children,
+}: Props) => {
   const formattedQuestion = question.replace(/<linebreak>/g, "<br />");
 
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
@@ -36,8 +47,9 @@ const QuestionCard = ({ question, options, id }: Props) => {
   };
 
   return (
-    <div>
-      <div className="question-title">
+    <div className="question-card">
+      <div className="question-title" id={id}>
+        <p style={{ marginRight: "10px" }}>{`Q${questionNo + 1}`}</p>
         <p dangerouslySetInnerHTML={{ __html: formattedQuestion }}></p>
       </div>
       <div className="question-options">
@@ -47,6 +59,9 @@ const QuestionCard = ({ question, options, id }: Props) => {
         >
           <p className="opt-box">A</p>
           <p className="opt-text">{options[0]}</p>
+          <p className="opt-icon">
+            <TiTick />{" "}
+          </p>
         </Box>
         <Box
           className={`opt-area ${checkIfAnswer(options[1])}`}
@@ -54,6 +69,9 @@ const QuestionCard = ({ question, options, id }: Props) => {
         >
           <p className="opt-box">B</p>
           <p className="opt-text">{options[1]}</p>
+          <p className="opt-icon">
+            <TiTick />{" "}
+          </p>
         </Box>
         <Box
           className={`opt-area ${checkIfAnswer(options[2])}`}
@@ -61,6 +79,9 @@ const QuestionCard = ({ question, options, id }: Props) => {
         >
           <p className="opt-box">C</p>
           <p className="opt-text">{options[2]}</p>
+          <p className="opt-icon">
+            <TiTick />{" "}
+          </p>
         </Box>
         <Box
           className={`opt-area ${checkIfAnswer(options[3])}`}
@@ -68,8 +89,12 @@ const QuestionCard = ({ question, options, id }: Props) => {
         >
           <p className="opt-box">D</p>
           <p className="opt-text">{options[3]}</p>
+          <p className="opt-icon">
+            <TiTick />{" "}
+          </p>
         </Box>
       </div>
+      <div className="question-card-bg-icon">{children}</div>
     </div>
   );
 };

@@ -5,34 +5,55 @@ import {
   AccordionPanel,
   Box,
 } from "@chakra-ui/react";
+import useQuestions from "../hooks/useQuestions";
+import useQuestionsStore from "../store";
+import "./css/TopicNameAccordion.css";
 
 interface Props {
   title: string;
   genre: string;
-  onChangeGenre: (genre: string) => void;
 }
-const TopicNameAccordion = ({ title, onChangeGenre, genre }: Props) => {
+
+const TopicNameAccordion = ({ title, genre }: Props) => {
   const handleClickAccordion = () => {
-    onChangeGenre(genre);
+    setSelectedGenre(genre);
   };
+
+  const { data } = useQuestions();
+
+  const filteredData = data?.filter((d) => d.topicName === genre);
+
+  const setSelectedGenre = useQuestionsStore((s) => s.setSelectedGenre);
   return (
-    <AccordionItem>
+    <AccordionItem style={{ border: "none", borderRadius: "10px" }} mb="14px">
       <h2>
         <AccordionButton
-          _expanded={{ bg: "tomato", color: "white" }}
+          _expanded={{
+            bg: "#332941",
+            color: "#f3ccf3",
+          }}
           onClick={handleClickAccordion}
+          className="accordion-btn"
+          padding="13px"
+          _hover={{
+            bg: "#332941",
+            color: "#f3ccf3",
+          }}
         >
-          <Box as="span" flex="1" textAlign="left">
+          <Box as="span" flex="1" textAlign="left" className="accordion-text">
             {title}
           </Box>
           <AccordionIcon />
         </AccordionButton>
       </h2>
       <AccordionPanel>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
+        <ul className="accordion-list">
+          {filteredData?.map((qus, idx) => (
+            <li key={idx} className="accordion-list-item">
+              <a href={`#${qus.questionId}`}> {`Question ${idx + 1}`}</a>
+            </li>
+          ))}
+        </ul>
       </AccordionPanel>
     </AccordionItem>
   );

@@ -1,0 +1,26 @@
+.accordion-btn {
+  color: #3d3b40;
+  background-color: #f3ccf3;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.accordion-list {
+  list-style: none;
+  font-weight: 500;
+}
+
+.accordion-list-item {
+  margin-bottom: 8px;
+  background-color: #f3ccf3;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.accordion-list-item:hover {
+  transform: scale(1.04);
+  transition: transform 0.1s ease-out;
+  background-color: #e9a8f2;
+}

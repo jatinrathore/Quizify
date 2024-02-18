@@ -1,5 +1,21 @@
+.question-card {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #f3ccf3;
+  position: relative;
+  overflow: hidden;
+}
+
 .question-options {
   margin-left: 10px;
+  margin-top: 10px;
+}
+
+.question-title {
+  display: flex;
+  font-weight: 700;
+  color: #413543;
 }
 
 .row {
@@ -8,22 +24,70 @@
 }
 
 .opt-area {
-  margin-right: 10px;
-  max-width: fit-content;
+  color: #6d5d6e;
+  margin-bottom: 10px;
+  cursor: pointer;
+  width: fit-content;
 }
+
+.opt-area:hover {
+  color: black;
+}
+
 .opt-box {
-  display: inline;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin-right: 10px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid #6d5d6e;
+  font-weight: 700;
 }
 
 .opt-text {
   display: inline;
+  font-weight: 600;
+}
+
+.opt-icon {
+  display: none;
+  background-color: green;
+  border-radius: 50%;
+  color: white;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.question-card-bg-icon {
+  position: absolute;
+  rotate: -30deg;
+  top: -100px;
+  right: 20px;
+  font-size: 20rem;
+  font-weight: 900;
+  opacity: 0.2;
+  color: white;
+}
+/* if selected right option */
+.green .opt-box {
+  color: green;
+  border-color: green;
 }
 
 .green .opt-text {
   color: green;
 }
 
+.green .opt-icon {
+  display: inline-block;
+}
+/* if selected wrong option */
 .crossed .opt-text {
-  text-decoration: line-through;
+  opacity: 0.3;
+}
+
+.crossed .opt-box {
+  opacity: 0.3;
 }
