@@ -1,10 +1,10 @@
 const express = require('express');
 const { Questions } = require('../models/questions');
-const { log } = require('console');
+const auth = require("../middlewares/auth");
 
 const router = express.Router();
 
-router.get("/", async (req, res) => {
+router.get("/", auth, async (req, res) => {
 
     try {
         const questions = await Questions.find();
@@ -18,17 +18,17 @@ router.get("/", async (req, res) => {
 
 });
 
-router.get("/:topicName", async (req, res) => {
+// router.get("/:topicName", async (req, res) => {
 
-    try {
-        const data = await Questions.find({ topicName: req.params.topicName });
+//     try {
+//         const data = await Questions.find({ topicName: req.params.topicName });
 
-        if (!data) res.status(404).send("Unable to fetch data from server!");
+//         if (!data) res.status(404).send("Unable to fetch data from server!");
 
-        res.status(200).send(data);
-    } catch (error) {
-        console.log(error.message);
-    }
-});
+//         res.status(200).send(data);
+//     } catch (error) {
+//         console.log(error.message);
+//     }
+// });
 
 exports.questions = router;

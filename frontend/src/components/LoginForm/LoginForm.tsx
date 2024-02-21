@@ -65,19 +65,20 @@ const LoginForm = () => {
     try {
       const data = await loginUser(formData);
 
-      if (typeof data === "string" && data === "Network Error") {
-        showErrorAlert("Network error occurred. Please try again later.");
-      } else if (
-        data?.message &&
-        data.message.includes("Internal Server Error")
-      ) {
+      if (data.response && data.response.status === 404) {
         showErrorAlert(
           "Internal server error occurred. Please try again later."
         );
-      } else if (data?.message && data.message.includes("Invalid")) {
+      } else if (data.response && data.response.status === 401) {
         showErrorAlert("Invalid email or password.");
-      } else {
-        //navigate to home on successfull login
+      } else if (data.response && data.response.status === 500) {
+        showErrorAlert(
+          "Internal server error occurred. Please try again later."
+        );
+      } else if (data.message && data.message === "Network Error") {
+        showErrorAlert("Network error occurred. Please try again later.");
+      } else if (data.response && data.response.status === 200) {
+        //on successful data retrieval
         navigate("/home");
         toast.info("Logged in successfully!");
       }

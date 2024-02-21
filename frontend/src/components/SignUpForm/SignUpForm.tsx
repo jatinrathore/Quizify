@@ -72,20 +72,17 @@ const SignUpForm = ({ onSignUpSuccess }: Props) => {
     try {
       const data = await registerUser(formData);
 
-      if (typeof data === "string" && data === "Network Error") {
-        showErrorAlert("Network error occurred. Please try again later.");
-      } else if (
-        data?.message &&
-        data.message.includes("Internal Server Error")
-      ) {
-        showErrorAlert(
-          "Internal server error occurred. Please try again later."
-        );
-      } else if (data?.message && data.message.includes("already")) {
+      if (data.response && data.response.status === 409) {
         showErrorAlert(
           "An account with this email address is already registered."
         );
-      } else {
+      } else if (data.message && data.message === "Network Error") {
+        showErrorAlert("Network error occurred. Please try again later.");
+      } else if (data.response && data.response.status === 500) {
+        showErrorAlert(
+          "Internal server error occurred. Please try again later."
+        );
+      } else if (data.response && data.response.status === 201) {
         setFormData({ name: "", email: "", password: "" });
         toast.info("User created successfully, Please Login.");
         onSignUpSuccess();

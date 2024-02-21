@@ -11,12 +11,19 @@ export interface QuestionsType {
   difficultyLevel: string;
 }
 
-const useQuestions = () =>
-  useQuery({
+const useQuestions = () => {
+  const token = localStorage.getItem("quizify-token");
+
+  return useQuery({
     queryKey: ["questions"],
     queryFn: async () => {
       const res = await axios.get<QuestionsType[]>(
-        "http://localhost:3000/api/questions"
+        "http://localhost:3000/api/questions",
+        {
+          headers: {
+            "quizify-auth-token": token,
+          },
+        }
       );
 
       return res.data;
@@ -24,5 +31,6 @@ const useQuestions = () =>
     staleTime: 24 * 60 * 60 * 1000, //24h
     keepPreviousData: true,
   });
+};
 
 export default useQuestions;
