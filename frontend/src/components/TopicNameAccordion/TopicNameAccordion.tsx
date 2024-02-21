@@ -5,9 +5,9 @@ import {
   AccordionPanel,
   Box,
 } from "@chakra-ui/react";
-import useQuestions from "../hooks/useQuestions";
-import useQuestionsStore from "../store";
-import "./css/TopicNameAccordion.css";
+import useQuestions from "../../hooks/useQuestions";
+import useQuestionsStore from "../../store";
+import "./TopicNameAccordion.css";
 
 interface Props {
   title: string;

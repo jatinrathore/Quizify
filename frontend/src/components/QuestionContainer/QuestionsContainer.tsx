@@ -1,6 +1,6 @@
-import useQuestions from "../hooks/useQuestions";
-import useQuestionsStore from "../store";
-import QuestionCard from "./QuestionCard";
+import useQuestions from "../../hooks/useQuestions";
+import useQuestionsStore from "../../store";
+import QuestionCard from "../QuestionCard";
 import { RiEnglishInput } from "react-icons/ri";
 import { TbBrandCss3 } from "react-icons/tb";
 import { BiWorld } from "react-icons/bi";
@@ -9,7 +9,7 @@ import { FaJava } from "react-icons/fa6";
 import { TbBrandJavascript } from "react-icons/tb";
 import { SiCplusplus } from "react-icons/si";
 import { TbFileTypeHtml } from "react-icons/tb";
-import "./css/QuestionContainer.css";
+import "./QuestionContainer.css";
 
 const QuestionsContainer = () => {
   const { data } = useQuestions();

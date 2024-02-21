@@ -1,5 +1,5 @@
 import { Accordion } from "@chakra-ui/react";
-import TopicNameAccordion from "./TopicNameAccordion";
+import TopicNameAccordion from "../TopicNameAccordion";
 
 const SideBar = () => {
   const topics = [

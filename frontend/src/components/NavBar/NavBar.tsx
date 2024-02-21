@@ -10,9 +10,9 @@ import {
   MenuList,
   Text,
 } from "@chakra-ui/react";
-import scriptlyLogo from "../assets/quizify-high-resolution-logo-transparent.png";
+import scriptlyLogo from "../../assets/quizify-high-resolution-logo-transparent.png";
 import { PiUserSquareDuotone } from "react-icons/pi";
-import LogoutModal from "./LogoutModal";
+import LogoutModal from "../LogoutModal";
 
 const NavBar = () => {
   const isLoggedIn = !!localStorage.getItem("quizify-token");

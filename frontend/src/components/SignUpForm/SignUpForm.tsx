@@ -3,7 +3,7 @@ import { FaLock, FaUser } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import "react-toastify/dist/ReactToastify.css";
 import { Form } from "react-router-dom";
-import { UserFormData, validateSignupInput } from "../models/Signup";
+import { UserFormData, validateSignupInput } from "../../models/Signup";
 import {
   Input,
   Button,
@@ -17,9 +17,9 @@ import {
   Alert,
   AlertIcon,
 } from "@chakra-ui/react";
-import "./css/Form.css";
-import registerUser from "../services/registerUser";
+import registerUser from "../../services/registerUser";
 import { toast } from "react-toastify";
+import "./SignUpForm.css";
 
 interface Props {
   onSignUpSuccess: () => void;

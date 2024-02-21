@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FaLock } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { Form, useNavigate } from "react-router-dom";
-import { LoginFormData, validateLoginInput } from "../models/Login";
+import { LoginFormData, validateLoginInput } from "../../models/Login";
 import {
   Alert,
   AlertIcon,
@@ -16,9 +16,9 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import "./css/Form.css";
-import loginUser from "../services/loginUser";
+import loginUser from "../../services/loginUser";
 import { toast } from "react-toastify";
+import "./LoginForm.css";
 
 const LoginForm = () => {
   const [show, setShow] = useState(false);

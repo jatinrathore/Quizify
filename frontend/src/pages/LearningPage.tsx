@@ -1,4 +1,4 @@
-import QuestionsContainer from "../components/QuestionsContainer";
+import QuestionsContainer from "../components/QuestionContainer/QuestionsContainer";
 import SideBar from "../components/SideBar";
 import "./css/LearningPage.css";
 
