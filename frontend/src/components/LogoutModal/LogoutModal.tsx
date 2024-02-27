@@ -22,7 +22,7 @@ const LogoutModal = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const handleClick = () => {
-    localStorage.removeItem("quizify-token");
+    localStorage.removeItem(import.meta.env.VITE_QUIZIFY_LS_KEY);
     toast.info("Logged out Successfully!");
     navigate("/");
   };

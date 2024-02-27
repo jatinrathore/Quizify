@@ -12,7 +12,7 @@ export interface QuestionsType {
 }
 
 const useQuestions = () => {
-  const token = localStorage.getItem("quizify-token");
+  const token = localStorage.getItem(import.meta.env.VITE_QUIZIFY_LS_KEY);
 
   return useQuery({
     queryKey: ["questions"],

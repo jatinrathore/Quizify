@@ -143,14 +143,16 @@ const LoginForm = () => {
         </div>
         <Box
           className="buttons"
-          style={{ textAlign: "center", marginTop: "30px" }}
+          style={{
+            textAlign: "center",
+            marginTop: "30px",
+            marginBottom: "1rem",
+            display: "flex",
+            flexDirection: "column",
+            gap: "10px",
+          }}
         >
-          <Button
-            colorScheme="orange"
-            type="submit"
-            marginBottom="1rem"
-            isDisabled={isLoading}
-          >
+          <Button colorScheme="orange" type="submit" isDisabled={isLoading}>
             {isLoading ? "Logging in..." : "Log in"}
             {isLoading && (
               <Spinner
@@ -160,6 +162,17 @@ const LoginForm = () => {
                 color="orange"
               />
             )}
+          </Button>
+
+          {/* Not Working Properly */}
+          <Button
+            colorScheme="red"
+            onClick={() =>
+              (window.location.href = import.meta.env.VITE_GOOGLE_AUTH_URL)
+            }
+            isDisabled={true}
+          >
+            Sign in with Google
           </Button>
         </Box>
       </Form>

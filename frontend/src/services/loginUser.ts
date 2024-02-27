@@ -7,7 +7,7 @@ const loginUser = async (userData: LoginFormData) => {
   try {
     const { data: res } = await axios.post(endpoint, userData);
 
-    localStorage.setItem("quizify-token", res.data);
+    localStorage.setItem(import.meta.env.VITE_QUIZIFY_LS_KEY, res.data);
 
     return res;
   } catch (error) {

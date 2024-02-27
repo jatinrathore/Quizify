@@ -15,7 +15,9 @@ import { PiUserSquareDuotone } from "react-icons/pi";
 import LogoutModal from "../LogoutModal";
 
 const NavBar = () => {
-  const isLoggedIn = !!localStorage.getItem("quizify-token");
+  const isLoggedIn = !!localStorage.getItem(
+    import.meta.env.VITE_QUIZIFY_LS_KEY
+  );
   return (
     <Box
       margin="10px 0 10px 10px"

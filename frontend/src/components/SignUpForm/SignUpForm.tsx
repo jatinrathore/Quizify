@@ -167,7 +167,14 @@ const SignUpForm = ({ onSignUpSuccess }: Props) => {
         </div>
         <Box
           className="buttons"
-          style={{ textAlign: "center", marginTop: "30px" }}
+          style={{
+            textAlign: "center",
+            marginTop: "30px",
+            marginBottom: "1rem",
+            display: "flex",
+            flexDirection: "column",
+            gap: "10px",
+          }}
         >
           <Button
             colorScheme="orange"
@@ -184,6 +191,15 @@ const SignUpForm = ({ onSignUpSuccess }: Props) => {
                 color="orange"
               />
             )}
+          </Button>
+          <Button
+            colorScheme="red"
+            onClick={() =>
+              (window.location.href = import.meta.env.VITE_GOOGLE_AUTH_URL)
+            }
+            isDisabled={true}
+          >
+            Sign up with Google
           </Button>
         </Box>
       </Form>

@@ -7,7 +7,9 @@ import { useEffect } from "react";
 const AccountManagePage = () => {
   const navigate = useNavigate();
 
-  const isLoggedIn = !!localStorage.getItem("quizify-token");
+  const isLoggedIn = !!localStorage.getItem(
+    import.meta.env.VITE_QUIZIFY_LS_KEY
+  );
 
   useEffect(() => {
     if (isLoggedIn) navigate("/home");
