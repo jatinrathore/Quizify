@@ -6,15 +6,21 @@ const app = express();
 const passport = require("passport");
 require("./config/passport-setup");
 
+const cookieParser = require('cookie-parser');
+app.use(cookieParser());
 
 //middlewares
-app.use(express.json());
-app.use(cors());
 app.use(session({
   secret: process.env.JWT_PRIVATE_KEY, // Replace with your actual secret key
   resave: false,
   saveUninitialized: false
 }));
+app.use(express.json());
+app.use(cors({
+  origin: 'http://localhost:5173',
+  credentials: true
+}));
+
 
 // Configure Passport strategies and routes...
 app.use(passport.initialize());

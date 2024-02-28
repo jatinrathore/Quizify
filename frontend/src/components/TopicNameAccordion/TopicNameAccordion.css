@@ -14,12 +14,12 @@
 }
 
 .accordion-list-item {
+  font-size: 13px;
   margin-bottom: 8px;
   background-color: #f3ccf3;
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;
-  text-align: center;
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
 

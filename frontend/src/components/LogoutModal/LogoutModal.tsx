@@ -15,14 +15,17 @@ import { GrCircleAlert } from "react-icons/gr";
 import { TbLogout2 } from "react-icons/tb";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { CookieManager } from "../../services/handleCookies";
 
 const LogoutModal = () => {
   const navigate = useNavigate();
 
   const { isOpen, onOpen, onClose } = useDisclosure();
 
+  const remove = CookieManager.removeCookie();
+
   const handleClick = () => {
-    localStorage.removeItem(import.meta.env.VITE_QUIZIFY_LS_KEY);
+    remove();
     toast.info("Logged out Successfully!");
     navigate("/");
   };

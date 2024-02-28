@@ -1,18 +1,17 @@
 import { Grid, GridItem } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
-import NavBar from "../components/NavBar";
+import NavBar from "../../components/NavBar";
+import { CookieManager } from "../../services/handleCookies";
 
 const HomePage = () => {
   const navigate = useNavigate();
 
-  const isLoggedIn = !!localStorage.getItem(
-    import.meta.env.VITE_QUIZIFY_LS_KEY
-  );
+  const cookieExists = CookieManager.isCookieSet();
 
   useEffect(() => {
-    if (!isLoggedIn) navigate("/");
-  }, [isLoggedIn]);
+    if (!cookieExists) navigate("/");
+  }, [cookieExists]);
 
   return (
     <Grid

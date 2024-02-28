@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useQuery } from "react-query";
+import { CookieManager } from "../services/handleCookies";
 
 export interface QuestionsType {
   questionId: string;
@@ -12,7 +13,7 @@ export interface QuestionsType {
 }
 
 const useQuestions = () => {
-  const token = localStorage.getItem(import.meta.env.VITE_QUIZIFY_LS_KEY);
+  const cookie = CookieManager.getCookie();
 
   return useQuery({
     queryKey: ["questions"],
@@ -21,7 +22,7 @@ const useQuestions = () => {
         "http://localhost:3000/api/questions",
         {
           headers: {
-            "quizify-auth-token": token,
+            "quizify-auth-token": cookie,
           },
         }
       );

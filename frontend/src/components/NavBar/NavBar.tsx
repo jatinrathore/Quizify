@@ -13,11 +13,11 @@ import {
 import scriptlyLogo from "../../assets/quizify-high-resolution-logo-transparent.png";
 import { PiUserSquareDuotone } from "react-icons/pi";
 import LogoutModal from "../LogoutModal";
+import { CookieManager } from "../../services/handleCookies";
 
 const NavBar = () => {
-  const isLoggedIn = !!localStorage.getItem(
-    import.meta.env.VITE_QUIZIFY_LS_KEY
-  );
+  const cookieExists = CookieManager.isCookieSet();
+
   return (
     <Box
       margin="10px 0 10px 10px"
@@ -26,7 +26,7 @@ const NavBar = () => {
       alignItems="center"
     >
       <Image src={scriptlyLogo} height="50px" />
-      {isLoggedIn && (
+      {cookieExists && (
         <Menu>
           <MenuButton
             as={IconButton}

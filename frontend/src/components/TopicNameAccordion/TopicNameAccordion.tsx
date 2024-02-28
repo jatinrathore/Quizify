@@ -24,6 +24,15 @@ const TopicNameAccordion = ({ title, genre }: Props) => {
   const filteredData = data?.filter((d) => d.topicName === genre);
 
   const setSelectedGenre = useQuestionsStore((s) => s.setSelectedGenre);
+
+  const cropQuestionTitle = (questionTitle: string) => {
+    const firstLinebreakIndex = questionTitle.indexOf("<linebreak>");
+    if (firstLinebreakIndex !== -1) {
+      return questionTitle.substring(0, firstLinebreakIndex);
+    }
+    return questionTitle;
+  };
+
   return (
     <AccordionItem style={{ border: "none", borderRadius: "10px" }} mb="20px">
       <h2>
@@ -50,7 +59,10 @@ const TopicNameAccordion = ({ title, genre }: Props) => {
         <ul className="accordion-list">
           {filteredData?.map((qus, idx) => (
             <li key={idx} className="accordion-list-item">
-              <a href={`#${qus.questionId}`}> {`Question ${idx + 1}`}</a>
+              <a href={`#${qus.questionId}`}>
+                {" "}
+                {`Q${idx + 1} ${cropQuestionTitle(qus.questionTitle)}`}
+              </a>
             </li>
           ))}
         </ul>

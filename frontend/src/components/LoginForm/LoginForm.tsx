@@ -170,7 +170,6 @@ const LoginForm = () => {
             onClick={() =>
               (window.location.href = import.meta.env.VITE_GOOGLE_AUTH_URL)
             }
-            isDisabled={true}
           >
             Sign in with Google
           </Button>

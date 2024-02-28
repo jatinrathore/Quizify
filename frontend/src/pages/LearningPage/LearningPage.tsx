@@ -1,6 +1,6 @@
-import QuestionsContainer from "../components/QuestionContainer/QuestionsContainer";
-import SideBar from "../components/SideBar";
-import "./css/LearningPage.css";
+import QuestionsContainer from "../../components/QuestionContainer/QuestionsContainer";
+import SideBar from "../../components/SideBar";
+import "./LearningPage.css";
 
 const LearningPage = () => {
   return (

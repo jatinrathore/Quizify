@@ -192,12 +192,12 @@ const SignUpForm = ({ onSignUpSuccess }: Props) => {
               />
             )}
           </Button>
+          {/* Not Working Properly */}
           <Button
             colorScheme="red"
             onClick={() =>
               (window.location.href = import.meta.env.VITE_GOOGLE_AUTH_URL)
             }
-            isDisabled={true}
           >
             Sign up with Google
           </Button>

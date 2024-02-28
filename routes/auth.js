@@ -21,7 +21,9 @@ router.post("/", async (req, res) => {
 
         const token = user.generateAuthToken();
 
-        res.status(200).send({
+        res.cookie("quizify-token", token, {
+            maxAge: 24 * 60 * 60 * 1000,
+        }).status(200).send({
             data: token, message: "Logged in Successfully", response: {
                 status: 200
             }
