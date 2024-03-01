@@ -4,10 +4,12 @@ import {
   AccordionItem,
   AccordionPanel,
   Box,
+  Skeleton,
 } from "@chakra-ui/react";
 import useQuestions from "../../hooks/useQuestions";
 import useQuestionsStore from "../../store";
 import "./TopicNameAccordion.css";
+import StringUtils from "../../services/handleStrings";
 
 interface Props {
   title: string;
@@ -15,23 +17,14 @@ interface Props {
 }
 
 const TopicNameAccordion = ({ title, genre }: Props) => {
+  const { isLoading, data: { questions } = {} } = useQuestions();
+  const setSelectedGenre = useQuestionsStore((s) => s.setSelectedGenre);
+
   const handleClickAccordion = () => {
     setSelectedGenre(genre);
   };
 
-  const { data } = useQuestions();
-
-  const filteredData = data?.filter((d) => d.topicName === genre);
-
-  const setSelectedGenre = useQuestionsStore((s) => s.setSelectedGenre);
-
-  const cropQuestionTitle = (questionTitle: string) => {
-    const firstLinebreakIndex = questionTitle.indexOf("<linebreak>");
-    if (firstLinebreakIndex !== -1) {
-      return questionTitle.substring(0, firstLinebreakIndex);
-    }
-    return questionTitle;
-  };
+  const skeletonArray = new Array(10).fill(0);
 
   return (
     <AccordionItem style={{ border: "none", borderRadius: "10px" }} mb="20px">
@@ -57,11 +50,27 @@ const TopicNameAccordion = ({ title, genre }: Props) => {
       </h2>
       <AccordionPanel>
         <ul className="accordion-list">
-          {filteredData?.map((qus, idx) => (
+          {isLoading &&
+            skeletonArray.map((_, idx) => (
+              <Skeleton
+                key={idx}
+                startColor="#f3ccf3"
+                endColor="#D8B4F8"
+                borderRadius="10px"
+                className="accordion-list-item"
+              />
+            ))}
+          {questions?.map((qus, idx) => (
             <li key={idx} className="accordion-list-item">
               <a href={`#${qus.questionId}`}>
-                {" "}
-                {`Q${idx + 1} ${cropQuestionTitle(qus.questionTitle)}`}
+                <Box className="list-item-title">
+                  <Box as="span">
+                    {`Q${StringUtils.extractNumberFromString(qus.questionId)}`}
+                  </Box>{" "}
+                  <Box as="span">
+                    {StringUtils.cropQuestionTitle(qus.questionTitle)}
+                  </Box>
+                </Box>
               </a>
             </li>
           ))}

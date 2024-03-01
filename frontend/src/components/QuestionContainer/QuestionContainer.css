@@ -8,3 +8,17 @@ html {
   flex-direction: column;
   gap: 20px;
 }
+
+.box-skeleton-cards {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #f3ccf3;
+  height: 4rem;
+}
+
+.page-btn-group {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}

@@ -36,14 +36,7 @@ passport.use(new GoogleStrategy({
         }).save();
     }
 
-    // const token = user.generateAuthToken();
-    // console.log(token);
-
-    // res.cookie("quizify-token", token, {
-    //     maxAge: 24 * 60 * 60 * 1000,
-    // });
-
-    console.log("User logged in" + user);
+    console.log("User logged in");
 
     return done(null, user);
 }));

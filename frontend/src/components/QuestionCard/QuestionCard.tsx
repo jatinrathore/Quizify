@@ -23,7 +23,7 @@ const QuestionCard = ({
 
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
 
-  const { data } = useQuestions();
+  const { data: { questions } = {} } = useQuestions();
 
   let isAnswerFound = false;
 
@@ -33,7 +33,7 @@ const QuestionCard = ({
   };
 
   const checkIfAnswer = (option: string) => {
-    const question = data?.find((d) => d.questionId === id);
+    const question = questions?.find((d) => d.questionId === id);
 
     if (selectedOption === option && question?.answer === option) {
       isAnswerFound = true;
@@ -48,7 +48,7 @@ const QuestionCard = ({
   return (
     <div className="question-card">
       <div className="question-title" id={id}>
-        <p style={{ marginRight: "10px" }}>{`Q${questionNo + 1}`}</p>
+        <p style={{ marginRight: "10px" }}>{`Q${questionNo}`}</p>
         <p dangerouslySetInnerHTML={{ __html: formattedQuestion }}></p>
       </div>
       <div className="question-options">

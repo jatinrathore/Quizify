@@ -7,7 +7,7 @@ router.get("/google", passport.authenticate("google", { scope: ["profile", "emai
 router.get("/google/callback", passport.authenticate("google", { failureRedirect: process.env.CLIENT_URL }), function (req, res) {
     // Successful authentication, redirect home.
     const token = req.user.generateAuthToken();
-    console.log("Generated token:", token);
+    console.log("Generated token:");
     res.cookie("quizify-token", token, {
         maxAge: 24 * 60 * 60 * 1000,
     }).redirect(process.env.CLIENT_URL + "home")
