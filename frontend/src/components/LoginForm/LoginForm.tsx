@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaLock } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { Form, useNavigate } from "react-router-dom";
@@ -8,22 +8,30 @@ import {
   AlertIcon,
   Box,
   Button,
+  Flex,
   Input,
   InputGroup,
   InputLeftElement,
   InputRightElement,
+  Link,
   Spinner,
   Stack,
   Text,
 } from "@chakra-ui/react";
 import loginUser from "../../services/loginUser";
 import { toast } from "react-toastify";
+import { FaExternalLinkAlt } from "react-icons/fa";
 import "./LoginForm.css";
 
 const LoginForm = () => {
   const [show, setShow] = useState(false);
   const [isLoading, setLoading] = useState(false);
+  const [idForVerify, setIdForVerify] = useState("");
   const navigate = useNavigate();
+
+  useEffect(() => {
+    setIdForVerify("");
+  }, []);
 
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [formData, setFormData] = useState<LoginFormData>({
@@ -71,6 +79,12 @@ const LoginForm = () => {
         );
       } else if (data.response && data.response.status === 401) {
         showErrorAlert("Invalid email or password.");
+      } else if (data.response && data.response.status === 403) {
+        //setId for verify email link
+        setIdForVerify(data.response.data.userId);
+        showErrorAlert(
+          "Email is not verified. Please verify Email before login."
+        );
       } else if (data.response && data.response.status === 500) {
         showErrorAlert(
           "Internal server error occurred. Please try again later."
@@ -137,6 +151,19 @@ const LoginForm = () => {
               <Alert status="error" borderRadius="5px" fontSize=".9rem">
                 <AlertIcon />
                 {errors.email}
+              </Alert>
+            )}
+            {idForVerify && (
+              <Alert status="error" borderRadius="5px" fontSize=".9rem">
+                <AlertIcon />
+                <Link
+                  href={`http://localhost:5173/verify-email/${idForVerify}`}
+                >
+                  <Flex>
+                    {`Verify your email here`}
+                    <FaExternalLinkAlt style={{ marginLeft: "5px" }} />
+                  </Flex>
+                </Link>
               </Alert>
             )}
           </Stack>

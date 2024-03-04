@@ -9,14 +9,7 @@ import { FaJava } from "react-icons/fa6";
 import { TbBrandJavascript } from "react-icons/tb";
 import { SiCplusplus } from "react-icons/si";
 import { TbFileTypeHtml } from "react-icons/tb";
-import {
-  Box,
-  IconButton,
-  Skeleton,
-  SkeletonCircle,
-  SkeletonText,
-  Stack,
-} from "@chakra-ui/react";
+import { Box, IconButton, SkeletonText, Stack } from "@chakra-ui/react";
 import { TbPlayerTrackNext } from "react-icons/tb";
 import { TbPlayerTrackPrev } from "react-icons/tb";
 import StringUtils from "../../services/handleStrings";

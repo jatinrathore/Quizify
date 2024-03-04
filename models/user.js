@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Joi = require("joi");
 const jwt = require("jsonwebtoken");
+const boolean = require('joi/lib/types/boolean');
 
 const userSchema = new mongoose.Schema({
     name: {
@@ -22,6 +23,10 @@ const userSchema = new mongoose.Schema({
         require: true,
         minlength: 8,
         maxlength: 255,
+    },
+    verified: {
+        type: Boolean,
+        default: false
     }
 });
 

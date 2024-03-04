@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaLock, FaUser } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import "react-toastify/dist/ReactToastify.css";
-import { Form } from "react-router-dom";
+import { Form, useNavigate } from "react-router-dom";
 import { UserFormData, validateSignupInput } from "../../models/Signup";
 import {
   Input,
@@ -29,6 +29,7 @@ const SignUpForm = ({ onSignUpSuccess }: Props) => {
   //password input state handler
   const [show, setShow] = useState(false);
   const [isLoading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [formData, setFormData] = useState<UserFormData>({
@@ -83,9 +84,10 @@ const SignUpForm = ({ onSignUpSuccess }: Props) => {
           "Internal server error occurred. Please try again later."
         );
       } else if (data.response && data.response.status === 201) {
-        setFormData({ name: "", email: "", password: "" });
-        toast.info("User created successfully, Please Login.");
+        toast.info("User created successfully, Please Verify your Email.");
+        navigate(`/verify-email/${data.userId}`);
         onSignUpSuccess();
+        setFormData({ name: "", email: "", password: "" });
       }
     } catch (error) {
       console.error("Error during registration", error);

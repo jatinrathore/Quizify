@@ -32,7 +32,8 @@ passport.use(new GoogleStrategy({
         user = await new User({
             name: profile._json.name,
             email: profile._json.email,
-            password: hashedPassword
+            password: hashedPassword,
+            verified: profile._json.email_verified
         }).save();
     }
 
