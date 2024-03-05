@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Joi = require("joi");
 const jwt = require("jsonwebtoken");
-const boolean = require('joi/lib/types/boolean');
+const bcrypt = require("bcrypt");
 
 const userSchema = new mongoose.Schema({
     name: {
@@ -28,6 +28,14 @@ const userSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     }
+});
+
+userSchema.pre("save", async function (next) {
+    if (this.isModified("password")) {
+        const hashedPassword = await bcrypt.hash(this.password, Number(process.env.SALT));
+        this.password = hashedPassword;
+    }
+    next();
 });
 
 userSchema.methods.generateAuthToken = function () {

@@ -36,7 +36,7 @@ const VerifyEmailPage = () => {
 
     try {
       const { data } = await axios.post(
-        import.meta.env.VITE_QUIZIFY_SERVER_URL + "api/users/verify-email",
+        `${import.meta.env.VITE_QUIZIFY_SERVER_URL}api/users/verify-email`,
         {
           userId: id,
           otp: OTP,
@@ -64,7 +64,7 @@ const VerifyEmailPage = () => {
       <div className="email-verify-container">
         <Text>An OTP is sent to your Email</Text>
         <Input
-          focusBorderColor="lime"
+          focusBorderColor="pink.400"
           placeholder="Enter your OTP"
           onChange={handleChange}
           value={OTP}

@@ -1,6 +1,5 @@
 const passport = require('passport');
 const { User } = require('../models/user');
-const bcrypt = require('bcrypt');
 let GoogleStrategy = require("passport-google-oauth20").Strategy;
 
 passport.serializeUser((user, done) => {
@@ -26,13 +25,11 @@ passport.use(new GoogleStrategy({
     if (!user) {
 
         const systemGenPassword = profile._json.given_name + "@" + profile._json.sub;
-        const salt = await bcrypt.genSalt(Number(process.env.SALT));
-        const hashedPassword = await bcrypt.hash(systemGenPassword, salt);
 
         user = await new User({
             name: profile._json.name,
             email: profile._json.email,
-            password: hashedPassword,
+            password: systemGenPassword,
             verified: profile._json.email_verified
         }).save();
     }

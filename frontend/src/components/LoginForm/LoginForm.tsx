@@ -168,11 +168,16 @@ const LoginForm = () => {
             )}
           </Stack>
         </div>
+        <div className="forgot-password-container">
+          <Link href="/forgot-password">
+            <Text>Forgot Password?</Text>
+          </Link>
+        </div>
         <Box
           className="buttons"
           style={{
             textAlign: "center",
-            marginTop: "30px",
+            marginTop: "20px",
             marginBottom: "1rem",
             display: "flex",
             flexDirection: "column",
@@ -191,7 +196,6 @@ const LoginForm = () => {
             )}
           </Button>
 
-          {/* Not Working Properly */}
           <Button
             colorScheme="red"
             onClick={() =>

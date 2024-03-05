@@ -3,6 +3,8 @@ import AccountManagePage from "./pages/AccountManagePage";
 import HomePage from "./pages/HomePage";
 import LearningPage from "./pages/LearningPage";
 import VerifyEmailPage from "./pages/VerifyEmailPage";
+import ForgotPasswordPage from "./pages/ForgotPasswordPage";
+import ResetPasswordPage from "./pages/ResetPasswordPage";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +25,11 @@ const router = createBrowserRouter([
     path: "/verify-email/:id",
     element: <VerifyEmailPage />,
   },
+  {
+    path: "/forgot-password",
+    element: <ForgotPasswordPage />,
+  },
+  { path: "reset-password", element: <ResetPasswordPage /> },
 ]);
 
 export default router;
