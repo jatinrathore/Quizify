@@ -120,9 +120,7 @@ router.post("/forgot-password", async (req, res) => {
 
         const resetToken = new ResetToken({ owner: user._id, resetToken: randomBytes });
 
-        const result = await resetToken.save();
-
-        console.log("Hello", result);
+        await resetToken.save();
 
         const url = `${process.env.CLIENT_URL}reset-password?token=${randomBytes}&id=${user._id}`;
 

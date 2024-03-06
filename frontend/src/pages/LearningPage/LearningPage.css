@@ -14,10 +14,21 @@
   border-right: 2px solid #80808038;
   border-radius: 10px;
   margin: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
 
 .container-main {
   margin: 10px;
   padding: 10px;
   border-radius: 10px;
+}
+
+.container-aside-right {
+  padding: 10px;
+  min-height: 85dvh;
+  height: auto;
+  border-left: 2px solid #80808038;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: -2.4px 2.4px 3.2px rgba(0, 0, 0, 0.15);
 }

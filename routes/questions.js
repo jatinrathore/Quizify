@@ -34,4 +34,67 @@ router.get("/", authenticate, async (req, res) => {
 
 });
 
+router.get("/quiz/prog-lang", authenticate, async (req, res) => {
+
+    try {
+
+        const questions = await Questions.aggregate([
+            { $match: { topicName: { $in: ["c++", "java", "javascript"] } } },
+            { $sample: { size: 15 } }
+        ]);
+
+        if (!questions) {
+            return res.status(404).send("Unable to fetch data from server!");
+        }
+
+        res.status(200).send({ questions });
+
+    } catch (error) {
+        console.log(error.message);
+        res.status(500).send("Internal Server Error");
+    }
+});
+
+router.get("/quiz/general", authenticate, async (req, res) => {
+
+    try {
+
+        const questions = await Questions.aggregate([
+            { $match: { topicName: { $in: ["english", "general knowledge", "aptitude"] } } },
+            { $sample: { size: 15 } }
+        ]);
+
+        if (!questions) {
+            return res.status(404).send("Unable to fetch data from server!");
+        }
+
+        res.status(200).send({ questions });
+
+    } catch (error) {
+        console.log(error.message);
+        res.status(500).send("Internal Server Error");
+    }
+});
+
+router.get("/quiz/web-dev", authenticate, async (req, res) => {
+
+    try {
+
+        const questions = await Questions.aggregate([
+            { $match: { topicName: { $in: ["css", "html", "javascript"] } } },
+            { $sample: { size: 15 } }
+        ]);
+
+        if (!questions) {
+            return res.status(404).send("Unable to fetch data from server!");
+        }
+
+        res.status(200).send({ questions });
+
+    } catch (error) {
+        console.log(error.message);
+        res.status(500).send("Internal Server Error");
+    }
+});
+
 exports.questions = router;

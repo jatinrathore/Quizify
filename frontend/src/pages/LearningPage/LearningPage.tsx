@@ -11,6 +11,7 @@ const LearningPage = () => {
       <div className="container-main">
         <QuestionsContainer />
       </div>
+      <div className="container-aside-right">Hello</div>
     </div>
   );
 };
