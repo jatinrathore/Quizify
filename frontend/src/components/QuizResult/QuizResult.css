@@ -1,4 +1,4 @@
-.quiz-container {
+.result-container {
   background: wheat;
   min-height: 100vh;
   height: auto;
@@ -8,9 +8,8 @@
   align-items: center;
 }
 
-.center-box {
+.result-center-box {
   background-color: white;
-  min-height: 27rem;
   height: auto;
   max-height: fit-content;
   width: 55rem;
@@ -21,37 +20,8 @@
   margin-bottom: 80px;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-}
-
-.title-box {
-  display: flex;
-  justify-content: space-between;
-  text-transform: capitalize;
-}
-
-.back-btn {
+.result-back-btn {
   display: flex;
   align-items: center;
   cursor: pointer;
-}
-
-.quiz-question-container {
-  margin: 50px auto;
-}
-
-.options-box {
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.right {
-  background-color: green;
-}
-
-.wrong {
-  background-color: red;
 }

@@ -1,10 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { CookieManager } from "../services/handleCookies";
-import { QuestionsType } from "./useQuestions";
+import QuestionsType from "../models/Questions";
 
 interface FetchResponseType {
-  questions: QuestionsType[];
+  data: QuestionsType[];
+  success: Boolean;
 }
 const useQuizQuestions = (endpoint: string) => {
   const cookie = CookieManager.getCookie();

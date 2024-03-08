@@ -309,6 +309,71 @@ module.exports.generateSuccessTemplate = () => {
   </html>`
 }
 
+module.exports.generateQuestionSubmitTemplate = (username) => {
+  retur`<html>
+  <head>
+    <style>
+    body {
+    color:#414141;
+  }
+  .container {
+    font-family: 'Helvetica Neue', Helvetica;
+    text-align: center;
+   padding: 5px; 
+  }
+  .text-container{
+    width: 90%;
+    max-width: 800px;
+    font-weight: 300;
+    margin: 0 auto;
+    padding: 15px;
+    padding-bottom: 15px;
+  }
+  h1{
+    font-weight: 100;
+  }
+      a{
+        text-decoration: none;
+        color: none;
+      }
+  .button {
+    padding: 15px;
+    font-family: 'Helvetica Neue', Helvetica;
+    text-size: 18px;
+    color: white;
+    background-color: #E6A1C3;
+    border: 0;
+    border-radius: 5px;
+    margin: 10px;
+    display: block;
+    max-width: 200px;
+    margin: auto;
+    text-decoration: none;
+  }
+  p {
+    line-height: 1.5;
+  }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    </head>
+    <body>
+      <div class="container" id="mobile">
+        <div class= "text-container">
+        <h1><i class="fa fa-check-circle" aria-hidden="true" style="color: #E6A1C3;"></i> Question Submitted</h1>
+      <p>Your question is submitted for review <a href="#" style="font-weight: bold; color: #9DA4DB;"></a>. </p>
+          <p>Our administrators will review your submission and notify you via email once it has been processed.</p>
+          <a href="#" class= "button">Go to app now</a>
+        </div>
+        </div>
+      <div class="container" id="web">
+        <div class= "text-container">
+          <p>Check out Quizify on <br /><span style="font-size: 2em;"><a href="https://www.instagram.com/" alt="Instagram"><i class="fa fa-instagram" aria-hidden="true" style="color: #E6A1C3;"></i></a> <a href="https://www.facebook.com/" alt="facebook"><i class="fa fa-facebook-official" aria-hidden="true" style="color: #E6A1C3;"></i></a></span> </p>
+        </div>
+        </div>
+    </body>
+  </html>`
+}
+
 
 
 

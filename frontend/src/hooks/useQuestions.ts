@@ -2,16 +2,7 @@ import axios from "axios";
 import { useQuery } from "@tanstack/react-query";
 import { CookieManager } from "../services/handleCookies";
 import useQuestionsStore from "../store";
-
-export interface QuestionsType {
-  questionId: string;
-  questionTitle: string;
-  options: [string];
-  answer: string;
-  points: number;
-  topicName: string;
-  difficultyLevel: string;
-}
+import QuestionsType from "../models/Questions";
 
 interface FetchResponseType {
   questions: QuestionsType[];

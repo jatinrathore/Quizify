@@ -43,11 +43,11 @@ router.get("/quiz/prog-lang", authenticate, async (req, res) => {
             { $sample: { size: 15 } }
         ]);
 
-        if (!questions) {
-            return res.status(404).send("Unable to fetch data from server!");
+        if (!questions || questions.length === 0) {
+            return res.status(404).json({ success: false, message: "No questions found" });
         }
 
-        res.status(200).send({ questions });
+        res.status(200).json({ success: true, data: questions });
 
     } catch (error) {
         console.log(error.message);
@@ -64,12 +64,11 @@ router.get("/quiz/general", authenticate, async (req, res) => {
             { $sample: { size: 15 } }
         ]);
 
-        if (!questions) {
-            return res.status(404).send("Unable to fetch data from server!");
+        if (!questions || questions.length === 0) {
+            return res.status(404).json({ success: false, message: "No questions found" });
         }
 
-        res.status(200).send({ questions });
-
+        res.status(200).json({ success: true, data: questions });
     } catch (error) {
         console.log(error.message);
         res.status(500).send("Internal Server Error");
@@ -85,12 +84,11 @@ router.get("/quiz/web-dev", authenticate, async (req, res) => {
             { $sample: { size: 15 } }
         ]);
 
-        if (!questions) {
-            return res.status(404).send("Unable to fetch data from server!");
+        if (!questions || questions.length === 0) {
+            return res.status(404).json({ success: false, message: "No questions found" });
         }
 
-        res.status(200).send({ questions });
-
+        res.status(200).json({ success: true, data: questions });
     } catch (error) {
         console.log(error.message);
         res.status(500).send("Internal Server Error");
