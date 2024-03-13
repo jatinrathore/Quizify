@@ -3,7 +3,6 @@ import {
   Input,
   InputRightElement,
   Button,
-  Heading,
   Image,
   Text,
 } from "@chakra-ui/react";

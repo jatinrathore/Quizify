@@ -182,19 +182,20 @@ const SignUpForm = () => {
               />
             )}
           </button>
-          <button
-            className="signup-custom-button"
-            onClick={() =>
-              (window.location.href = import.meta.env.VITE_GOOGLE_AUTH_URL)
-            }
-          >
-            <p className="signup-google-text">
-              <FcGoogle size={25} />
-              Sign up with Google
-            </p>
-          </button>
         </Box>
       </Form>
+      <button
+        className="signup-custom-button"
+        onClick={() =>
+          (window.location.href = import.meta.env.VITE_GOOGLE_AUTH_URL)
+        }
+        style={{ width: "100%" }}
+      >
+        <p className="signup-google-text">
+          <FcGoogle size={25} />
+          Sign up with Google
+        </p>
+      </button>
     </div>
   );
 };

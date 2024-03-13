@@ -35,10 +35,6 @@ const router = createBrowserRouter([
     path: "/quiz",
     element: <QuizPage />,
   },
-  {
-    path: "/testing",
-    element: <ResetPasswordPage />,
-  },
 ]);
 
 export default router;

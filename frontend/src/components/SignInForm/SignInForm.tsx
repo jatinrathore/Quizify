@@ -180,7 +180,7 @@ const SigninForm = () => {
           </Link>
         </div>
         <Box className="signin-buttons">
-          <button className="custom-button" type="submit" disabled={isLoading}>
+          <button className="custom-button" type="submit">
             {isLoading ? "Logging in..." : "Log in"}
             {isLoading && (
               <Spinner
@@ -191,20 +191,20 @@ const SigninForm = () => {
               />
             )}
           </button>
-
-          <button
-            className="custom-button"
-            onClick={() =>
-              (window.location.href = import.meta.env.VITE_GOOGLE_AUTH_URL)
-            }
-          >
-            <p className="signin-google-text">
-              <FcGoogle size={25} />
-              Sign up with Google
-            </p>
-          </button>
         </Box>
       </Form>
+      <button
+        className="custom-button"
+        onClick={() => {
+          window.location.href = import.meta.env.VITE_GOOGLE_AUTH_URL;
+        }}
+        style={{ width: "100%" }}
+      >
+        <p className="signin-google-text">
+          <FcGoogle size={25} />
+          Sign in with Google
+        </p>
+      </button>
     </div>
   );
 };

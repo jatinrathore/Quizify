@@ -1,6 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom";
 import NavBar from "../../components/NavBar";
-import { Button, Image, Input, Text } from "@chakra-ui/react";
+import { Image, Input, Text } from "@chakra-ui/react";
 import { useState } from "react";
 import "react-toastify/dist/ReactToastify.css";
 import { toast } from "react-toastify";
