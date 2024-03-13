@@ -4,11 +4,17 @@ import {
   InputRightElement,
   Button,
   Heading,
+  Image,
+  Text,
 } from "@chakra-ui/react";
 import axios from "axios";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { toast } from "react-toastify";
+import NavBar from "../../components/NavBar";
+import GitFooter from "../../components/GitFooter";
+import img from "../../assets/password-reset-2.gif";
+import "./resetpassword.css";
 
 const ResetPasswordPage = () => {
   const [show, setShow] = useState(false);
@@ -92,48 +98,68 @@ const ResetPasswordPage = () => {
     }
   };
   return (
-    <div>
-      <Heading>Reset your password</Heading>
-      <InputGroup size="md">
-        <Input
-          pr="4.5rem"
-          type={show ? "text" : "password"}
-          placeholder="Enter password"
-          focusBorderColor="pink.400"
-          name="password"
-          value={inputFields.password}
-          onChange={handleChange}
-        />
-        <InputRightElement width="4.5rem">
-          <Button h="1.75rem" size="sm" onClick={() => setShow(!show)}>
-            {show ? "Hide" : "Show"}
-          </Button>
-        </InputRightElement>
-      </InputGroup>
-      <InputGroup>
-        <Input
-          pr="4.5rem"
-          type={confirmShow ? "text" : "password"}
-          placeholder="Confirm password"
-          focusBorderColor="pink.400"
-          name="confirmPassword"
-          value={inputFields.confirmPassword}
-          onChange={handleChange}
-        />
-        <InputRightElement width="4.5rem">
-          <Button
-            h="1.75rem"
-            size="sm"
-            onClick={() => setConfirmShow(!confirmShow)}
-          >
-            {confirmShow ? "Hide" : "Show"}
-          </Button>
-        </InputRightElement>
-      </InputGroup>
-      <Button colorScheme="purple" onClick={handleClick}>
-        Reset Password
-      </Button>
-    </div>
+    <>
+      <NavBar />
+      <div className="rp-outer-container">
+        <div className="rp-grid">
+          <div className="rp-details-box">
+            <Text className="rp-box-heading">Reset your password!</Text>
+
+            <label className="rp-box-label">Password*</label>
+            <InputGroup size="md">
+              <Input
+                pr="4.5rem"
+                type={show ? "text" : "password"}
+                placeholder="Ex : Abc@1234"
+                focusBorderColor="pink.400"
+                name="password"
+                value={inputFields.password}
+                onChange={handleChange}
+                className="rp-box-input"
+              />
+              <InputRightElement width="4.5rem">
+                <Button h="1.75rem" size="sm" onClick={() => setShow(!show)}>
+                  {show ? "Hide" : "Show"}
+                </Button>
+              </InputRightElement>
+            </InputGroup>
+
+            <label className="rp-box-label">Confirm Password*</label>
+            <InputGroup>
+              <Input
+                pr="4.5rem"
+                type={confirmShow ? "text" : "password"}
+                placeholder="same as password"
+                focusBorderColor="pink.400"
+                name="confirmPassword"
+                value={inputFields.confirmPassword}
+                onChange={handleChange}
+                className="rp-box-input"
+              />
+              <InputRightElement width="4.5rem">
+                <Button
+                  h="1.75rem"
+                  size="sm"
+                  onClick={() => setConfirmShow(!confirmShow)}
+                >
+                  {confirmShow ? "Hide" : "Show"}
+                </Button>
+              </InputRightElement>
+            </InputGroup>
+            <button onClick={handleClick} className="rp-custom-btn">
+              Reset Password
+            </button>
+          </div>
+          <div className="rp-img-box">
+            <Image
+              src={img}
+              style={{ borderRadius: "10px", marginTop: "30px" }}
+            />
+          </div>
+        </div>
+      </div>
+      <GitFooter />
+    </>
   );
 };
 

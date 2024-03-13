@@ -22,6 +22,7 @@ import loginUser from "../../services/loginUser";
 import { toast } from "react-toastify";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import "./signinform.css";
+import { FcGoogle } from "react-icons/fc";
 
 const SigninForm = () => {
   const [show, setShow] = useState(false);
@@ -197,7 +198,10 @@ const SigninForm = () => {
               (window.location.href = import.meta.env.VITE_GOOGLE_AUTH_URL)
             }
           >
-            Sign in with Google
+            <p className="signin-google-text">
+              <FcGoogle size={25} />
+              Sign up with Google
+            </p>
           </button>
         </Box>
       </Form>

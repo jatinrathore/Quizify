@@ -59,6 +59,12 @@
   transform: translateY(2px);
 }
 
+.signin-google-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
 @media only screen and (max-width: 600px) {
   .signin-container {
     padding: 1rem 1rem;

@@ -19,6 +19,7 @@ import {
 } from "@chakra-ui/react";
 import registerUser from "../../services/registerUser";
 import { toast } from "react-toastify";
+import { FcGoogle } from "react-icons/fc";
 import "./signupform.css";
 
 const SignUpForm = () => {
@@ -187,7 +188,10 @@ const SignUpForm = () => {
               (window.location.href = import.meta.env.VITE_GOOGLE_AUTH_URL)
             }
           >
-            Sign up with Google
+            <p className="signup-google-text">
+              <FcGoogle size={25} />
+              Sign up with Google
+            </p>
           </button>
         </Box>
       </Form>

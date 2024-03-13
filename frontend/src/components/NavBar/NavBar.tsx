@@ -15,9 +15,11 @@ import { PiUserSquareDuotone } from "react-icons/pi";
 import LogoutModal from "../LogoutModal";
 import { CookieManager } from "../../services/handleCookies";
 import "./navbar.css";
+import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
   const cookieExists = CookieManager.isCookieSet();
+  const navigate = useNavigate();
 
   return (
     <Box
@@ -26,7 +28,12 @@ const NavBar = () => {
       justifyContent="space-between"
       alignItems="center"
     >
-      <Image src={scriptlyLogo} className="navbar-logo" />
+      <Image
+        src={scriptlyLogo}
+        className="navbar-logo"
+        style={{ cursor: "pointer" }}
+        onClick={() => navigate("/")}
+      />
       {cookieExists && (
         <Menu>
           <MenuButton

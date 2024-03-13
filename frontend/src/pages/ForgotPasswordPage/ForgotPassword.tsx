@@ -1,9 +1,13 @@
-import { Button, Heading, Input, Text } from "@chakra-ui/react";
+import { Image, Input, Stack, Text } from "@chakra-ui/react";
 import NavBar from "../../components/NavBar";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import img from "../../assets/forgot-password.gif";
+import GitFooter from "../../components/GitFooter";
+import { FcGoogle } from "react-icons/fc";
+import "./forgotpassword.css";
 
 const ForgotPassword = () => {
   const [emailField, setEmailField] = useState("");
@@ -54,28 +58,54 @@ const ForgotPassword = () => {
     } catch (error) {
       console.error("Error in forgot password component", error);
       showErrorAlert(
-        "Oops! Something went wrong. Please double-check your OTP and try again."
+        "Oops! Something went wrong. Please double-check your email and try again."
       );
     }
   };
   return (
-    <div>
+    <>
       <NavBar />
-      <Heading>Reset Password</Heading>
-      <Text>
-        Please provide your email address to receive a link for password reset.
-      </Text>
-      <Input
-        focusBorderColor="pink.400"
-        placeholder="Enter your email"
-        onChange={handleChange}
-        value={emailField}
-        type="email"
-      />
-      <Button colorScheme="purple" onClick={handleClick}>
-        Send Link
-      </Button>
-    </div>
+      <div className="fp-outer-container">
+        <div className="fp-grid">
+          <div className="fp-details-box">
+            <Text className="fp-box-heading">Forgot Password?</Text>
+            <Text className="fp-box-text">
+              Enter your email blow to receive password reset instruction.
+            </Text>
+            <label className="fp-box-label">Email*</label>
+            <Input
+              focusBorderColor="pink.400"
+              placeholder="Abc@1234"
+              onChange={handleChange}
+              value={emailField}
+              type="email"
+              className="fp-box-input"
+            />
+            <Stack className="fp-btn-group" spacing={5}>
+              <button onClick={handleClick} className="custom-btn fp-box-btn">
+                Submit
+              </button>
+              <p>or</p>
+              <button
+                className=" custom-btn fp-google-btn"
+                onClick={() =>
+                  (window.location.href = import.meta.env.VITE_GOOGLE_AUTH_URL)
+                }
+              >
+                <p className="google-btn-text">
+                  <FcGoogle size={25} />
+                  Sign in with Google
+                </p>
+              </button>
+            </Stack>
+          </div>
+          <div className="fp-img-box">
+            <Image src={img} />
+          </div>
+        </div>
+      </div>
+      <GitFooter />
+    </>
   );
 };
 

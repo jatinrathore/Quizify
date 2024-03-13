@@ -53,6 +53,13 @@
   transform: translateY(2px);
 }
 
+.signup-google-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
 @media only screen and (max-width: 600px) {
   .signup-container {
     padding: 1rem 1rem;

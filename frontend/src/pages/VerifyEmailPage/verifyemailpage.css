@@ -1,0 +1,104 @@
+.ev-outer-container {
+  min-height: 100%;
+  height: auto;
+  max-height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.ev-grid {
+  display: grid;
+  width: 55rem;
+  height: 25rem;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  gap: 10px;
+  box-shadow: 0 14px 28px rgba(121, 108, 108, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.ev-details-box {
+  width: 20rem;
+}
+
+.ev-box-heading {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.ev-box-text {
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.ev-box-label {
+  font-weight: 600;
+}
+
+.ev-box-input {
+  margin-bottom: 50px;
+}
+
+.ev-custom-btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background: #f3ccf3;
+  color: white;
+  font-weight: 500;
+}
+
+.ev-custom-btn:hover {
+  background: linear-gradient(to right, #d8b4f8, #f3ccf3);
+}
+
+.ev-custom-btn:active {
+  transform: translateY(2px);
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  /* Styles for medium screens go here */
+
+  .ev-grid {
+    width: 40rem;
+  }
+
+  .ev-details-box {
+    width: 15rem;
+  }
+
+  .ev-box-heading {
+    font-size: 1rem;
+  }
+
+  .ev-box-text {
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+  }
+
+  .ev-box-label {
+    font-size: 0.8rem;
+  }
+
+  .ev-box-input {
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* Styles for small screens go here */
+  .ev-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ev-img-box {
+    display: none;
+  }
+}
