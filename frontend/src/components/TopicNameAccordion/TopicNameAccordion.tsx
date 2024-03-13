@@ -8,8 +8,8 @@ import {
 } from "@chakra-ui/react";
 import useQuestions from "../../hooks/useQuestions";
 import useQuestionsStore from "../../store";
-import "./TopicNameAccordion.css";
 import StringUtils from "../../services/handleStrings";
+import "./topicnameaccordion.css";
 
 interface Props {
   title: string;

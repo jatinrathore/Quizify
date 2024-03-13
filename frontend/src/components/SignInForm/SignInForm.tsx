@@ -21,9 +21,9 @@ import {
 import loginUser from "../../services/loginUser";
 import { toast } from "react-toastify";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import "./LoginForm.css";
+import "./signinform.css";
 
-const LoginForm = () => {
+const SigninForm = () => {
   const [show, setShow] = useState(false);
   const [isLoading, setLoading] = useState(false);
   const [idForVerify, setIdForVerify] = useState("");
@@ -105,9 +105,9 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="container">
+    <div className="signin-container">
       <div className="heading">
-        <Text style={{ color: "#45474b", marginBottom: "50px" }}>Log In</Text>
+        <Text>Sign In</Text>
       </div>
       <Form onSubmit={handleLogin}>
         <div className="input-fields--box">
@@ -124,7 +124,7 @@ const LoginForm = () => {
                 onChange={handleChange}
                 value={formData.email}
                 name="email"
-                className="box__input"
+                className="box-input"
               />
             </InputGroup>
 
@@ -139,7 +139,7 @@ const LoginForm = () => {
                 name="password"
                 value={formData.password}
                 onChange={handleChange}
-                className="box__input"
+                className="box-input"
               />
               <InputRightElement width="4.5rem">
                 <Button h="1.75rem" size="sm" onClick={() => setShow(!show)}>
@@ -148,7 +148,12 @@ const LoginForm = () => {
               </InputRightElement>
             </InputGroup>
             {errors.email && (
-              <Alert status="error" borderRadius="5px" fontSize=".9rem">
+              <Alert
+                status="error"
+                borderRadius="5px"
+                fontSize=".9rem"
+                padding="5px"
+              >
                 <AlertIcon />
                 {errors.email}
               </Alert>
@@ -173,41 +178,31 @@ const LoginForm = () => {
             <Text>Forgot Password?</Text>
           </Link>
         </div>
-        <Box
-          className="buttons"
-          style={{
-            textAlign: "center",
-            marginTop: "20px",
-            marginBottom: "1rem",
-            display: "flex",
-            flexDirection: "column",
-            gap: "10px",
-          }}
-        >
-          <Button colorScheme="orange" type="submit" isDisabled={isLoading}>
+        <Box className="signin-buttons">
+          <button className="custom-button" type="submit" disabled={isLoading}>
             {isLoading ? "Logging in..." : "Log in"}
             {isLoading && (
               <Spinner
                 thickness="2px"
                 emptyColor="gray.200"
                 size="sm"
-                color="orange"
+                color="violet"
               />
             )}
-          </Button>
+          </button>
 
-          <Button
-            colorScheme="red"
+          <button
+            className="custom-button"
             onClick={() =>
               (window.location.href = import.meta.env.VITE_GOOGLE_AUTH_URL)
             }
           >
             Sign in with Google
-          </Button>
+          </button>
         </Box>
       </Form>
     </div>
   );
 };
 
-export default LoginForm;
+export default SigninForm;

@@ -2,7 +2,7 @@ import { Box } from "@chakra-ui/react";
 import useQuestions from "../../hooks/useQuestions";
 import { ReactNode, useState } from "react";
 import { TiTick } from "react-icons/ti";
-import "./QuestionCard.css";
+import "./questioncard.css";
 
 interface Props {
   question: string;
@@ -56,41 +56,57 @@ const QuestionCard = ({
           className={`opt-area ${checkIfAnswer(options[0])}`}
           onClick={() => handleClick(options[0])}
         >
-          <p className="opt-box">A</p>
-          <p className="opt-text">{options[0]}</p>
-          <p className="opt-icon">
-            <TiTick />{" "}
-          </p>
+          <div>
+            <p className="opt-box">A</p>
+          </div>
+          <div>
+            <p className="opt-text">{options[0]}</p>
+            <p className="opt-icon">
+              <TiTick />{" "}
+            </p>
+          </div>
         </Box>
         <Box
           className={`opt-area ${checkIfAnswer(options[1])}`}
           onClick={() => handleClick(options[1])}
         >
-          <p className="opt-box">B</p>
-          <p className="opt-text">{options[1]}</p>
-          <p className="opt-icon">
-            <TiTick />{" "}
-          </p>
+          <div>
+            <p className="opt-box">B</p>
+          </div>
+          <div>
+            <p className="opt-text">{options[1]}</p>
+            <p className="opt-icon">
+              <TiTick />{" "}
+            </p>
+          </div>
         </Box>
         <Box
           className={`opt-area ${checkIfAnswer(options[2])}`}
           onClick={() => handleClick(options[2])}
         >
-          <p className="opt-box">C</p>
-          <p className="opt-text">{options[2]}</p>
-          <p className="opt-icon">
-            <TiTick />{" "}
-          </p>
+          <div>
+            <p className="opt-box">C</p>
+          </div>
+          <div>
+            <p className="opt-text">{options[2]}</p>
+            <p className="opt-icon">
+              <TiTick />{" "}
+            </p>
+          </div>
         </Box>
         <Box
           className={`opt-area ${checkIfAnswer(options[3])}`}
           onClick={() => handleClick(options[3])}
         >
-          <p className="opt-box">D</p>
-          <p className="opt-text">{options[3]}</p>
-          <p className="opt-icon">
-            <TiTick />{" "}
-          </p>
+          <div>
+            <p className="opt-box">D</p>
+          </div>
+          <div>
+            <p className="opt-text">{options[3]}</p>
+            <p className="opt-icon">
+              <TiTick />{" "}
+            </p>
+          </div>
         </Box>
       </div>
       <div className="question-card-bg-icon">{children}</div>

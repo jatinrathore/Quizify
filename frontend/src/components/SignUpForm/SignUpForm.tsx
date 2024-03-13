@@ -19,13 +19,9 @@ import {
 } from "@chakra-ui/react";
 import registerUser from "../../services/registerUser";
 import { toast } from "react-toastify";
-import "./SignUpForm.css";
+import "./signupform.css";
 
-interface Props {
-  onSignUpSuccess: () => void;
-}
-
-const SignUpForm = ({ onSignUpSuccess }: Props) => {
+const SignUpForm = () => {
   //password input state handler
   const [show, setShow] = useState(false);
   const [isLoading, setLoading] = useState(false);
@@ -38,8 +34,7 @@ const SignUpForm = ({ onSignUpSuccess }: Props) => {
     password: "",
   });
 
-  const passwordRequirements =
-    "Password should be at least 8 characters, including at least one capital letter and one numeric or special character.";
+  const passwordRequirements = "Password Example : Abc@1234";
 
   const showErrorAlert = (message: string) => {
     toast.warn(message, {
@@ -86,7 +81,6 @@ const SignUpForm = ({ onSignUpSuccess }: Props) => {
       } else if (data.response && data.response.status === 201) {
         toast.info("User created successfully, Please Verify your Email.");
         navigate(`/verify-email/${data.userId}`);
-        onSignUpSuccess();
         setFormData({ name: "", email: "", password: "" });
       }
     } catch (error) {
@@ -98,14 +92,14 @@ const SignUpForm = ({ onSignUpSuccess }: Props) => {
   };
 
   return (
-    <div className="container">
-      <div className="heading">
-        <Text style={{ color: "#45474b", marginBottom: "50px" }}>Sign Up</Text>
+    <div className="signup-container">
+      <div className="signup-heading">
+        <Text>Sign Up</Text>
       </div>
       <Form onSubmit={handleSubmit}>
-        <div className="input-fields--box">
-          <Stack spacing={5}>
-            <Text className="input-fields--heading">
+        <div className="signup-input-fields--box">
+          <Stack spacing={3}>
+            <Text className="signup-input-fields--heading">
               Join Scriptly today! Sign up now to get started.
             </Text>
             <InputGroup>
@@ -118,6 +112,7 @@ const SignUpForm = ({ onSignUpSuccess }: Props) => {
                 onChange={handleChange}
                 value={formData.name}
                 name="name"
+                className="signup-box-input"
               />
             </InputGroup>
 
@@ -130,6 +125,7 @@ const SignUpForm = ({ onSignUpSuccess }: Props) => {
                 onChange={handleChange}
                 value={formData.email}
                 name="email"
+                className="signup-box-input"
               />
             </InputGroup>
 
@@ -143,6 +139,7 @@ const SignUpForm = ({ onSignUpSuccess }: Props) => {
                 name="password"
                 value={formData.password}
                 onChange={handleChange}
+                className="signup-box-input"
               />
               <InputRightElement width="4.5rem">
                 <Button h="1.75rem" size="sm" onClick={() => setShow(!show)}>
@@ -154,6 +151,7 @@ const SignUpForm = ({ onSignUpSuccess }: Props) => {
               <Alert
                 status="error"
                 maxWidth="26rem"
+                padding="5px"
                 borderRadius="5px"
                 fontSize=".9rem"
               >
@@ -167,22 +165,11 @@ const SignUpForm = ({ onSignUpSuccess }: Props) => {
             )}
           </Stack>
         </div>
-        <Box
-          className="buttons"
-          style={{
-            textAlign: "center",
-            marginTop: "30px",
-            marginBottom: "1rem",
-            display: "flex",
-            flexDirection: "column",
-            gap: "10px",
-          }}
-        >
-          <Button
-            colorScheme="orange"
+        <Box className="signup-buttons">
+          <button
             type="submit"
-            marginBottom="1rem"
-            isDisabled={isLoading}
+            disabled={isLoading}
+            className="signup-custom-button"
           >
             {isLoading ? "Signing up..." : "Sign up"}
             {isLoading && (
@@ -190,19 +177,18 @@ const SignUpForm = ({ onSignUpSuccess }: Props) => {
                 thickness="2px"
                 emptyColor="gray.200"
                 size="sm"
-                color="orange"
+                color="voilet"
               />
             )}
-          </Button>
-          {/* Not Working Properly */}
-          <Button
-            colorScheme="red"
+          </button>
+          <button
+            className="signup-custom-button"
             onClick={() =>
               (window.location.href = import.meta.env.VITE_GOOGLE_AUTH_URL)
             }
           >
             Sign up with Google
-          </Button>
+          </button>
         </Box>
       </Form>
     </div>

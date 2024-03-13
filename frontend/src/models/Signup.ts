@@ -9,7 +9,7 @@ export interface UserFormData {
 // schema validation of input fields
 const schema = Joi.object({
   name: Joi.string().min(4).max(50).required().trim(),
-  email: Joi.string().email({ tlds: false }).min(20).required().trim(),
+  email: Joi.string().email({ tlds: false }).min(15).required().trim(),
   password: Joi.string()
     .pattern(new RegExp("^(?=.*[A-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9]).{8,}$"))
     .required(),

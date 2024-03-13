@@ -2,5 +2,19 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 50px;
+  padding: 20px 40px;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer--container {
+    padding: 10px 20px;
+  }
+
+  .git-footer-text {
+    font-size: 12px;
+  }
+
+  .git-footer-logo {
+    height: 25px;
+  }
 }

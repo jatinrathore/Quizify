@@ -1,31 +1,37 @@
-.signup-container {
+.signin-container {
   padding: 1rem 2rem;
 }
 
-.signup-heading {
+.heading {
   color: #d8b4f8;
   margin-bottom: 2rem;
   text-align: center;
-  text-decoration: underline;
   font-weight: 500;
+  text-decoration: underline;
   font-family: monospace;
   font-size: 2rem;
 }
 
-.signup-input-fields--heading {
-  color: #45474b;
+.input-fields--heading {
   text-align: center;
-  font-size: 1.1rem;
   font-weight: 500;
-  text-decoration: none;
+  font-size: 1.1rem;
+  color: #45474b;
 }
 
-.signup-box-input {
+.box-input {
   height: 3rem;
   font-size: 1rem;
 }
 
-.signup-buttons {
+.forgot-password-container {
+  text-align: end;
+  margin-top: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.signin-buttons {
   text-align: center;
   margin: 1rem 0;
   display: flex;
@@ -33,7 +39,7 @@
   gap: 10px;
 }
 
-.signup-custom-button {
+.custom-button {
   background-color: #f3ccf3;
   border-radius: 50px;
   color: #45474b;
@@ -45,16 +51,16 @@
   transition: background-color 0.3s ease;
 }
 
-.signup-custom-button:hover {
+.custom-button:hover {
   background: linear-gradient(45deg, #f3ccf3, #d8b4f8);
 }
 
-.signup-custom-button:active {
+.custom-button:active {
   transform: translateY(2px);
 }
 
 @media only screen and (max-width: 600px) {
-  .signup-container {
+  .signin-container {
     padding: 1rem 1rem;
   }
 }

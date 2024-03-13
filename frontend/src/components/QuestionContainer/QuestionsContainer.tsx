@@ -13,8 +13,8 @@ import { Box, IconButton, SkeletonText, Stack } from "@chakra-ui/react";
 import { TbPlayerTrackNext } from "react-icons/tb";
 import { TbPlayerTrackPrev } from "react-icons/tb";
 import StringUtils from "../../services/handleStrings";
-import "./QuestionContainer.css";
 import { useEffect } from "react";
+import "./questioncontainer.css";
 
 const QuestionsContainer = () => {
   const { selectedGenre, page, setNextPage, setPrevPage } = useQuestionsStore();

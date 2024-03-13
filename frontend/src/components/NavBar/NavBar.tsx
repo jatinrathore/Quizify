@@ -14,18 +14,19 @@ import scriptlyLogo from "../../assets/quizify-high-resolution-logo-transparent.
 import { PiUserSquareDuotone } from "react-icons/pi";
 import LogoutModal from "../LogoutModal";
 import { CookieManager } from "../../services/handleCookies";
+import "./navbar.css";
 
 const NavBar = () => {
   const cookieExists = CookieManager.isCookieSet();
 
   return (
     <Box
-      margin="10px 0 10px 10px"
+      padding="20px 0 20px 20px"
       display="flex"
       justifyContent="space-between"
       alignItems="center"
     >
-      <Image src={scriptlyLogo} height="50px" />
+      <Image src={scriptlyLogo} className="navbar-logo" />
       {cookieExists && (
         <Menu>
           <MenuButton

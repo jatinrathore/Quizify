@@ -2,12 +2,12 @@ import useQuizQuestions from "../../hooks/useQuizQuestions";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { Link, Text } from "@chakra-ui/react";
 import useTimer from "../../hooks/useTimer";
-import "./QuizPage.css";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { CookieManager } from "../../services/handleCookies";
 import useQuestionsStore from "../../store";
 import QuizResult from "../../components/QuizResult";
+import "./quizpage.css";
 
 const QuizPage = () => {
   const navigate = useNavigate();

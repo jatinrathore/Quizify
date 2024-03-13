@@ -1,9 +1,9 @@
 import { Text } from "@chakra-ui/react";
 import QuestionsContainer from "../../components/QuestionContainer/QuestionsContainer";
 import SideBar from "../../components/SideBar";
-import "./LearningPage.css";
 import useQuestionsStore from "../../store";
 import { useNavigate } from "react-router-dom";
+import "./learningpage.css";
 
 const LearningPage = () => {
   const navigate = useNavigate();
