@@ -10,7 +10,7 @@ router.get("/google/callback", passport.authenticate("google", { failureRedirect
     console.log("Token Generated");
     res.cookie("quizify-token", token, {
         maxAge: 24 * 60 * 60 * 1000,
-    }).redirect(process.env.CLIENT_URL + "home")
+    }).redirect(process.env.CLIENT_URL)
 });
 
 

@@ -1,7 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import AccountManagePage from "./pages/AccountManagePage";
 import HomePage from "./pages/HomePage";
-import LearningPage from "./pages/LearningPage";
 import VerifyEmailPage from "./pages/VerifyEmailPage";
 import ForgotPasswordPage from "./pages/ForgotPasswordPage";
 import ResetPasswordPage from "./pages/ResetPasswordPage";
@@ -11,17 +10,15 @@ import DashboardPage from "./pages/DashboardPage";
 const router = createBrowserRouter([
   {
     path: "",
+    element: <DashboardPage />,
+  },
+  {
+    path: "/account-manage",
     element: <AccountManagePage />,
   },
   {
     path: "/home",
     element: <HomePage />,
-    children: [
-      {
-        index: true,
-        element: <LearningPage />,
-      },
-    ],
   },
   {
     path: "/verify-email/:id",
@@ -35,10 +32,6 @@ const router = createBrowserRouter([
   {
     path: "/quiz",
     element: <QuizPage />,
-  },
-  {
-    path: "/testing",
-    element: <DashboardPage />,
   },
 ]);
 

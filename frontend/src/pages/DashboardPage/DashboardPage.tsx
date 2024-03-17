@@ -43,41 +43,49 @@ const DashboardPage = () => {
               title="Java"
               subtitle="Ready to sharpen your Java skills? Start now!"
               children={<FaJava fontSize="40px" />}
+              genre="java"
             />
             <PracticeCard
               title="JavaScript"
               subtitle="JavaScript mastery starts here. Dive in now!"
               children={<TbBrandJavascript fontSize="40px" />}
+              genre="javascript"
             />
             <PracticeCard
               title="C++"
               subtitle="Start your C++ journey today! Let's begin."
               children={<SiCplusplus fontSize="40px" />}
+              genre="c++"
             />
             <PracticeCard
               title="English"
               subtitle="Enhance your English fluency! Practice now!"
               children={<RiEnglishInput fontSize="40px" />}
+              genre="english"
             />
             <PracticeCard
               title="General"
               subtitle="Expand your knowledge with engaging GK Qus."
               children={<BiWorld fontSize="40px" />}
+              genre="general knowledge"
             />
             <PracticeCard
               title="Aptitude"
               subtitle="Boost your aptitude skills with practice Qus."
               children={<GiBrain fontSize="40px" />}
+              genre="aptitude"
             />
             <PracticeCard
               title="HTML"
               subtitle="Unlock HTML's power with hands-on practice!"
               children={<TbFileTypeHtml fontSize="40px" />}
+              genre="html"
             />
             <PracticeCard
               title="CSS"
               subtitle="Level up your CSS skills with practice!"
               children={<TbBrandCss3 fontSize="40px" />}
+              genre="css"
             />
           </div>
         </div>

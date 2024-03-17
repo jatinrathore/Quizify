@@ -1,8 +1,9 @@
 import { Grid, GridItem } from "@chakra-ui/react";
 import { useEffect } from "react";
-import { Outlet, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import NavBar from "../../components/NavBar";
 import { CookieManager } from "../../services/handleCookies";
+import LearningPage from "../LearningPage";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -19,12 +20,10 @@ const HomePage = () => {
                       "main"`}
     >
       <GridItem area="nav">
-        <div style={{ borderBottom: "2px solid #E1F0DA" }}>
-          <NavBar />
-        </div>
+        <NavBar />
       </GridItem>
       <GridItem area="main">
-        <Outlet />
+        <LearningPage />
       </GridItem>
     </Grid>
   );

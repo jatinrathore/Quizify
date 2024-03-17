@@ -12,7 +12,7 @@ import {
   Heading,
 } from "@chakra-ui/react";
 import { GrCircleAlert } from "react-icons/gr";
-import { TbLogout2 } from "react-icons/tb";
+import { IoLogOutOutline } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { CookieManager } from "../../services/handleCookies";
@@ -32,9 +32,9 @@ const LogoutModal = () => {
 
   return (
     <>
-      <Box onClick={onOpen} color="red" display="flex" alignItems="center">
-        <TbLogout2 />
-        <Text marginLeft="8px">Log out</Text>
+      <Box onClick={onOpen} display="flex" alignItems="center">
+        <Text marginRight="8px">Log out</Text>
+        <IoLogOutOutline size="22px" />
       </Box>
 
       <Modal isOpen={isOpen} onClose={onClose}>

@@ -104,7 +104,7 @@ exports.generateVerifyTemplate = (name) => {
           <h1><i class="fa fa-check-circle" aria-hidden="true" style="color: #E6A1C3;"></i> Email verified</h1>
           <p><span style="color: #9DA4DB;">${name}</span> your email is verified</p>
             <p>Your account is now fully activated, and you can enjoy all the benefits of our platform.</p>
-            <a href="${process.env.CLIENT_URL}" class= "button">Go to app now</a>
+            <a href="${process.env.CLIENT_URL + "account-manage"}" class= "button">Go to app now</a>
           </div>
           </div>
         <div class="container" id="web">
@@ -197,7 +197,7 @@ module.exports.generateSuccessTemplate = () => {
   return `<html lang='en-US'> 
   <head>
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type' />
-    <title>Welcome to Arena Cloud Highlights</title>
+    <title>Quizify</title>
     <meta name='description' content='New Account Email Template.' />
     <style type='text/css'>
       a:hover {text-decoration: underline !important;}

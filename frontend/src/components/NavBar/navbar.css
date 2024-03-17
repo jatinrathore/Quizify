@@ -2,8 +2,42 @@
   height: 50px;
 }
 
+.navbar-text {
+  color: #f3ccf3;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  cursor: pointer;
+  margin-right: 1rem;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.navbar-text:active,
+.profile-btn:active {
+  transform: translateY(3px);
+}
+
+.navbar-right-box {
+  display: flex;
+  gap: 20px;
+}
+
+.profile-btn {
+  font-size: 1.2rem;
+  outline: none;
+  color: #f3ccf3;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
 @media only screen and (max-width: 600px) {
   .navbar-logo {
     height: 40px;
+  }
+
+  .navbar-text {
+    font-size: 0.8rem;
+    padding: 5px;
   }
 }

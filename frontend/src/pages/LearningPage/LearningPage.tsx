@@ -7,7 +7,7 @@ import "./learningpage.css";
 
 const LearningPage = () => {
   const navigate = useNavigate();
-  const { setSelectedEndpoint } = useQuestionsStore();
+  const setSelectedEndpoint = useQuestionsStore((s) => s.setSelectedEndpoint);
 
   const handleClick = (endpoint: string) => {
     setSelectedEndpoint(endpoint);

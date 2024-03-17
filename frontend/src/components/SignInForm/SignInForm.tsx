@@ -94,7 +94,7 @@ const SigninForm = () => {
         showErrorAlert("Network error occurred. Please try again later.");
       } else if (data.response && data.response.status === 200) {
         //on successful data retrieval
-        navigate("/home");
+        navigate("/");
         toast.info("Logged in successfully!");
       }
     } catch (error) {

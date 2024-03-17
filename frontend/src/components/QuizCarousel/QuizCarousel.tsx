@@ -4,9 +4,15 @@ import "./quizcarousel.css";
 import { useState } from "react";
 import { Button, Text } from "@chakra-ui/react";
 import { GiSandsOfTime } from "react-icons/gi";
+import useQuestionsStore from "../../store";
+import { useNavigate } from "react-router-dom";
+import { CookieManager } from "../../services/handleCookies";
 
 const QuizCarousel = () => {
   const [counter, setCounter] = useState(0);
+  const navigate = useNavigate();
+  const setSelectedEndpoint = useQuestionsStore((s) => s.setSelectedEndpoint);
+  const cookieExists = CookieManager.isCookieSet();
 
   let slideLength = 3;
 
@@ -25,6 +31,15 @@ const QuizCarousel = () => {
     setCounter((prev) => prev - 1);
   };
 
+  const handleClick = (endpoint: string) => {
+    if (!cookieExists) {
+      navigate("/account-manage");
+    } else {
+      setSelectedEndpoint(endpoint);
+      navigate("/quiz");
+    }
+  };
+
   return (
     <div className="qc-area">
       <div
@@ -40,7 +55,11 @@ const QuizCarousel = () => {
             Dive into the world of programming with MCQs covering Java,
             JavaScript, and C++.
           </Text>
-          <Button colorScheme="pink" fontSize="20px">
+          <Button
+            colorScheme="pink"
+            fontSize="20px"
+            onClick={() => handleClick("prog-lang")}
+          >
             Take Quiz Now!
           </Button>
         </div>
@@ -61,7 +80,11 @@ const QuizCarousel = () => {
             Test your knowledge in general knowledge, aptitude, and English with
             our comprehensive MCQs.
           </Text>
-          <Button colorScheme="orange" fontSize="20px">
+          <Button
+            colorScheme="orange"
+            fontSize="20px"
+            onClick={() => handleClick("general")}
+          >
             Take Quiz Now!
           </Button>
         </div>
@@ -82,7 +105,11 @@ const QuizCarousel = () => {
             "Explore HTML, CSS, and JavaScript concepts with interactive MCQs
             for web enthusiasts.
           </Text>
-          <Button colorScheme="messenger" fontSize="20px">
+          <Button
+            colorScheme="messenger"
+            fontSize="20px"
+            onClick={() => handleClick("web-dev")}
+          >
             Take Quiz Now!
           </Button>
         </div>

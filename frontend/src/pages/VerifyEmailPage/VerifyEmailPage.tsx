@@ -48,7 +48,7 @@ const VerifyEmailPage = () => {
 
       if (data.response.status === 200) {
         setOTP("");
-        navigate("/");
+        navigate("/account-manage");
         return toast.info(
           "Your email has been successfully verified. Please login."
         );
