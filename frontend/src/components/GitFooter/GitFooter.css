@@ -1,12 +1,29 @@
-.footer--container {
+.git-footer-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px 40px;
 }
 
+.git-footer-text {
+  display: flex;
+  align-items: center;
+  color: #e9a8f2;
+  gap: 5px;
+}
+
+.git-footer-text:hover,
+.git-footer-logo:hover {
+  color: #c476cf;
+}
+
+.git-footer-logo {
+  font-size: 30px;
+  color: #e9a8f2;
+}
+
 @media only screen and (max-width: 600px) {
-  .footer--container {
+  .git-footer-container {
     padding: 10px 20px;
   }
 
@@ -15,6 +32,6 @@
   }
 
   .git-footer-logo {
-    height: 25px;
+    font-size: 18px;
   }
 }

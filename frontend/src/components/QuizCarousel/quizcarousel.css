@@ -1,0 +1,111 @@
+.qc-area {
+  width: 100%;
+  height: 19rem;
+  position: relative;
+}
+
+.slide {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide-lang {
+  background: rgb(248, 180, 235);
+  background: linear-gradient(
+    248deg,
+    rgba(248, 180, 235, 1) 50%,
+    rgba(243, 204, 243, 1) 100%
+  );
+}
+
+.slide-general {
+  background: linear-gradient(135deg, #f8c291, #f6e58d);
+}
+
+.slide-web {
+  background: rgb(2, 148, 232);
+  background: linear-gradient(
+    96deg,
+    rgba(2, 148, 232, 1) 0%,
+    rgba(89, 189, 209, 1) 100%
+  );
+}
+
+.qc-slide-details {
+  width: 70%;
+  text-align: start;
+  position: absolute;
+  top: 4rem;
+  left: 5rem;
+}
+
+.slide-details-title {
+  font-size: 3rem;
+  color: white;
+}
+
+.slide-details-subtitle {
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.qc-slide-icon {
+  color: white;
+  opacity: 0.2;
+  position: absolute;
+  font-size: 25rem;
+  rotate: 20deg;
+  top: -15px;
+  right: 0;
+}
+
+.qc-btn {
+  font-size: 2.2rem;
+  color: rgba(255, 255, 255, 0.466);
+}
+
+.qc-btn:hover {
+  color: white;
+}
+
+.qc-btn:active {
+  transform: translateY(2px);
+}
+
+.qc-btn-right {
+  display: flex;
+  height: 100%;
+  position: absolute;
+  right: 20px;
+  top: 0;
+}
+
+.qc-btn-left {
+  display: flex;
+  height: 100%;
+  position: absolute;
+  left: 20px;
+  top: 0;
+}
+
+.highlight-boxes {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top: 18rem;
+  gap: 5px;
+}
+
+.slide-box {
+  height: 3px;
+  width: 30px;
+  background-color: rgba(245, 245, 245, 0.521);
+  transition: background-color 0.3s ease-in;
+}
+
+.selected {
+  background-color: white;
+}

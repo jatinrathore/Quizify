@@ -23,10 +23,13 @@ const NavBar = () => {
 
   return (
     <Box
+      borderRadius={10}
       padding="20px 0 20px 20px"
       display="flex"
       justifyContent="space-between"
       alignItems="center"
+      boxShadow={"rgba(0, 0, 0, 0.04) 0px 3px 5px"}
+      marginBottom={4}
     >
       <Image
         src={scriptlyLogo}
