@@ -1,4 +1,4 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Text } from "@chakra-ui/react";
 import GitFooter from "../../components/GitFooter";
 import NavBar from "../../components/NavBar";
 import { TbBrandCss3 } from "react-icons/tb";

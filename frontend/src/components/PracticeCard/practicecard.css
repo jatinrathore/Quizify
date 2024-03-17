@@ -73,3 +73,68 @@
 .cc-btn-title {
   font-size: 0.8rem;
 }
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  /* Styles for medium screens go here */
+
+  .db-cc-card:not(:first-child) {
+    margin-left: -65px;
+  }
+
+  .db-cc-card {
+    width: 10rem;
+  }
+
+  .db-cc-title {
+    font-size: 1.1rem;
+  }
+
+  .db-cc-subtitle {
+    font-size: 0.6rem;
+  }
+}
+
+/* Scrolling div for cards */
+@media only screen and (max-width: 1023px) {
+  /* Styles for screens less than 1024px wide go here */
+  .db-cc-card:not(:first-child) {
+    margin-left: 0;
+  }
+
+  .db-cc-card:hover {
+    transform: none;
+    transition: 0.6s ease-out;
+  }
+
+  .db-cc-card:hover ~ .db-cc-card {
+    left: 0;
+  }
+
+  .db-cc-title {
+    font-size: 1rem;
+  }
+
+  .db-cc-subtitle {
+    display: none;
+  }
+
+  .db-cc-card {
+    align-items: center;
+    width: 9rem;
+  }
+
+  .cc-card-btn {
+    padding: 5px;
+  }
+
+  .cc-btn-title {
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* Styles for small screens go here */
+  .db-cc-title {
+    display: none;
+  }
+}

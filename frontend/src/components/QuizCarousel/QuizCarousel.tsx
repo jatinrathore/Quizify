@@ -6,7 +6,6 @@ import { Button, Text } from "@chakra-ui/react";
 import { GiSandsOfTime } from "react-icons/gi";
 
 const QuizCarousel = () => {
-  let sliders = ["A", "B", "C", "D"];
   const [counter, setCounter] = useState(0);
 
   let slideLength = 3;
@@ -78,10 +77,10 @@ const QuizCarousel = () => {
         }}
       >
         <div className="qc-slide-details">
-          <Text className="slide-details-title">Web Development Quiz</Text>
+          <Text className="slide-details-title">Web Dev Quiz</Text>
           <Text className="slide-details-subtitle">
-            Explore HTML, CSS, and JavaScript concepts with our interactive MCQs
-            designed for web development enthusiasts.
+            "Explore HTML, CSS, and JavaScript concepts with interactive MCQs
+            for web enthusiasts.
           </Text>
           <Button colorScheme="messenger" fontSize="20px">
             Take Quiz Now!

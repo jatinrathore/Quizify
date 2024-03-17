@@ -57,16 +57,72 @@
 
 .inner-container-two {
   margin-top: 3rem;
+  width: 80%;
 }
 
 .db-categories {
   font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
+  color: #45474b;
 }
 
 .db-cards-container {
   height: fit-content;
   width: fit-content;
   display: flex;
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  /* Styles for medium screens go here */
+  .inner-container-two {
+    margin-top: 2rem;
+  }
+}
+
+/* Scrolling div for cards */
+@media only screen and (max-width: 1023px) {
+  /* Styles for screens less than 1024px wide go here */
+  .db-cards-container {
+    background-color: whitesmoke;
+    border-radius: 20px;
+    width: 100%;
+    padding: 20px;
+    gap: 10px;
+    overflow-x: auto; /* Add scrollbar horizontally */
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    white-space: nowrap; /* Prevent cards from wrapping */
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* Styles for small screens go here */
+  .db-inner-container {
+    width: 90%;
+    padding: 20px 20px;
+  }
+
+  .inner-container-two {
+    width: 90%;
+    margin-top: 1.8rem;
+  }
+
+  .db-title {
+    font-size: 1.2rem;
+  }
+
+  .db-subtitle {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  .db-categories {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .db-cards-container {
+    padding: 20px;
+    gap: 10px;
+  }
 }

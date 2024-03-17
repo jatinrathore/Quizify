@@ -109,3 +109,43 @@
 .selected {
   background-color: white;
 }
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  /* Styles for medium screens go here */
+  .slide-details-title {
+    font-size: 2.5rem;
+    color: white;
+  }
+
+  .slide-details-subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* Styles for small screens go here */
+  .slide-details-title {
+    font-size: 1.5rem;
+  }
+
+  .slide-details-subtitle {
+    font-size: 0.7rem;
+  }
+
+  .qc-slide-details {
+    text-align: start;
+    position: absolute;
+    top: 5rem;
+    left: 3rem;
+  }
+
+  .qc-slide-icon {
+    color: white;
+    opacity: 0.2;
+    position: absolute;
+    font-size: 18rem;
+    rotate: 20deg;
+    top: 0px;
+    right: -4rem;
+  }
+}
