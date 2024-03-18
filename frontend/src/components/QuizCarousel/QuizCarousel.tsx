@@ -59,6 +59,7 @@ const QuizCarousel = () => {
             colorScheme="pink"
             fontSize="20px"
             onClick={() => handleClick("prog-lang")}
+            zIndex={1}
           >
             Take Quiz Now!
           </Button>
@@ -84,6 +85,7 @@ const QuizCarousel = () => {
             colorScheme="orange"
             fontSize="20px"
             onClick={() => handleClick("general")}
+            zIndex={1}
           >
             Take Quiz Now!
           </Button>
@@ -102,13 +104,14 @@ const QuizCarousel = () => {
         <div className="qc-slide-details">
           <Text className="slide-details-title">Web Dev Quiz</Text>
           <Text className="slide-details-subtitle">
-            "Explore HTML, CSS, and JavaScript concepts with interactive MCQs
-            for web enthusiasts.
+            Explore HTML, CSS, and JavaScript concepts with interactive MCQs for
+            web enthusiasts.
           </Text>
           <Button
             colorScheme="messenger"
             fontSize="20px"
             onClick={() => handleClick("web-dev")}
+            zIndex={1}
           >
             Take Quiz Now!
           </Button>

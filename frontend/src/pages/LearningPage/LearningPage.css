@@ -17,13 +17,38 @@
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
 
+.c-aside-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.582);
+  margin-bottom: 1rem;
+}
+
 .container-main {
   margin: 10px;
   padding: 10px;
   border-radius: 10px;
 }
 
+.c-main-heading-box {
+  padding: 2px;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.c-main-heading {
+  margin-left: 5px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.582);
+  text-transform: uppercase;
+}
+
 .container-aside-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   padding: 10px;
   min-height: 85dvh;
   height: auto;
@@ -31,4 +56,180 @@
   border-radius: 10px;
   margin: 10px;
   box-shadow: -2.4px 2.4px 3.2px rgba(0, 0, 0, 0.15);
+}
+
+.r-aside-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.582);
+}
+
+.ra-card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.r-aside-card {
+  border-radius: 10px;
+  padding: 0.8rem;
+  background-color: #f3ccf3;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.ra-card-title {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.ra-card-subtitle {
+  font-size: 0.8rem;
+  text-align: start;
+  margin-bottom: 10px;
+}
+
+.ra-card-btn {
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  background: linear-gradient(132deg, #ec56ece1, wheat);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.ra-card-btn:hover {
+  transform: translateY(-3px);
+  transition: all 0.3s;
+}
+
+.ra-card-btn:active {
+  transform: translateY(0px);
+}
+
+.lp-aside-btn {
+  display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  .learning-page-container {
+    display: grid;
+    grid-template-columns: 16rem 1fr;
+    grid-template-rows: 14rem 1fr;
+  }
+
+  .container-aside {
+    grid-area: 1 / 1 / 6 / 2;
+  }
+  .container-aside-right {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  .container-main {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+
+  .container-aside-right {
+    min-height: auto;
+  }
+
+  .ra-card-container {
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-evenly;
+  }
+
+  .r-aside-card {
+    padding: 0.5rem;
+  }
+
+  .ra-card-title {
+    font-size: 0.8rem;
+  }
+
+  .ra-card-subtitle {
+    font-size: 0.6rem;
+  }
+
+  .ra-card-btn {
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 0.6rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .learning-page-container {
+    grid-template-columns: 14rem 1fr;
+    grid-template-rows: 11rem 1fr;
+  }
+
+  .c-aside-heading {
+    font-size: 1.2rem;
+  }
+
+  .c-main-heading {
+    font-size: 1.4rem;
+  }
+
+  .r-aside-heading {
+    font-size: 1.2rem;
+  }
+
+  .r-aside-card {
+    padding: 0.8rem;
+  }
+
+  .ra-card-title {
+    margin-bottom: 0.5rem;
+  }
+
+  .ra-card-subtitle {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .learning-page-container {
+    display: block;
+    position: relative;
+  }
+
+  .lp-aside-btn {
+    display: block;
+    position: absolute;
+    top: -12px;
+    font-size: 20px;
+    left: 160px;
+    z-index: 4;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .container-aside {
+    margin: 0;
+    width: 45%;
+    height: 100%;
+    position: absolute;
+    top: -20px;
+    z-index: 2;
+    background-color: white;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .aside-close {
+    transform: translateX(-200px);
+  }
+
+  .aside-close-btn {
+    left: 10px;
+    padding: 3px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  .c-main-heading {
+    text-align: end;
+    margin-right: 10px;
+  }
+
+  .container-aside-right {
+    display: none;
+  }
 }

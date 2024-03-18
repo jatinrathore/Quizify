@@ -1,6 +1,6 @@
 import useQuizQuestions from "../../hooks/useQuizQuestions";
 import { IoIosArrowRoundBack } from "react-icons/io";
-import { Link, Text } from "@chakra-ui/react";
+import { Box, Link, Text } from "@chakra-ui/react";
 import useTimer from "../../hooks/useTimer";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -25,12 +25,12 @@ const QuizPage = () => {
   const { data, isLoading } = useQuizQuestions(selectedEndpoint);
 
   const [selectedOption, setSelectedOption] = useState<string>("");
-  const { minutes, seconds, startTimer, timerRunning, stopTimer } = useTimer(1);
+  const { minutes, seconds, startTimer, timerRunning, stopTimer } = useTimer(5);
   const [index, setIndex] = useState(0);
   const [correctAnswer, setCorrectAnswer] = useState<number>(0);
 
   const questionObject = data?.data[index];
-  const totalQuestions = data && data?.data.length - 1;
+  const totalQuestions = data && data?.data.length;
 
   const formattedQuestion = questionObject?.questionTitle.replace(
     /<linebreak>/g,
@@ -53,12 +53,18 @@ const QuizPage = () => {
   if (index === totalQuestions || !timerRunning) {
     if (timerRunning) stopTimer();
 
-    return <QuizResult questions={data?.data || []} />;
+    return (
+      <QuizResult
+        questions={data?.data || []}
+        totalQuestions={totalQuestions || 15}
+        correctAnswer={correctAnswer}
+      />
+    );
   }
 
   return (
     <div className="quiz-container">
-      <div className="center-box">
+      <div className="qc-center-box">
         <div className="header">
           <Link href="/home">
             <span className="back-btn">
@@ -75,40 +81,44 @@ const QuizPage = () => {
         <div className="quiz-question-container">
           <div className="question-box">
             <div className="title-box">
-              <p
-                dangerouslySetInnerHTML={{ __html: formattedQuestion || "" }}
-              ></p>
+              <Box display="flex" gap="5px" fontWeight="700">
+                <p>{`${index + 1}.`}</p>
+                <p
+                  dangerouslySetInnerHTML={{ __html: formattedQuestion || "" }}
+                  className="qb-question"
+                ></p>
+              </Box>
               <p className="question-difficulty">
                 {questionObject?.difficultyLevel}
               </p>
             </div>
             <div className="options-box">
               <span
-                className={`option`}
+                className={`ob-option`}
                 onClick={() => handleClick(questionObject?.options[0] || "")}
               >
-                <span>A</span>
+                <span style={{ marginRight: "10px" }}>A</span>
                 {questionObject?.options[0]}
               </span>
               <span
-                className={`option`}
+                className={`ob-option`}
                 onClick={() => handleClick(questionObject?.options[1] || "")}
               >
-                <span>B</span>
+                <span style={{ marginRight: "10px" }}>B</span>
                 {questionObject?.options[1]}
               </span>
               <span
-                className={`option`}
+                className={`ob-option`}
                 onClick={() => handleClick(questionObject?.options[2] || "")}
               >
-                <span>C</span>
+                <span style={{ marginRight: "10px" }}>C</span>
                 {questionObject?.options[2]}
               </span>
               <span
-                className={`option`}
+                className={`ob-option`}
                 onClick={() => handleClick(questionObject?.options[3] || "")}
               >
-                <span>D</span>
+                <span style={{ marginRight: "10px" }}>D</span>
                 {questionObject?.options[3]}
               </span>
             </div>

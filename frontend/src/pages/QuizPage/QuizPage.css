@@ -1,19 +1,21 @@
 .quiz-container {
-  background: wheat;
+  background: #f3ccf3;
+  color: rgba(0, 0, 0, 0.582);
   min-height: 100vh;
   height: auto;
   max-height: max-content;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 500;
 }
 
-.center-box {
+.qc-center-box {
   background-color: white;
   min-height: 27rem;
   height: auto;
   max-height: fit-content;
-  width: 55rem;
+  width: 70%;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   padding: 20px;
@@ -26,8 +28,21 @@
   justify-content: space-between;
 }
 
+.timer-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #d8b4f8;
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+  padding: 5px;
+  background-color: whitesmoke;
+}
+
 .title-box {
   display: flex;
+  align-items: start;
   justify-content: space-between;
   text-transform: capitalize;
 }
@@ -39,19 +54,51 @@
 }
 
 .quiz-question-container {
-  margin: 50px auto;
+  margin: 30px auto;
 }
 
 .options-box {
   display: flex;
   flex-direction: column;
+  gap: 10px;
   cursor: pointer;
 }
 
-.right {
-  background-color: green;
+.ob-option {
+  font-size: 0.9rem;
+  display: flex;
+  align-items: start;
+  background-color: #f3ccf3;
+  padding: 0.5rem;
+  border-radius: 10px;
+  width: 80%;
 }
 
-.wrong {
-  background-color: red;
+.ob-option:hover {
+  background-color: #d8b4f8;
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .qc-center-box {
+    width: 90%;
+  }
+
+  .timer-circle {
+    font-size: 0.8rem;
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .question-difficulty {
+    font-size: 0.7rem;
+  }
+
+  .title-box {
+    font-size: 0.9rem;
+  }
+
+  .ob-option {
+    font-size: 0.8rem;
+  }
 }

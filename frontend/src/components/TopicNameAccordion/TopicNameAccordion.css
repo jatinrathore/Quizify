@@ -44,3 +44,13 @@
   transition: transform 0.1s ease-out;
   background-color: #e9a8f2;
 }
+
+@media only screen and (max-width: 800px) {
+  .accordion-text {
+    font-size: 0.7rem;
+  }
+
+  .list-item-title {
+    font-size: 0.6rem;
+  }
+}

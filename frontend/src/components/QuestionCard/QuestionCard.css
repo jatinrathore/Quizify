@@ -104,3 +104,19 @@
 .crossed .opt-box {
   opacity: 0.3;
 }
+
+@media only screen and (max-width: 800px) {
+  .question-title {
+    font-size: 0.9rem;
+  }
+
+  .question-options {
+    font-size: 0.9rem;
+  }
+
+  .question-card-bg-icon {
+    top: -80px;
+    right: 10px;
+    font-size: 17rem;
+  }
+}

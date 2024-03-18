@@ -1,5 +1,6 @@
 .result-container {
-  background: wheat;
+  background: #f3ccf3;
+  color: rgba(0, 0, 0, 0.582);
   min-height: 100vh;
   height: auto;
   max-height: max-content;
@@ -12,7 +13,7 @@
   background-color: white;
   height: auto;
   max-height: fit-content;
-  width: 55rem;
+  width: 70%;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   padding: 20px;
@@ -24,4 +25,40 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+}
+
+.result-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.ri-heading {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+.ri-text {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.question-answer-box {
+  margin-top: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .result-center-box {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .result-center-box {
+    width: 90%;
+  }
 }
