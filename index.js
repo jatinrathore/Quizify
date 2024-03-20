@@ -18,7 +18,7 @@ app.use(session({
 }));
 app.use(express.json());
 app.use(cors({
-  origin: '*',
+  origin: 'https://quizify-web.netlify.app',
   credentials: true
 }));
 
