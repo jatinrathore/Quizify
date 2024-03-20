@@ -1,6 +1,6 @@
-import { create } from "zustand";
+import create from "zustand";
 
-interface QestionsStore {
+interface QuestionsStore {
   page: number;
   pageSize: number;
   selectedGenre: string;
@@ -11,18 +11,18 @@ interface QestionsStore {
   setPrevPage: () => void;
 }
 
-const useQuestionsStore = create<QestionsStore>((set) => ({
+const useQuestionsStore = create<QuestionsStore>((set) => ({
   page: 1,
   pageSize: 10,
   selectedGenre: "english",
   selectedEndpoint: "web-dev",
-  setSelectedGenre: (genre) =>
+  setSelectedGenre: (genre: string) =>
     set((store) => ({
       ...store,
       selectedGenre: genre,
       page: genre === store.selectedGenre ? store.page : 1,
     })),
-  setSelectedEndpoint: (endpoint) => {
+  setSelectedEndpoint: (endpoint: string) => {
     set((store) => ({ ...store, selectedEndpoint: endpoint }));
   },
   setNextPage: () => set((store) => ({ ...store, page: store.page + 1 })),
