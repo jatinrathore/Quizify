@@ -28,14 +28,14 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Deployment 
-const curDir = path.resolve();
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(curDir, "/frontend/dist")));
+// const curDir = path.resolve();
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static(path.join(curDir, "/frontend/dist")));
 
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(curDir, "frontend", "dist", "index.html"));
-  });
-}
+//   app.get("*", (req, res) => {
+//     res.sendFile(path.resolve(curDir, "frontend", "dist", "index.html"));
+//   });
+// }
 
 //routes
 require("./startup/routes")(app);
