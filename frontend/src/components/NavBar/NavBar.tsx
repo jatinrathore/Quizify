@@ -1,4 +1,4 @@
-import { Box, Image, Text } from "@chakra-ui/react";
+import { Box, Image } from "@chakra-ui/react";
 import scriptlyLogo from "../../assets/quizify-high-resolution-logo-transparent.png";
 import LogoutModal from "../LogoutModal";
 import { CookieManager } from "../../services/handleCookies";

@@ -1,0 +1,18 @@
+.lm-content-card {
+  background: white;
+  color: black;
+}
+
+@media only screen and (max-width: 600px) {
+  .lm-content-card {
+    margin: auto 200px;
+  }
+
+  .lm-heading {
+    font-size: 1.2rem;
+  }
+
+  .lm-subtext {
+    font-size: 0.9rem;
+  }
+}

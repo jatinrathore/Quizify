@@ -16,6 +16,7 @@ import { IoLogOutOutline } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { CookieManager } from "../../services/handleCookies";
+import "./logoutmodal.css";
 
 const LogoutModal = () => {
   const navigate = useNavigate();
@@ -33,19 +34,25 @@ const LogoutModal = () => {
   return (
     <>
       <Box onClick={onOpen} display="flex" alignItems="center">
-        <Text marginRight="8px">Log out</Text>
-        <IoLogOutOutline size="22px" />
+        <Text marginRight="8px" className="lm-logout-btn">
+          Log out
+        </Text>
+        <IoLogOutOutline size="22px" className="lm-logout-icon" />
       </Box>
 
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
-        <ModalContent bg="white" color="black" mt="200px">
+        <ModalContent className="lm-content-card" mt="200px">
           <ModalHeader>
             <GrCircleAlert color="red" fontSize={25} />
           </ModalHeader>
           <ModalBody>
-            <Heading fontSize={20}>Caution!</Heading>
-            <Text mt={4}>Are you sure you want to logout ?</Text>
+            <Heading fontSize={20} className="lm-heading">
+              Caution!
+            </Heading>
+            <Text mt={4} className="lm-subtext">
+              Are you sure you want to logout ?
+            </Text>
           </ModalBody>
 
           <ModalFooter>

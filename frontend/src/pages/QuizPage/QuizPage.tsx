@@ -24,7 +24,7 @@ const QuizPage = () => {
 
   const { data, isLoading } = useQuizQuestions(selectedEndpoint);
 
-  const [selectedOption, setSelectedOption] = useState<string>("");
+  const [_, setSelectedOption] = useState<string>("");
   const { minutes, seconds, startTimer, timerRunning, stopTimer } = useTimer(5);
   const [index, setIndex] = useState(0);
   const [correctAnswer, setCorrectAnswer] = useState<number>(0);
