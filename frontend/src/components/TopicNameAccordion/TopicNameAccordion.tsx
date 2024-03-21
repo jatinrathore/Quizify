@@ -9,7 +9,7 @@ import {
 import useQuestions from "../../hooks/useQuestions";
 import useQuestionsStore from "../../store";
 import StringUtils from "../../services/handleStrings";
-import "./topicnameaccordion.css";
+import "./topicnameaccordion1.css";
 
 interface Props {
   title: string;

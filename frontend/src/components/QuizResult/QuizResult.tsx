@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import QuestionsType from "../../models/Questions";
 import { IoIosArrowRoundBack } from "react-icons/io";
-import "./quizresult.css";
+import "./quizresult1.css";
 
 interface Props {
   questions: QuestionsType[];

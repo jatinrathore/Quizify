@@ -1,7 +1,7 @@
 import { FaRegCopyright } from "react-icons/fa";
 import { FaSquareGithub } from "react-icons/fa6";
 import { Link, Text } from "@chakra-ui/react";
-import "./gitfooter.css";
+import "./gitfooter1.css";
 
 const GitFooter = () => {
   return (

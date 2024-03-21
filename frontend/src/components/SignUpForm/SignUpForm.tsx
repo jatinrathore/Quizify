@@ -20,7 +20,7 @@ import {
 import registerUser from "../../services/registerUser";
 import { toast } from "react-toastify";
 import { FcGoogle } from "react-icons/fc";
-import "./signupform.css";
+import "./signupform1.css";
 
 const SignUpForm = () => {
   //password input state handler
