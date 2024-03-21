@@ -16,8 +16,8 @@ exports.mailTransport = () => nodemailer.createTransport({
   port: 465,
   secure: true,
   auth: {
-    user: "rathorejatin1234@gmail.com",
-    pass: "nrccvybmbxxuvvgf",
+    user: process.env.MAILTRAP_USERNAME,
+    pass: process.env.MAILTRAP_PASSWORD,
   }
 });
 
