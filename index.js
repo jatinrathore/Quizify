@@ -28,6 +28,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Deployment 
+
+app.use(express.static(path.join(__dirname, 'frontend')));
 // const curDir = path.resolve();
 // if (process.env.NODE_ENV === "production") {
 //   app.use(express.static(path.join(curDir, "/frontend/dist")));
