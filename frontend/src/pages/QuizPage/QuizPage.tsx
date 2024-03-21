@@ -6,8 +6,8 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { CookieManager } from "../../services/handleCookies";
 import useQuestionsStore from "../../store";
-import "./quizpage.css";
 import QuizResult from "../../components/QuizResult";
+import "./quizpage1.css";
 
 const QuizPage = () => {
   const navigate = useNavigate();
