@@ -4,8 +4,8 @@ import SideBar from "../../components/SideBar";
 import useQuestionsStore from "../../store";
 import { useNavigate } from "react-router-dom";
 import { PiListBold } from "react-icons/pi";
-import "./learningpage.css";
 import { useState } from "react";
+import "./learningpage1.css";
 
 const LearningPage = () => {
   const navigate = useNavigate();
