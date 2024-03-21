@@ -17,6 +17,8 @@ const PracticeCard = ({ title, subtitle, children, genre }: Props) => {
   const setSelectedGenre = useQuestionsStore((s) => s.setSelectedGenre);
 
   const handleClick = () => {
+    console.log("Haanji " ,cookieExists);
+
     if (!cookieExists) {
       navigate("/account-manage");
     } else {
