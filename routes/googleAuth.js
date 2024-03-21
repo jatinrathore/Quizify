@@ -12,6 +12,7 @@ router.get("/google/callback", passport.authenticate("google", { failureRedirect
         maxAge: 24 * 60 * 60 * 1000,
         sameSite: 'none', // Setting SameSite attribute to None
         secure: true,     // Ensuring the cookie is sent over HTTPS
+        domain: '.netlify.app' // Set the domain to allow third-party cookies across subdomains of Netlify
     }).redirect(process.env.CLIENT_URL)
 });
 
