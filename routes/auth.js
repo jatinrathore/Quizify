@@ -28,7 +28,6 @@ router.post("/", async (req, res) => {
             maxAge: 24 * 60 * 60 * 1000,
             sameSite: 'none', // Setting SameSite attribute to None
             secure: true,     // Ensuring the cookie is sent over HTTPS
-            domain: ["quizify-pt2a.onrender.com", 'quizify-flax.vercel.app'] // Setting the domain attribute to match the client's domain
         }).status(200).send({
             data: token, message: "Logged in Successfully", response: {
                 status: 200
