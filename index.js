@@ -27,9 +27,10 @@ app.use(cors({
 app.use(passport.initialize());
 app.use(passport.session());
 
+
+// app.use(express.static(path.join(__dirname, 'frontend')));
 // Deployment 
 
-app.use(express.static(path.join(__dirname, 'frontend')));
 // const curDir = path.resolve();
 // if (process.env.NODE_ENV === "production") {
 //   app.use(express.static(path.join(curDir, "/frontend/dist")));
