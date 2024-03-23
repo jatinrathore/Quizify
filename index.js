@@ -28,7 +28,7 @@ app.use(express.json());
 const apiProxy = createProxyMiddleware('/api', {
   target: 'https://quizify-pt2a.onrender.com', // Change this to your backend URL
   changeOrigin: true,
-  secure: true // Set it to true if your backend URL is HTTPS and has a valid certificate
+  secure: false // Set it to true if your backend URL is HTTPS and has a valid certificate
 });
 
 // Proxy API requests
