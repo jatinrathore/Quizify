@@ -28,9 +28,12 @@ app.use(express.json());
 const whitelist = ['https://quizify-learning.netlify.app'];
 const corsOptions = {
   origin: function (origin, callback) {
+    console.log("Origin:", origin);
     if (whitelist.indexOf(origin) !== -1 || !origin) {
+      console.log("Allowed by CORS");
       callback(null, true);
     } else {
+      console.log("Not allowed by CORS");
       callback(new Error('Not allowed by CORS'));
     }
   }
