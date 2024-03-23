@@ -38,13 +38,10 @@ const VerifyEmailPage = () => {
       return showErrorAlert("Invalid OTP entered. Please provide a valid OTP.");
 
     try {
-      const { data } = await axios.post(
-        `${import.meta.env.VITE_QUIZIFY_SERVER_URL}api/users/verify-email`,
-        {
-          userId: id,
-          otp: OTP,
-        }
-      );
+      const { data } = await axios.post(`/api/users/verify-email`, {
+        userId: id,
+        otp: OTP,
+      });
 
       if (data.response.status === 200) {
         setOTP("");

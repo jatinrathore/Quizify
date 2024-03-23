@@ -12,7 +12,7 @@ interface FetchResponseType {
 const useQuestions = () => {
   const cookie = CookieManager.getCookie();
 
-  const endpoint = `${import.meta.env.VITE_QUIZIFY_SERVER_URL}api/questions`;
+  const endpoint = `/api/questions`;
 
   const { selectedGenre, page, pageSize } = useQuestionsStore();
 

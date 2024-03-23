@@ -1,6 +1,6 @@
 import useQuizQuestions from "../../hooks/useQuizQuestions";
 import { IoIosArrowRoundBack } from "react-icons/io";
-import { Box, Link, Text } from "@chakra-ui/react";
+import { Box, Link, Spinner, Text } from "@chakra-ui/react";
 import useTimer from "../../hooks/useTimer";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -48,8 +48,6 @@ const QuizPage = () => {
     nextQuestion();
   };
 
-  if (isLoading) return <div>Loading...</div>;
-
   if (index === totalQuestions || !timerRunning) {
     if (timerRunning) stopTimer();
 
@@ -61,6 +59,17 @@ const QuizPage = () => {
       />
     );
   }
+
+  if (isLoading)
+    return (
+      <>
+        <div className="quiz-container">
+          <div className="qc-center-box">
+            <Spinner />
+          </div>
+        </div>
+      </>
+    );
 
   return (
     <div className="quiz-container">
@@ -78,6 +87,7 @@ const QuizPage = () => {
               .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`}</div>
           </div>
         </div>
+
         <div className="quiz-question-container">
           <div className="question-box">
             <div className="title-box">

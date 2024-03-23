@@ -1,0 +1,2737 @@
+[
+  {
+    "questionId": "apti_1",
+    "questionTitle": "A train running at the speed of 60 km/hr crosses a pole in 9 seconds. What is the length of the train?",
+    "options": ["120 metres", "180 metres", "324 metres", "150 metres"],
+    "answer": "150 metres",
+    "points": 2,
+    "topicName": "aptitude",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "apti_2",
+    "questionTitle": "A boat travels upstream at 10 km/hr and downstream at 18 km/hr. What is the speed of the boat in still water?",
+    "options": ["12 km/hr", "14 km/hr", "16 km/hr", "20 km/hr"],
+    "answer": "14 km/hr",
+    "points": 2,
+    "topicName": "aptitude",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "apti_3",
+    "questionTitle": "In how many different ways can the letters of the word 'LEADING' be arranged?",
+    "options": ["420", "840", "2520", "5040"],
+    "answer": "2520",
+    "points": 3,
+    "topicName": "aptitude",
+    "difficultyLevel": "hard"
+  },
+  {
+    "questionId": "apti_4",
+    "questionTitle": "If 20 men can build a wall in 6 days, how long will it take for 15 men to build the same wall?",
+    "options": ["8 days", "10 days", "12 days", "15 days"],
+    "answer": "8 days",
+    "points": 2,
+    "topicName": "aptitude",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "apti_5",
+    "questionTitle": "What is the least number which when divided by 8, 12, 15 and 20 leaves a remainder of 5 in each case?",
+    "options": ["115", "225", "335", "445"],
+    "answer": "225",
+    "points": 3,
+    "topicName": "aptitude",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "apti_6",
+    "questionTitle": "If a rope 22 meters long is cut into two pieces, such that the length of one piece is two-thirds of the length of the other, what is the length of the shorter piece?",
+    "options": ["6 meters", "8 meters", "10 meters", "12 meters"],
+    "answer": "8 meters",
+    "points": 2,
+    "topicName": "aptitude",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "apti_7",
+    "questionTitle": "If a car travels at a speed of 60 km/hr, how long will it take to cover a distance of 150 kilometers?",
+    "options": ["2.5 hours", "2 hours", "3 hours", "2.25 hours"],
+    "answer": "2.5 hours",
+    "points": 2,
+    "topicName": "aptitude",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "apti_8",
+    "questionTitle": "What is the value of 'x' in the equation 3x + 5 = 17?",
+    "options": ["4", "5", "6", "7"],
+    "answer": "4",
+    "points": 1,
+    "topicName": "aptitude",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "apti_9",
+    "questionTitle": "The average of five consecutive integers starting with 'm' is n. What is the average of five consecutive integers starting with (m + 2)?",
+    "options": ["(n + 2)", "(n + 3)", "(n + 4)", "(n + 5)"],
+    "answer": "(n + 2)",
+    "points": 2,
+    "topicName": "aptitude",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "apti_10",
+    "questionTitle": "What is the next number in the sequence: 2, 6, 12, 20, ...?",
+    "options": ["26", "30", "36", "42"],
+    "answer": "30",
+    "points": 2,
+    "topicName": "aptitude",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "apti_11",
+    "questionTitle": "If 3x - 7 = 2x + 1, what is the value of x?",
+    "options": ["4", "6", "8", "10"],
+    "answer": "8",
+    "points": 1,
+    "topicName": "aptitude",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "apti_12",
+    "questionTitle": "If a car travels at an average speed of 45 km/hr, how long will it take to cover a distance of 90 kilometers?",
+    "options": ["1 hour", "2 hours", "3 hours", "4 hours"],
+    "answer": "2 hours",
+    "points": 2,
+    "topicName": "aptitude",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "apti_13",
+    "questionTitle": "If 6x - 3 = 15, what is the value of x?",
+    "options": ["2", "3", "4", "5"],
+    "answer": "3",
+    "points": 1,
+    "topicName": "aptitude",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "apti_14",
+    "questionTitle": "Find the sum of first 20 natural numbers.",
+    "options": ["190", "200", "210", "220"],
+    "answer": "210",
+    "points": 2,
+    "topicName": "aptitude",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "apti_15",
+    "questionTitle": "If the ratio of the first to second is 2:3 and that of the second to the third is 5:8, what is the ratio of the first to the third?",
+    "options": ["1:3", "2:5", "3:8", "5:12"],
+    "answer": "5:12",
+    "points": 2,
+    "topicName": "aptitude",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "apti_16",
+    "questionTitle": "A train travels 360 kilometers in 4 hours. What is its speed in km/hr?",
+    "options": ["80", "90", "100", "110"],
+    "answer": "90",
+    "points": 2,
+    "topicName": "aptitude",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "apti_17",
+    "questionTitle": "If a car travels 180 kilometers in 3 hours, what is its speed in km/hr?",
+    "options": ["50", "60", "70", "80"],
+    "answer": "60",
+    "points": 2,
+    "topicName": "aptitude",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "apti_18",
+    "questionTitle": "If 4x - 7 = 5, what is the value of x?",
+    "options": ["3", "4", "5", "6"],
+    "answer": "3",
+    "points": 1,
+    "topicName": "aptitude",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "apti_19",
+    "questionTitle": "The product of two consecutive even integers is 120. What is the smaller integer?",
+    "options": ["8", "10", "12", "14"],
+    "answer": "10",
+    "points": 2,
+    "topicName": "aptitude",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "apti_20",
+    "questionTitle": "What is the next number in the sequence: 5, 10, 20, 40, ...?",
+    "options": ["60", "80", "100", "120"],
+    "answer": "80",
+    "points": 2,
+    "topicName": "aptitude",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "apti_21",
+    "questionTitle": "If 7x + 5 = 26, what is the value of x?",
+    "options": ["2", "3", "4", "5"],
+    "answer": "3",
+    "points": 1,
+    "topicName": "aptitude",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "apti_22",
+    "questionTitle": "What is the sum of the first 50 natural numbers?",
+    "options": ["1275", "1275", "1276", "1276"],
+    "answer": "1275",
+    "points": 2,
+    "topicName": "aptitude",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "apti_23",
+    "questionTitle": "If x = 2/3, what is the value of 3x - 1?",
+    "options": ["0", "1", "2", "3"],
+    "answer": "1",
+    "points": 1,
+    "topicName": "aptitude",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "apti_24",
+    "questionTitle": "The sum of two consecutive odd integers is 56. What is the smaller integer?",
+    "options": ["27", "28", "29", "30"],
+    "answer": "27",
+    "points": 2,
+    "topicName": "aptitude",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "apti_25",
+    "questionTitle": "If a car travels 240 kilometers in 4 hours, what is its speed in km/hr?",
+    "options": ["50", "60", "70", "80"],
+    "answer": "60",
+    "points": 2,
+    "topicName": "aptitude",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "apti_26",
+    "questionTitle": "What is the value of 'x' in the equation 2x + 3 = 11?",
+    "options": ["4", "5", "6", "7"],
+    "answer": "4",
+    "points": 1,
+    "topicName": "aptitude",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "apti_27",
+    "questionTitle": "Find the average of first 20 odd natural numbers.",
+    "options": ["10", "20", "30", "40"],
+    "answer": "20",
+    "points": 2,
+    "topicName": "aptitude",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "apti_28",
+    "questionTitle": "If 5x - 3 = 12, what is the value of x?",
+    "options": ["3", "4", "5", "6"],
+    "answer": "3",
+    "points": 1,
+    "topicName": "aptitude",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "apti_29",
+    "questionTitle": "What is the sum of first 30 natural numbers?",
+    "options": ["435", "465", "495", "525"],
+    "answer": "465",
+    "points": 2,
+    "topicName": "aptitude",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "apti_30",
+    "questionTitle": "The product of two consecutive integers is 240. What is the larger integer?",
+    "options": ["15", "16", "17", "18"],
+    "answer": "16",
+    "points": 2,
+    "topicName": "aptitude",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "cpp_1",
+    "questionTitle": "Which header file is used to input and output functions in C++?",
+    "options": ["iostream.h", "inputoutput.h", "stdio.h", "iostream"],
+    "answer": "iostream",
+    "points": 2,
+    "topicName": "c++",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "cpp_2",
+    "questionTitle": "Which operator is used for incrementing the value of a variable by 1 in C++?",
+    "options": ["++", "+", "--", "-"],
+    "answer": "++",
+    "points": 2,
+    "topicName": "c++",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "cpp_3",
+    "questionTitle": "What does the 'cout' object in C++ do?",
+    "options": [
+      "It reads input from the console",
+      "It writes output to the console",
+      "It performs arithmetic operations",
+      "It declares a variable"
+    ],
+    "answer": "It writes output to the console",
+    "points": 2,
+    "topicName": "c++",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "cpp_4",
+    "questionTitle": "Which data type is used to store whole numbers in C++?",
+    "options": ["int", "float", "char", "string"],
+    "answer": "int",
+    "points": 2,
+    "topicName": "c++",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "cpp_5",
+    "questionTitle": "What does the 'cin' object in C++ do?",
+    "options": [
+      "It reads input from the console",
+      "It writes output to the console",
+      "It performs arithmetic operations",
+      "It declares a variable"
+    ],
+    "answer": "It reads input from the console",
+    "points": 2,
+    "topicName": "c++",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "cpp_6",
+    "questionTitle": "What is the purpose of the 'new' operator in C++?",
+    "options": [
+      "It is used to delete objects",
+      "It is used to allocate memory for a new object",
+      "It is used to declare a new variable",
+      "It is used to define a new function"
+    ],
+    "answer": "It is used to allocate memory for a new object",
+    "points": 3,
+    "topicName": "c++",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "cpp_7",
+    "questionTitle": "What does the 'static' keyword indicate in C++?",
+    "options": [
+      "It indicates that a variable is constant",
+      "It indicates that a variable is shared among all instances of a class",
+      "It indicates that a variable is only accessible within a specific function",
+      "It indicates that a variable is dynamically allocated"
+    ],
+    "answer": "It indicates that a variable is shared among all instances of a class",
+    "points": 3,
+    "topicName": "c++",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "cpp_8",
+    "questionTitle": "What does the 'virtual' keyword indicate in C++?",
+    "options": [
+      "It indicates that a function is static",
+      "It indicates that a function is a member of a class",
+      "It indicates that a function can be overridden in a derived class",
+      "It indicates that a function is pure virtual"
+    ],
+    "answer": "It indicates that a function can be overridden in a derived class",
+    "points": 3,
+    "topicName": "c++",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "cpp_9",
+    "questionTitle": "What is the purpose of the 'this' pointer in C++?",
+    "options": [
+      "It points to the previous element in a linked list",
+      "It points to the current instance of a class",
+      "It points to the next element in a linked list",
+      "It points to the base class"
+    ],
+    "answer": "It points to the current instance of a class",
+    "points": 3,
+    "topicName": "c++",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "cpp_10",
+    "questionTitle": "What does the 'const' keyword indicate in C++?",
+    "options": [
+      "It indicates that a variable cannot be modified",
+      "It indicates that a variable is initialized with a specific value",
+      "It indicates that a variable is a constant",
+      "It indicates that a variable is dynamically allocated"
+    ],
+    "answer": "It indicates that a variable cannot be modified",
+    "points": 3,
+    "topicName": "c++",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "cpp_11",
+    "questionTitle": "Which C++ keyword is used to declare a class?",
+    "options": ["class", "struct", "object", "instance"],
+    "answer": "class",
+    "points": 2,
+    "topicName": "c++",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "cpp_12",
+    "questionTitle": "What is the correct syntax for a single-line comment in C++?",
+    "options": [
+      "// This is a comment",
+      "# This is a comment",
+      "/* This is a comment */",
+      "<!-- This is a comment -->"
+    ],
+    "answer": "// This is a comment",
+    "points": 2,
+    "topicName": "c++",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "cpp_13",
+    "questionTitle": "What is the output of the following C++ code snippet?<linebreak><linebreak>```cpp<linebreak>#include <iostream><linebreak>using namespace std;<linebreak>int main() {<linebreak>  int x = 5;<linebreak>  cout << x--;<linebreak>  return 0;<linebreak>}<linebreak>```",
+    "options": ["5", "4", "0", "Compiler error"],
+    "answer": "5",
+    "points": 2,
+    "topicName": "c++",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "cpp_14",
+    "questionTitle": "Which of the following is NOT a valid C++ data type?",
+    "options": ["int", "float", "boolean", "char*"],
+    "answer": "boolean",
+    "points": 2,
+    "topicName": "c++",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "cpp_15",
+    "questionTitle": "What does the 'endl' in C++ do?",
+    "options": [
+      "Ends the program execution",
+      "Adds a new line and flushes the output buffer",
+      "Inserts a tab space",
+      "Prints the value of pi"
+    ],
+    "answer": "Adds a new line and flushes the output buffer",
+    "points": 2,
+    "topicName": "c++",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "cpp_16",
+    "questionTitle": "Which keyword is used to define a constant in C++?",
+    "options": ["constant", "const", "final", "readonly"],
+    "answer": "const",
+    "points": 3,
+    "topicName": "c++",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "cpp_17",
+    "questionTitle": "What does the 'static' keyword do in C++?",
+    "options": [
+      "Specifies that a variable or function is shared among all instances of a class",
+      "Specifies that a variable or function belongs to a specific instance of a class",
+      "Specifies that a variable or function cannot be modified",
+      "Specifies that a variable or function cannot be accessed from outside its class"
+    ],
+    "answer": "Specifies that a variable or function is shared among all instances of a class",
+    "points": 3,
+    "topicName": "c++",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "cpp_18",
+    "questionTitle": "What does the 'new' operator do in C++?",
+    "options": [
+      "Allocates memory on the heap and returns a pointer to it",
+      "Allocates memory on the stack and returns a pointer to it",
+      "Deallocates memory on the heap",
+      "Deallocates memory on the stack"
+    ],
+    "answer": "Allocates memory on the heap and returns a pointer to it",
+    "points": 3,
+    "topicName": "c++",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "cpp_19",
+    "questionTitle": "What is the purpose of the 'virtual' keyword in C++?",
+    "options": [
+      "To specify that a function should be overridden in a derived class",
+      "To specify that a function cannot be overridden in a derived class",
+      "To specify that a function should be private",
+      "To specify that a function should be static"
+    ],
+    "answer": "To specify that a function should be overridden in a derived class",
+    "points": 4,
+    "topicName": "c++",
+    "difficultyLevel": "hard"
+  },
+  {
+    "questionId": "cpp_20",
+    "questionTitle": "What is the output of the following C++ code snippet?<linebreak><linebreak>```cpp<linebreak>#include <iostream><linebreak>using namespace std;<linebreak>int main() {<linebreak>  int x = 5;<linebreak>  cout << x++;<linebreak>  return 0;<linebreak>}<linebreak>```",
+    "options": ["5", "6", "0", "Compiler error"],
+    "answer": "5",
+    "points": 4,
+    "topicName": "c++",
+    "difficultyLevel": "hard"
+  },
+  {
+    "questionId": "cpp_21",
+    "questionTitle": "Which C++ keyword is used to define a derived class?",
+    "options": ["base", "extend", "derive", "class"],
+    "answer": "class",
+    "points": 2,
+    "topicName": "c++",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "cpp_22",
+    "questionTitle": "What is the output of the following C++ code snippet?<linebreak><linebreak>```cpp<linebreak>#include <iostream><linebreak>using namespace std;<linebreak>int main() {<linebreak>  int x = 10;<linebreak>  int y = 20;<linebreak>  cout << x + y;<linebreak>  return 0;<linebreak>}<linebreak>```",
+    "options": ["10", "20", "30", "Compiler error"],
+    "answer": "30",
+    "points": 2,
+    "topicName": "c++",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "cpp_23",
+    "questionTitle": "Which of the following is NOT a valid C++ variable name?",
+    "options": ["my_var", "_var", "2var", "var_2"],
+    "answer": "2var",
+    "points": 2,
+    "topicName": "c++",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "cpp_24",
+    "questionTitle": "What does the 'nullptr' keyword in C++11 represent?",
+    "options": [
+      "An integer value of 0",
+      "A pointer to the address 0",
+      "A null reference",
+      "A null pointer"
+    ],
+    "answer": "A null pointer",
+    "points": 2,
+    "topicName": "c++",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "cpp_25",
+    "questionTitle": "What is the purpose of the 'extern' keyword in C++?",
+    "options": [
+      "To declare a global variable",
+      "To specify that a variable is available outside the current scope",
+      "To specify that a function is implemented in another file",
+      "To declare a constant variable"
+    ],
+    "answer": "To specify that a variable is available outside the current scope",
+    "points": 2,
+    "topicName": "c++",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "cpp_26",
+    "questionTitle": "What is the output of the following C++ code snippet?<linebreak><linebreak>```cpp<linebreak>#include <iostream><linebreak>using namespace std;<linebreak>int main() {<linebreak>  int x = 5;<linebreak>  cout << sizeof(x);<linebreak>  return 0;<linebreak>}<linebreak>```",
+    "options": ["4", "8", "2", "Compiler error"],
+    "answer": "4",
+    "points": 3,
+    "topicName": "c++",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "cpp_27",
+    "questionTitle": "What is the purpose of the 'this' pointer in C++?",
+    "options": [
+      "To refer to the current class instance",
+      "To refer to the previous class instance",
+      "To refer to the next class instance",
+      "To refer to the main class instance"
+    ],
+    "answer": "To refer to the current class instance",
+    "points": 3,
+    "topicName": "c++",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "cpp_28",
+    "questionTitle": "What does the 'static' keyword do when applied to a class member in C++?",
+    "options": [
+      "Specifies that the member is shared among all instances of the class",
+      "Specifies that the member belongs to a specific instance of the class",
+      "Specifies that the member cannot be modified",
+      "Specifies that the member cannot be accessed from outside its class"
+    ],
+    "answer": "Specifies that the member is shared among all instances of the class",
+    "points": 3,
+    "topicName": "c++",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "cpp_29",
+    "questionTitle": "What is the purpose of the 'typeid' operator in C++?",
+    "options": [
+      "To identify the type of an object at runtime",
+      "To identify the type of an object at compile time",
+      "To identify the type of a class",
+      "To identify the type of a variable"
+    ],
+    "answer": "To identify the type of an object at runtime",
+    "points": 3,
+    "topicName": "c++",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "cpp_30",
+    "questionTitle": "What is the output of the following C++ code snippet?<linebreak><linebreak>```cpp<linebreak>#include <iostream><linebreak>using namespace std;<linebreak>int main() {<linebreak>  int x = 5;<linebreak>  int* ptr = &x;<linebreak>  cout << *ptr;<linebreak>  return 0;<linebreak>}<linebreak>```",
+    "options": ["5", "Compiler error", "Garbage value", "0"],
+    "answer": "5",
+    "points": 3,
+    "topicName": "c++",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "css_1",
+    "questionTitle": "What does CSS stand for?",
+    "options": [
+      "Cascading Style Sheets",
+      "Computer Style Sheets",
+      "Creative Style Sheets",
+      "Colorful Style Sheets"
+    ],
+    "answer": "Cascading Style Sheets",
+    "points": 2,
+    "topicName": "css",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "css_2",
+    "questionTitle": "Which CSS property is used to change the text color of an element?",
+    "options": ["color", "text-color", "font-color", "text-style"],
+    "answer": "color",
+    "points": 2,
+    "topicName": "css",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "css_3",
+    "questionTitle": "What does the 'padding' property in CSS define?",
+    "options": [
+      "The space between the border and the content of an element",
+      "The space between elements",
+      "The space between the border and the margin of an element",
+      "The space between lines of text"
+    ],
+    "answer": "The space between the border and the content of an element",
+    "points": 2,
+    "topicName": "css",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "css_4",
+    "questionTitle": "Which CSS property is used to set the background color of an element?",
+    "options": ["background-color", "bg-color", "color-background", "bgcolor"],
+    "answer": "background-color",
+    "points": 2,
+    "topicName": "css",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "css_5",
+    "questionTitle": "What does the 'margin' property in CSS define?",
+    "options": [
+      "The space between the border and the content of an element",
+      "The space between elements",
+      "The space between the border and the margin of an element",
+      "The space between lines of text"
+    ],
+    "answer": "The space between the border and the margin of an element",
+    "points": 2,
+    "topicName": "css",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "css_6",
+    "questionTitle": "What is the purpose of the 'float' property in CSS?",
+    "options": [
+      "To move an element to the left or right",
+      "To center an element horizontally",
+      "To make text bold",
+      "To change the font of an element"
+    ],
+    "answer": "To move an element to the left or right",
+    "points": 3,
+    "topicName": "css",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "css_7",
+    "questionTitle": "Which CSS property is used to add shadows to elements?",
+    "options": ["shadow", "box-shadow", "element-shadow", "text-shadow"],
+    "answer": "box-shadow",
+    "points": 3,
+    "topicName": "css",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "css_8",
+    "questionTitle": "What does the 'display: flex;' property do in CSS?",
+    "options": [
+      "It displays an element as a block-level flex container",
+      "It displays an element as an inline-level flex container",
+      "It displays an element as an inline-level block container",
+      "It hides an element"
+    ],
+    "answer": "It displays an element as a block-level flex container",
+    "points": 3,
+    "topicName": "css",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "css_9",
+    "questionTitle": "What does the 'position: absolute;' property do in CSS?",
+    "options": [
+      "Positions an element relative to its normal position",
+      "Positions an element absolutely to the browser window",
+      "Positions an element relatively to its parent element",
+      "Positions an element relatively to the viewport"
+    ],
+    "answer": "Positions an element absolutely to the browser window",
+    "points": 3,
+    "topicName": "css",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "css_10",
+    "questionTitle": "What does the 'z-index' property in CSS define?",
+    "options": [
+      "The order of elements along the z-axis",
+      "The order of elements along the x-axis",
+      "The order of elements along the y-axis",
+      "The order of elements within a flex container"
+    ],
+    "answer": "The order of elements along the z-axis",
+    "points": 3,
+    "topicName": "css",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "css_11",
+    "questionTitle": "What is the purpose of the 'overflow' property in CSS?",
+    "options": [
+      "To specify whether the content of an element should be clipped, visible, or scrollable",
+      "To control the visibility of an element",
+      "To hide an element",
+      "To add shadows to an element"
+    ],
+    "answer": "To specify whether the content of an element should be clipped, visible, or scrollable",
+    "points": 4,
+    "topicName": "css",
+    "difficultyLevel": "hard"
+  },
+  {
+    "questionId": "css_12",
+    "questionTitle": "Which CSS property is used to create rounded corners on elements?",
+    "options": [
+      "border-round",
+      "corner-radius",
+      "border-radius",
+      "round-corner"
+    ],
+    "answer": "border-radius",
+    "points": 4,
+    "topicName": "css",
+    "difficultyLevel": "hard"
+  },
+  {
+    "questionId": "css_13",
+    "questionTitle": "What is the purpose of the 'transform' property in CSS?",
+    "options": [
+      "To change the size of an element",
+      "To rotate, scale, skew, or translate an element",
+      "To change the color of an element",
+      "To change the font of an element"
+    ],
+    "answer": "To rotate, scale, skew, or translate an element",
+    "points": 4,
+    "topicName": "css",
+    "difficultyLevel": "hard"
+  },
+  {
+    "questionId": "css_14",
+    "questionTitle": "What does the 'transition' property in CSS do?",
+    "options": [
+      "It specifies the timing function for a transition effect",
+      "It specifies the duration of a transition effect",
+      "It specifies the property to transition",
+      "It specifies the initial value of a property"
+    ],
+    "answer": "It specifies the timing function for a transition effect",
+    "points": 4,
+    "topicName": "css",
+    "difficultyLevel": "hard"
+  },
+  {
+    "questionId": "css_15",
+    "questionTitle": "Which CSS property is used to change the font size of an element?",
+    "options": ["text-size", "font-style", "size", "font-size"],
+    "answer": "font-size",
+    "points": 2,
+    "topicName": "css",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "css_16",
+    "questionTitle": "What does the 'background-image' property in CSS do?",
+    "options": [
+      "It specifies the color of the background",
+      "It specifies an image as the background of an element",
+      "It specifies the size of the background",
+      "It specifies the position of the background"
+    ],
+    "answer": "It specifies an image as the background of an element",
+    "points": 2,
+    "topicName": "css",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "css_17",
+    "questionTitle": "Which CSS property is used to set the font family of an element?",
+    "options": ["font-family", "text-family", "family", "font-style"],
+    "answer": "font-family",
+    "points": 2,
+    "topicName": "css",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "css_18",
+    "questionTitle": "What does the 'border' property in CSS define?",
+    "options": [
+      "The space between the border and the content of an element",
+      "The space between elements",
+      "The color, width, and style of the border of an element",
+      "The space between the border and the margin of an element"
+    ],
+    "answer": "The color, width, and style of the border of an element",
+    "points": 2,
+    "topicName": "css",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "css_19",
+    "questionTitle": "What does the 'text-align' property in CSS do?",
+    "options": [
+      "It specifies the alignment of the text within an element",
+      "It specifies the size of the text",
+      "It specifies the color of the text",
+      "It specifies the font of the text"
+    ],
+    "answer": "It specifies the alignment of the text within an element",
+    "points": 2,
+    "topicName": "css",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "css_20",
+    "questionTitle": "Which CSS property is used to add space between letters in a text?",
+    "options": ["letter-spacing", "word-spacing", "text-spacing", "spacing"],
+    "answer": "letter-spacing",
+    "points": 2,
+    "topicName": "css",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "css_21",
+    "questionTitle": "What does the 'list-style-type' property in CSS define?",
+    "options": [
+      "The style of the list item marker",
+      "The spacing between list items",
+      "The font of the list item text",
+      "The alignment of the list item text"
+    ],
+    "answer": "The style of the list item marker",
+    "points": 2,
+    "topicName": "css",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "css_22",
+    "questionTitle": "Which CSS property is used to change the style of a list item marker?",
+    "options": [
+      "list-style",
+      "marker-style",
+      "list-item-style",
+      "list-style-type"
+    ],
+    "answer": "list-style-type",
+    "points": 2,
+    "topicName": "css",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "css_23",
+    "questionTitle": "What does the 'text-decoration' property in CSS do?",
+    "options": [
+      "It specifies the color of the text",
+      "It specifies whether a line should be drawn under, over, or through the text",
+      "It specifies the font of the text",
+      "It specifies the size of the text"
+    ],
+    "answer": "It specifies whether a line should be drawn under, over, or through the text",
+    "points": 2,
+    "topicName": "css",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "css_24",
+    "questionTitle": "What does the 'opacity' property in CSS do?",
+    "options": [
+      "It specifies the transparency of an element",
+      "It specifies the color of an element",
+      "It specifies the size of an element",
+      "It specifies the position of an element"
+    ],
+    "answer": "It specifies the transparency of an element",
+    "points": 2,
+    "topicName": "css",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "css_25",
+    "questionTitle": "Which CSS property is used to specify the distance between the text of a text element and its border?",
+    "options": ["padding", "margin", "spacing", "border-spacing"],
+    "answer": "padding",
+    "points": 2,
+    "topicName": "css",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "css_26",
+    "questionTitle": "What does the 'display: none;' property do in CSS?",
+    "options": [
+      "It hides an element",
+      "It displays an element as an inline element",
+      "It displays an element as a block element",
+      "It centers an element horizontally"
+    ],
+    "answer": "It hides an element",
+    "points": 2,
+    "topicName": "css",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "css_27",
+    "questionTitle": "Which CSS property is used to change the style of the cursor when hovering over an element?",
+    "options": ["cursor-style", "pointer-style", "hover-cursor", "cursor"],
+    "answer": "cursor",
+    "points": 2,
+    "topicName": "css",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "css_28",
+    "questionTitle": "What does the 'font-weight' property in CSS specify?",
+    "options": [
+      "The size of the font",
+      "The color of the font",
+      "The thickness of the font",
+      "The style of the font"
+    ],
+    "answer": "The thickness of the font",
+    "points": 2,
+    "topicName": "css",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "css_29",
+    "questionTitle": "Which CSS property is used to make text bold?",
+    "options": ["font-weight", "text-weight", "font-style", "text-style"],
+    "answer": "font-weight",
+    "points": 2,
+    "topicName": "css",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "css_30",
+    "questionTitle": "What does the 'line-height' property in CSS specify?",
+    "options": [
+      "The height of the lines of text",
+      "The spacing between lines of text",
+      "The alignment of the text",
+      "The color of the text"
+    ],
+    "answer": "The spacing between lines of text",
+    "points": 2,
+    "topicName": "css",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "eng_1",
+    "questionTitle": "What is the plural form of 'child'?",
+    "options": ["childs", "children", "childes", "childen"],
+    "answer": "children",
+    "points": 2,
+    "topicName": "english",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "eng_2",
+    "questionTitle": "Which word is a synonym for 'happy'?",
+    "options": ["Sad", "Glad", "Angry", "Bored"],
+    "answer": "Glad",
+    "points": 2,
+    "topicName": "english",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "eng_3",
+    "questionTitle": "What is the past tense of 'go'?",
+    "options": ["Go", "Gone", "Went", "Goes"],
+    "answer": "Went",
+    "points": 2,
+    "topicName": "english",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "eng_4",
+    "questionTitle": "Which sentence is correct?",
+    "options": [
+      "She don't like ice cream.",
+      "She doesn't like ice cream.",
+      "She do not like ice cream.",
+      "She not likes ice cream."
+    ],
+    "answer": "She doesn't like ice cream.",
+    "points": 2,
+    "topicName": "english",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "eng_5",
+    "questionTitle": "What is the opposite of 'beautiful'?",
+    "options": ["Ugly", "Pretty", "Attractive", "Lovely"],
+    "answer": "Ugly",
+    "points": 2,
+    "topicName": "english",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "eng_6",
+    "questionTitle": "Which word is a synonym for 'brave'?",
+    "options": ["Cowardly", "Fearful", "Courageous", "Timid"],
+    "answer": "Courageous",
+    "points": 2,
+    "topicName": "english",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "eng_7",
+    "questionTitle": "What is the comparative form of 'good'?",
+    "options": ["Gooder", "Better", "Best", "More good"],
+    "answer": "Better",
+    "points": 2,
+    "topicName": "english",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "eng_8",
+    "questionTitle": "Choose the correct spelling.",
+    "options": ["Acommodate", "Accommodate", "Acomodate", "Accomodate"],
+    "answer": "Accommodate",
+    "points": 2,
+    "topicName": "english",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "eng_9",
+    "questionTitle": "Which sentence is grammatically correct?",
+    "options": [
+      "Neither of them are coming to the party.",
+      "Neither of them is coming to the party.",
+      "Neither of them am coming to the party.",
+      "Neither of them were coming to the party."
+    ],
+    "answer": "Neither of them is coming to the party.",
+    "points": 2,
+    "topicName": "english",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "eng_10",
+    "questionTitle": "Identify the antonym of 'generous'.",
+    "options": ["Stingy", "Kind", "Benevolent", "Munificent"],
+    "answer": "Stingy",
+    "points": 2,
+    "topicName": "english",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "eng_11",
+    "questionTitle": "What is the correct plural form of 'mouse'?",
+    "options": ["Mouses", "Mice", "Meese", "Maus"],
+    "answer": "Mice",
+    "points": 2,
+    "topicName": "english",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "eng_12",
+    "questionTitle": "Select the appropriate preposition: She is good _____ mathematics.",
+    "options": ["at", "in", "on", "with"],
+    "answer": "at",
+    "points": 3,
+    "topicName": "english",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "eng_13",
+    "questionTitle": "Choose the correct form of the verb: The cat _____ on the windowsill.",
+    "options": ["is laying", "is lying", "are laying", "are lying"],
+    "answer": "is lying",
+    "points": 3,
+    "topicName": "english",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "eng_14",
+    "questionTitle": "Identify the correct sentence.",
+    "options": [
+      "Each of the students were given a book.",
+      "Each of the students was given a book.",
+      "Each of the students are given a book.",
+      "Each of the students is given a book."
+    ],
+    "answer": "Each of the students was given a book.",
+    "points": 3,
+    "topicName": "english",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "eng_15",
+    "questionTitle": "Identify the correct use of the gerund:",
+    "options": [
+      "She enjoys to read books.",
+      "She enjoys reading books.",
+      "She enjoys read books.",
+      "She enjoys for reading books."
+    ],
+    "answer": "She enjoys reading books.",
+    "points": 3,
+    "topicName": "english",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "eng_16",
+    "questionTitle": "Choose the correct word order for a question:",
+    "options": [
+      "She does where live?",
+      "Where she does live?",
+      "Does she live where?",
+      "Where does she live?"
+    ],
+    "answer": "Where does she live?",
+    "points": 3,
+    "topicName": "english",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "eng_17",
+    "questionTitle": "Identify the correct use of the infinitive:",
+    "options": [
+      "He wanted to to go home.",
+      "He wanted going home.",
+      "He wanted go home.",
+      "He wanted to go home."
+    ],
+    "answer": "He wanted to go home.",
+    "points": 3,
+    "topicName": "english",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "eng_18",
+    "questionTitle": "Select the correct form of the verb to complete the sentence: 'She _____ English for five years.'",
+    "options": ["teach", "teached", "taught", "teaches"],
+    "answer": "has taught",
+    "points": 3,
+    "topicName": "english",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "eng_19",
+    "questionTitle": "Which of the following sentences contains a gerund?",
+    "options": [
+      "She enjoys to swim in the ocean.",
+      "Swimming in the ocean is her favorite activity.",
+      "She likes to swim in the ocean.",
+      "She went swimming in the ocean yesterday."
+    ],
+    "answer": "Swimming in the ocean is her favorite activity.",
+    "points": 3,
+    "topicName": "english",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "eng_20",
+    "questionTitle": "Choose the correct preposition to complete the sentence: 'He is interested _____ learning new languages.'",
+    "options": ["of", "in", "for", "on"],
+    "answer": "in",
+    "points": 2,
+    "topicName": "english",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "eng_21",
+    "questionTitle": "Which of the following words is a synonym for 'confused'?",
+    "options": ["Clear", "Certain", "Bewildered", "Comprehensible"],
+    "answer": "Bewildered",
+    "points": 2,
+    "topicName": "english",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "eng_22",
+    "questionTitle": "Choose the correct form of the verb to complete the sentence: 'She _____ to the store yesterday.'",
+    "options": ["go", "goes", "going", "went"],
+    "answer": "went",
+    "points": 2,
+    "topicName": "english",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "eng_23",
+    "questionTitle": "Identify the correct use of the past perfect tense:",
+    "options": [
+      "She had wrote the letter before she left.",
+      "She had written the letter before she left.",
+      "She had writing the letter before she left.",
+      "She had writed the letter before she left."
+    ],
+    "answer": "She had written the letter before she left.",
+    "points": 3,
+    "topicName": "english",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "eng_24",
+    "questionTitle": "Choose the correct word order for a question: 'What doing are you?'",
+    "options": [
+      "What are doing you?",
+      "Doing what are you?",
+      "What are you doing?",
+      "You are what doing?"
+    ],
+    "answer": "What are you doing?",
+    "points": 3,
+    "topicName": "english",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "eng_25",
+    "questionTitle": "Identify the correct use of the subjunctive mood:",
+    "options": [
+      "If she was here, she would help.",
+      "If she were here, she would help.",
+      "If she will be here, she would help.",
+      "If she is here, she would help."
+    ],
+    "answer": "If she were here, she would help.",
+    "points": 4,
+    "topicName": "english",
+    "difficultyLevel": "hard"
+  },
+  {
+    "questionId": "eng_26",
+    "questionTitle": "Choose the correct form of the verb to complete the sentence: 'The team _______ the championship last year.'",
+    "options": ["win", "wins", "won", "winning"],
+    "answer": "won",
+    "points": 4,
+    "topicName": "english",
+    "difficultyLevel": "hard"
+  },
+  {
+    "questionId": "eng_27",
+    "questionTitle": "Choose the correct sentence with correct punctuation:",
+    "options": [
+      "I am tired, and want to go home.",
+      "I am tired and, want to go home.",
+      "I am tired and want to go home.",
+      "I am tired; and want to go home."
+    ],
+    "answer": "I am tired and want to go home.",
+    "points": 4,
+    "topicName": "english",
+    "difficultyLevel": "hard"
+  },
+  {
+    "questionId": "eng_28",
+    "questionTitle": "Which of the following sentences contains an example of personification?",
+    "options": [
+      "The sun was shining brightly.",
+      "The tree branches waved in the wind.",
+      "The ocean waves crashed against the shore.",
+      "The stars twinkled in the night sky."
+    ],
+    "answer": "The tree branches waved in the wind.",
+    "points": 4,
+    "topicName": "english",
+    "difficultyLevel": "hard"
+  },
+  {
+    "questionId": "eng_29",
+    "questionTitle": "Identify the correct use of the past perfect continuous tense:",
+    "options": [
+      "She had been crying when I arrived.",
+      "She had cried when I arrived.",
+      "She had been cry when I arrived.",
+      "She had crying when I arrived."
+    ],
+    "answer": "She had been crying when I arrived.",
+    "points": 4,
+    "topicName": "english",
+    "difficultyLevel": "hard"
+  },
+  {
+    "questionId": "eng_30",
+    "questionTitle": "Select the correct form of the verb to complete the sentence: 'He _____ for hours before he found it.'",
+    "options": [
+      "had been searching",
+      "had searched",
+      "has been searching",
+      "has searched"
+    ],
+    "answer": "had been searching",
+    "points": 4,
+    "topicName": "english",
+    "difficultyLevel": "hard"
+  },
+  {
+    "questionId": "gk_1",
+    "questionTitle": "Which planet is known as the 'Red Planet'?",
+    "options": ["Earth", "Mars", "Jupiter", "Venus"],
+    "answer": "Mars",
+    "points": 2,
+    "topicName": "general knowledge",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "gk_2",
+    "questionTitle": "What is the capital city of Japan?",
+    "options": ["Beijing", "Seoul", "Tokyo", "Bangkok"],
+    "answer": "Tokyo",
+    "points": 2,
+    "topicName": "general knowledge",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "gk_3",
+    "questionTitle": "Who wrote the play 'Romeo and Juliet'?",
+    "options": [
+      "Charles Dickens",
+      "William Shakespeare",
+      "Jane Austen",
+      "Mark Twain"
+    ],
+    "answer": "William Shakespeare",
+    "points": 3,
+    "topicName": "general knowledge",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "gk_4",
+    "questionTitle": "In which year did the Titanic sink?",
+    "options": ["1905", "1912", "1920", "1931"],
+    "answer": "1912",
+    "points": 2,
+    "topicName": "general knowledge",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "gk_5",
+    "questionTitle": "What is the longest river in the world?",
+    "options": ["Nile", "Amazon", "Yangtze", "Mississippi"],
+    "answer": "Amazon",
+    "points": 3,
+    "topicName": "general knowledge",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "gk_6",
+    "questionTitle": "Which country is known as the 'Land of the Rising Sun'?",
+    "options": ["China", "Japan", "South Korea", "Vietnam"],
+    "answer": "Japan",
+    "points": 2,
+    "topicName": "general knowledge",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "gk_7",
+    "questionTitle": "Which is the largest state in India by area?",
+    "options": ["Uttar Pradesh", "Madhya Pradesh", "Rajasthan", "Maharashtra"],
+    "answer": "Rajasthan",
+    "points": 2,
+    "topicName": "general knowledge",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "gk_8",
+    "questionTitle": "What is the capital city of Tamil Nadu?",
+    "options": ["Chennai", "Mumbai", "Kolkata", "Hyderabad"],
+    "answer": "Chennai",
+    "points": 2,
+    "topicName": "general knowledge",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "gk_9",
+    "questionTitle": "Who was the first Prime Minister of India?",
+    "options": [
+      "Jawaharlal Nehru",
+      "Mahatma Gandhi",
+      "Indira Gandhi",
+      "Sardar Vallabhbhai Patel"
+    ],
+    "answer": "Jawaharlal Nehru",
+    "points": 3,
+    "topicName": "general knowledge",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "gk_10",
+    "questionTitle": "Which Indian state is known as the 'Land of Five Rivers'?",
+    "options": ["Punjab", "Haryana", "Uttar Pradesh", "Maharashtra"],
+    "answer": "Punjab",
+    "points": 2,
+    "topicName": "general knowledge",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "gk_11",
+    "questionTitle": "What is the national currency of India?",
+    "options": ["Rupee", "Taka", "Rupiah", "Yen"],
+    "answer": "Rupee",
+    "points": 2,
+    "topicName": "general knowledge",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "gk_12",
+    "questionTitle": "Which Indian city is known as the 'City of Lakes'?",
+    "options": ["Udaipur", "Jaipur", "Jaisalmer", "Jodhpur"],
+    "answer": "Udaipur",
+    "points": 3,
+    "topicName": "general knowledge",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "gk_13",
+    "questionTitle": "Who is known as the 'Father of the Indian Constitution'?",
+    "options": [
+      "Mahatma Gandhi",
+      "B.R. Ambedkar",
+      "Jawaharlal Nehru",
+      "Rajendra Prasad"
+    ],
+    "answer": "B.R. Ambedkar",
+    "points": 3,
+    "topicName": "general knowledge",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "gk_14",
+    "questionTitle": "Which Indian state is known as the 'Land of the Gods'?",
+    "options": [
+      "Uttarakhand",
+      "Himachal Pradesh",
+      "Jammu and Kashmir",
+      "Uttar Pradesh"
+    ],
+    "answer": "Uttarakhand",
+    "points": 2,
+    "topicName": "general knowledge",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "gk_15",
+    "questionTitle": "Which Indian state has the largest coastline?",
+    "options": ["Maharashtra", "Gujarat", "West Bengal", "Odisha"],
+    "answer": "Gujarat",
+    "points": 2,
+    "topicName": "general knowledge",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "gk_16",
+    "questionTitle": "Which Indian festival is known as the 'Festival of Lights'?",
+    "options": ["Holi", "Diwali", "Eid", "Dussehra"],
+    "answer": "Diwali",
+    "points": 2,
+    "topicName": "general knowledge",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "gk_17",
+    "questionTitle": "Who is known as the 'God of Cricket'?",
+    "options": [
+      "Virat Kohli",
+      "Sachin Tendulkar",
+      "Ricky Ponting",
+      "Brian Lara"
+    ],
+    "answer": "Sachin Tendulkar",
+    "points": 2,
+    "topicName": "general knowledge",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "gk_18",
+    "questionTitle": "Which country won the first-ever Cricket World Cup in 1975?",
+    "options": ["Australia", "West Indies", "England", "India"],
+    "answer": "West Indies",
+    "points": 2,
+    "topicName": "general knowledge",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "gk_19",
+    "questionTitle": "Who holds the record for the highest individual score in Test cricket?",
+    "options": ["Virat Kohli", "Brian Lara", "Sachin Tendulkar", "Don Bradman"],
+    "answer": "Brian Lara",
+    "points": 3,
+    "topicName": "general knowledge",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "gk_20",
+    "questionTitle": "Which bowler has taken the most wickets in international cricket?",
+    "options": [
+      "Muttiah Muralitharan",
+      "Shane Warne",
+      "Anil Kumble",
+      "Glenn McGrath"
+    ],
+    "answer": "Muttiah Muralitharan",
+    "points": 2,
+    "topicName": "general knowledge",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "gk_21",
+    "questionTitle": "Which player has hit the most sixes in international cricket?",
+    "options": [
+      "AB de Villiers",
+      "Chris Gayle",
+      "Rohit Sharma",
+      "Shahid Afridi"
+    ],
+    "answer": "Shahid Afridi",
+    "points": 3,
+    "topicName": "general knowledge",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "gk_22",
+    "questionTitle": "Who was the captain of the Indian cricket team when they won the 2011 Cricket World Cup?",
+    "options": ["Sachin Tendulkar", "Rahul Dravid", "Virat Kohli", "MS Dhoni"],
+    "answer": "MS Dhoni",
+    "points": 2,
+    "topicName": "general knowledge",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "gk_23",
+    "questionTitle": "Which player has scored the most runs in a single over in international cricket?",
+    "options": [
+      "Yuvraj Singh",
+      "Herschelle Gibbs",
+      "AB de Villiers",
+      "David Warner"
+    ],
+    "answer": "Herschelle Gibbs",
+    "points": 3,
+    "topicName": "general knowledge",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "gk_24",
+    "questionTitle": "Which country has won the most ICC Cricket World Cups?",
+    "options": ["Australia", "India", "West Indies", "Pakistan"],
+    "answer": "Australia",
+    "points": 2,
+    "topicName": "general knowledge",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "gk_25",
+    "questionTitle": "Who was the first cricketer to score a triple century in Test cricket?",
+    "options": [
+      "Don Bradman",
+      "Sachin Tendulkar",
+      "Brian Lara",
+      "Virender Sehwag"
+    ],
+    "answer": "Don Bradman",
+    "points": 3,
+    "topicName": "general knowledge",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "gk_26",
+    "questionTitle": "Which Indian bowler has taken the most wickets in Test cricket?",
+    "options": [
+      "Kapil Dev",
+      "Anil Kumble",
+      "Javagal Srinath",
+      "Ravichandran Ashwin"
+    ],
+    "answer": "Anil Kumble",
+    "points": 2,
+    "topicName": "general knowledge",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "gk_27",
+    "questionTitle": "Who is known as the 'Missile Man of India'?",
+    "options": [
+      "A.P.J. Abdul Kalam",
+      "Sarvepalli Radhakrishnan",
+      "Jawaharlal Nehru",
+      "Indira Gandhi"
+    ],
+    "answer": "A.P.J. Abdul Kalam",
+    "points": 2,
+    "topicName": "general knowledge",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "gk_28",
+    "questionTitle": "What is the national animal of India?",
+    "options": ["Tiger", "Elephant", "Lion", "Leopard"],
+    "answer": "Tiger",
+    "points": 2,
+    "topicName": "general knowledge",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "gk_29",
+    "questionTitle": "Who is the current President of India?",
+    "options": [
+      "Ram Nath Kovind",
+      "Narendra Modi",
+      "Sonia Gandhi",
+      "Rahul Gandhi"
+    ],
+    "answer": "Ram Nath Kovind",
+    "points": 2,
+    "topicName": "general knowledge",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "gk_30",
+    "questionTitle": "Which Indian state is known as the 'Spice Garden of India'?",
+    "options": ["Kerala", "Tamil Nadu", "Karnataka", "Andhra Pradesh"],
+    "answer": "Kerala",
+    "points": 2,
+    "topicName": "general knowledge",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "html_1",
+    "questionTitle": "What does HTML stand for?",
+    "options": [
+      "Hyper Text Markup Language",
+      "Hyperlinks and Text Markup Language",
+      "Home Tool Markup Language",
+      "Hyper Text Makeup Language"
+    ],
+    "answer": "Hyper Text Markup Language",
+    "points": 2,
+    "topicName": "html",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "html_2",
+    "questionTitle": "Which HTML tag is used to define an unordered list?",
+    "options": ["<ul>", "<ol>", "<li>", "<u>"],
+    "answer": "<ul>",
+    "points": 2,
+    "topicName": "html",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "html_3",
+    "questionTitle": "What is the correct HTML element for inserting a line break?",
+    "options": ["<break>", "<lb>", "<br>", "<line>"],
+    "answer": "<br>",
+    "points": 2,
+    "topicName": "html",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "html_4",
+    "questionTitle": "Which HTML attribute specifies an alternate text for an image, if the image cannot be displayed?",
+    "options": ["src", "alt", "title", "href"],
+    "answer": "alt",
+    "points": 2,
+    "topicName": "html",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "html_5",
+    "questionTitle": "What is the purpose of the <meta> tag in HTML?",
+    "options": [
+      "To define a paragraph of text",
+      "To define a navigation menu",
+      "To specify metadata about an HTML document",
+      "To create a hyperlink"
+    ],
+    "answer": "To specify metadata about an HTML document",
+    "points": 2,
+    "topicName": "html",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "html_6",
+    "questionTitle": "Which HTML tag is used to create a hyperlink?",
+    "options": ["<a>", "<link>", "<href>", "<hyperlink>"],
+    "answer": "<a>",
+    "points": 2,
+    "topicName": "html",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "html_7",
+    "questionTitle": "What does the DOCTYPE declaration in HTML do?",
+    "options": [
+      "It defines the character encoding for the document",
+      "It specifies the version of HTML being used",
+      "It declares the type of the document as HTML",
+      "It links the HTML document to an external stylesheet"
+    ],
+    "answer": "It declares the type of the document as HTML",
+    "points": 2,
+    "topicName": "html",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "html_8",
+    "questionTitle": "What is the correct HTML tag for inserting an image?",
+    "options": ["<img>", "<image>", "<picture>", "<src>"],
+    "answer": "<img>",
+    "points": 2,
+    "topicName": "html",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "html_9",
+    "questionTitle": "What does the <footer> tag in HTML represent?",
+    "options": [
+      "A section that contains navigation links",
+      "A section that contains contact information",
+      "A section that contains copyright information",
+      "A section that contains a sidebar"
+    ],
+    "answer": "A section that contains copyright information",
+    "points": 2,
+    "topicName": "html",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "html_10",
+    "questionTitle": "Which attribute is used to specify the URL of the page the link goes to?",
+    "options": ["href", "src", "url", "link"],
+    "answer": "href",
+    "points": 2,
+    "topicName": "html",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "html_11",
+    "questionTitle": "What is the purpose of the <header> tag in HTML?",
+    "options": [
+      "To define a header for a document or section",
+      "To define a header for a table",
+      "To define a header for a form",
+      "To define a header for a list"
+    ],
+    "answer": "To define a header for a document or section",
+    "points": 2,
+    "topicName": "html",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "html_12",
+    "questionTitle": "What is the correct HTML element for making text bold?",
+    "options": ["<bold>", "<strong>", "<b>", "<emphasis>"],
+    "answer": "<strong>",
+    "points": 2,
+    "topicName": "html",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "html_13",
+    "questionTitle": "Which attribute is used to specify the alignment of an image in HTML?",
+    "options": ["align", "position", "float", "placement"],
+    "answer": "align",
+    "points": 2,
+    "topicName": "html",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "html_14",
+    "questionTitle": "What does the <nav> tag in HTML represent?",
+    "options": [
+      "A section that contains navigation links",
+      "A section that contains news articles",
+      "A section that contains social media links",
+      "A section that contains a sidebar"
+    ],
+    "answer": "A section that contains navigation links",
+    "points": 2,
+    "topicName": "html",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "html_15",
+    "questionTitle": "Which HTML tag is used to define a table?",
+    "options": ["<table>", "<tr>", "<td>", "<th>"],
+    "answer": "<table>",
+    "points": 2,
+    "topicName": "html",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "html_16",
+    "questionTitle": "What does the 'alt' attribute of the <img> tag specify?",
+    "options": [
+      "Image source URL",
+      "Image width",
+      "Alternate text for the image",
+      "Image alignment"
+    ],
+    "answer": "Alternate text for the image",
+    "points": 2,
+    "topicName": "html",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "html_17",
+    "questionTitle": "Which HTML tag is used to create a line break?",
+    "options": ["<br>", "<linebreak>", "<lb>", "<break>"],
+    "answer": "<br>",
+    "points": 2,
+    "topicName": "html",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "html_18",
+    "questionTitle": "What is the correct HTML for creating a hyperlink?",
+    "options": [
+      "<a href='http://www.example.com'>Example</a>",
+      "<link src='http://www.example.com'>Example</link>",
+      "<hyperlink>http://www.example.com</hyperlink>",
+      "<href='http://www.example.com'>Example</href>"
+    ],
+    "answer": "<a href='http://www.example.com'>Example</a>",
+    "points": 2,
+    "topicName": "html",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "html_19",
+    "questionTitle": "What is the correct HTML for creating an email link?",
+    "options": [
+      "<a href='mailto:info@example.com'>Email Us</a>",
+      "<a href='mail:info@example.com'>Email Us</a>",
+      "<mail>info@example.com</mail>",
+      "<link src='mailto:info@example.com'>Email Us</link>"
+    ],
+    "answer": "<a href='mailto:info@example.com'>Email Us</a>",
+    "points": 2,
+    "topicName": "html",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "html_20",
+    "questionTitle": "Which attribute is used to specify the URL of the image in the <img> tag?",
+    "options": ["src", "url", "link", "href"],
+    "answer": "src",
+    "points": 2,
+    "topicName": "html",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "html_21",
+    "questionTitle": "What is the purpose of the 'span' tag in HTML?",
+    "options": [
+      "To create a section of content",
+      "To define a block of text",
+      "To group inline-elements",
+      "To create a heading"
+    ],
+    "answer": "To group inline-elements",
+    "points": 3,
+    "topicName": "html",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "html_22",
+    "questionTitle": "What does the 'fieldset' tag in HTML represent?",
+    "options": [
+      "A group of related form elements",
+      "A section that contains navigation links",
+      "A container for metadata",
+      "A container for a table"
+    ],
+    "answer": "A group of related form elements",
+    "points": 3,
+    "topicName": "html",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "html_23",
+    "questionTitle": "What is the correct HTML element for playing audio files?",
+    "options": ["<audio>", "<sound>", "<music>", "<media>"],
+    "answer": "<audio>",
+    "points": 3,
+    "topicName": "html",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "html_24",
+    "questionTitle": "Which HTML tag is used to create a hyperlink that refers to a section within the same webpage?",
+    "options": [
+      "<a href='#section'>",
+      "<a name='section'>",
+      "<a href='section'>",
+      "<a src='#section'>"
+    ],
+    "answer": "<a href='#section'>",
+    "points": 3,
+    "topicName": "html",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "html_25",
+    "questionTitle": "What does the 'required' attribute do in an HTML form?",
+    "options": [
+      "Specifies that an input field must contain a value before submitting the form",
+      "Specifies that an input field is optional",
+      "Specifies the maximum length of the input field",
+      "Specifies the minimum length of the input field"
+    ],
+    "answer": "Specifies that an input field must contain a value before submitting the form",
+    "points": 3,
+    "topicName": "html",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "html_26",
+    "questionTitle": "What is the purpose of the 'canvas' tag in HTML?",
+    "options": [
+      "To define a section of content",
+      "To draw graphics, animations, or other visual images",
+      "To group inline-elements",
+      "To create a heading"
+    ],
+    "answer": "To draw graphics, animations, or other visual images",
+    "points": 4,
+    "topicName": "html",
+    "difficultyLevel": "hard"
+  },
+  {
+    "questionId": "html_27",
+    "questionTitle": "What does the 'contenteditable' attribute do in HTML?",
+    "options": [
+      "Specifies whether the element's content is editable by the user",
+      "Specifies the character encoding for the document",
+      "Specifies the language of the text contained in the element",
+      "Specifies a keyboard shortcut to activate the element"
+    ],
+    "answer": "Specifies whether the element's content is editable by the user",
+    "points": 4,
+    "topicName": "html",
+    "difficultyLevel": "hard"
+  },
+  {
+    "questionId": "html_28",
+    "questionTitle": "What does the 'progress' tag in HTML represent?",
+    "options": [
+      "A progress bar",
+      "A container for metadata",
+      "A section that contains navigation links",
+      "A container for a table"
+    ],
+    "answer": "A progress bar",
+    "points": 4,
+    "topicName": "html",
+    "difficultyLevel": "hard"
+  },
+  {
+    "questionId": "html_29",
+    "questionTitle": "What is the purpose of the 'details' tag in HTML?",
+    "options": [
+      "To define a section of content",
+      "To draw graphics, animations, or other visual images",
+      "To create a collapsible section",
+      "To group inline-elements"
+    ],
+    "answer": "To create a collapsible section",
+    "points": 4,
+    "topicName": "html",
+    "difficultyLevel": "hard"
+  },
+  {
+    "questionId": "html_30",
+    "questionTitle": "What does the 'spellcheck' attribute do in HTML?",
+    "options": [
+      "Specifies whether spell checking should be enabled for the element",
+      "Specifies the language of the text contained in the element",
+      "Specifies the maximum length of the input field",
+      "Specifies the minimum length of the input field"
+    ],
+    "answer": "Specifies whether spell checking should be enabled for the element",
+    "points": 4,
+    "topicName": "html",
+    "difficultyLevel": "hard"
+  },
+  {
+    "questionId": "java_1",
+    "questionTitle": "What is Java?",
+    "options": [
+      "A type of coffee",
+      "A programming language",
+      "A type of tree",
+      "A city in Indonesia"
+    ],
+    "answer": "A programming language",
+    "points": 2,
+    "topicName": "java",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "java_2",
+    "questionTitle": "Which keyword is used to define a constant in Java?",
+    "options": ["constant", "static", "final", "const"],
+    "answer": "final",
+    "points": 2,
+    "topicName": "java",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "java_3",
+    "questionTitle": "What is the output of the following Java code?<linebreak><linebreak>```<linebreak>public class Main {<linebreak>    public static void main(String[] args) {<linebreak>        int x = 5;<linebreak>        System.out.println(++x);<linebreak>    }<linebreak>}<linebreak>```",
+    "options": ["5", "6", "7", "Error"],
+    "answer": "6",
+    "points": 3,
+    "topicName": "java",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "java_4",
+    "questionTitle": "Which of the following statements is true about Java?",
+    "options": [
+      "Java is a low-level programming language.",
+      "Java code is compiled into machine code.",
+      "Java is platform-dependent.",
+      "Java is an object-oriented programming language."
+    ],
+    "answer": "Java is an object-oriented programming language.",
+    "points": 2,
+    "topicName": "java",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "java_5",
+    "questionTitle": "What is the Java virtual machine (JVM)?",
+    "options": [
+      "A physical machine used to run Java code",
+      "An abstract machine that provides the runtime environment for Java bytecode",
+      "A tool used for debugging Java code",
+      "A software development kit for Java"
+    ],
+    "answer": "An abstract machine that provides the runtime environment for Java bytecode",
+    "points": 2,
+    "topicName": "java",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "java_6",
+    "questionTitle": "Which of the following data types in Java is used to store single characters?",
+    "options": ["char", "String", "int", "double"],
+    "answer": "char",
+    "points": 2,
+    "topicName": "java",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "java_7",
+    "questionTitle": "What is the purpose of the 'static' keyword in Java?",
+    "options": [
+      "To define a constant",
+      "To specify that a variable or method belongs to the class, rather than instances of the class",
+      "To prevent inheritance",
+      "To declare a method that can be overridden"
+    ],
+    "answer": "To specify that a variable or method belongs to the class, rather than instances of the class",
+    "points": 2,
+    "topicName": "java",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "java_8",
+    "questionTitle": "What is the default value of a boolean variable in Java?",
+    "options": ["true", "false", "0", "null"],
+    "answer": "false",
+    "points": 2,
+    "topicName": "java",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "java_9",
+    "questionTitle": "What does the 'void' keyword indicate in Java?",
+    "options": [
+      "It indicates that a method returns no value",
+      "It indicates that a method is private",
+      "It indicates that a method is static",
+      "It indicates that a method is abstract"
+    ],
+    "answer": "It indicates that a method returns no value",
+    "points": 2,
+    "topicName": "java",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "java_10",
+    "questionTitle": "Which of the following is NOT a Java keyword?",
+    "options": ["class", "interface", "struct", "break"],
+    "answer": "struct",
+    "points": 2,
+    "topicName": "java",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "java_11",
+    "questionTitle": "What is the difference between '==' and '.equals()' in Java?",
+    "options": [
+      "'==' is used to compare primitive data types, while '.equals()' is used to compare objects.",
+      "'==' is used to compare objects, while '.equals()' is used to compare primitive data types.",
+      "'==' and '.equals()' are used interchangeably in Java.",
+      "'==' and '.equals()' are both used to compare objects in Java."
+    ],
+    "answer": "'==' is used to compare primitive data types, while '.equals()' is used to compare objects.",
+    "points": 3,
+    "topicName": "java",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "java_12",
+    "questionTitle": "What is method overloading in Java?",
+    "options": [
+      "Method overloading allows multiple methods with the same name but different parameters in a class.",
+      "Method overloading allows a method to have multiple return types.",
+      "Method overloading allows a method to be overridden by a subclass.",
+      "Method overloading allows a method to have multiple access modifiers."
+    ],
+    "answer": "Method overloading allows multiple methods with the same name but different parameters in a class.",
+    "points": 3,
+    "topicName": "java",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "java_13",
+    "questionTitle": "What is method overriding in Java?",
+    "options": [
+      "Method overriding allows multiple methods with the same name but different parameters in a class.",
+      "Method overriding allows a method to have multiple return types.",
+      "Method overriding allows a subclass to provide a specific implementation of a method that is already defined in its superclass.",
+      "Method overriding allows a method to have multiple access modifiers."
+    ],
+    "answer": "Method overriding allows a subclass to provide a specific implementation of a method that is already defined in its superclass.",
+    "points": 3,
+    "topicName": "java",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "java_14",
+    "questionTitle": "What is the purpose of the 'super' keyword in Java?",
+    "options": [
+      "To call the constructor of the superclass",
+      "To access the superclass's methods and fields",
+      "To define a subclass",
+      "To create an instance of a class"
+    ],
+    "answer": "To access the superclass's methods and fields",
+    "points": 3,
+    "topicName": "java",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "java_15",
+    "questionTitle": "What is the purpose of the 'this' keyword in Java?",
+    "options": [
+      "To call the constructor of the current class",
+      "To access the superclass's methods and fields",
+      "To refer to the current instance of the class",
+      "To define a subclass"
+    ],
+    "answer": "To refer to the current instance of the class",
+    "points": 3,
+    "topicName": "java",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "java_16",
+    "questionTitle": "What is the output of the following Java code?<linebreak><linebreak>```<linebreak>public class Main {<linebreak>    public static void main(String[] args) {<linebreak>        int x = 5;<linebreak>        int y = 2;<linebreak>        System.out.println(x / y);<linebreak>    }<linebreak>}<linebreak>```",
+    "options": ["2.5", "2", "2.0", "Compilation Error"],
+    "answer": "2",
+    "points": 3,
+    "topicName": "java",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "java_17",
+    "questionTitle": "What is the output of the following Java code?<linebreak><linebreak>```<linebreak>public class Main {<linebreak>    public static void main(String[] args) {<linebreak>        int x = 5;<linebreak>        int y = 2;<linebreak>        System.out.println(x % y);<linebreak>    }<linebreak>}<linebreak>```",
+    "options": ["2.5", "2", "1", "Compilation Error"],
+    "answer": "1",
+    "points": 3,
+    "topicName": "java",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "java_18",
+    "questionTitle": "What is the purpose of the 'interface' keyword in Java?",
+    "options": [
+      "To declare a class",
+      "To define a blueprint for a class",
+      "To specify the superclass",
+      "To access static variables"
+    ],
+    "answer": "To define a blueprint for a class",
+    "points": 2,
+    "topicName": "java",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "java_19",
+    "questionTitle": "What is the output of the following Java code snippet?<linebreak><linebreak><linebreak>public class Main {<linebreak>    public static void main(String[] args) {<linebreak>        int x = 10;<linebreak>        if (x == 10) {<linebreak>            System.out.println(\"x is 10\");<linebreak>        } else if (x == 20) {<linebreak>            System.out.println(\"x is 20\");<linebreak>        } else {<linebreak>            System.out.println(\"x is not 10 or 20\");<linebreak>        }<linebreak>    }<linebreak>}<linebreak>",
+    "options": ["x is 10", "x is 20", "x is not 10 or 20", "No output"],
+    "answer": "x is 10",
+    "points": 3,
+    "topicName": "java",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "java_20",
+    "questionTitle": "What is the purpose of the 'try-catch' block in Java?",
+    "options": [
+      "To handle exceptions",
+      "To execute code only if a condition is true",
+      "To declare a method that can be overridden",
+      "To prevent inheritance"
+    ],
+    "answer": "To handle exceptions",
+    "points": 2,
+    "topicName": "java",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "java_21",
+    "questionTitle": "What is method overloading in Java?",
+    "options": [
+      "Defining multiple methods with the same name but different parameters",
+      "Defining multiple methods with the same name and same parameters",
+      "Defining multiple methods with different return types",
+      "Defining multiple methods in different classes"
+    ],
+    "answer": "Defining multiple methods with the same name but different parameters",
+    "points": 3,
+    "topicName": "java",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "java_22",
+    "questionTitle": "What is the purpose of the 'StringBuilder' class in Java?",
+    "options": [
+      "To create immutable strings",
+      "To create mutable strings",
+      "To perform string concatenation",
+      "To format strings"
+    ],
+    "answer": "To create mutable strings",
+    "points": 2,
+    "topicName": "java",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "java_23",
+    "questionTitle": "What is the purpose of the 'throw' keyword in Java?",
+    "options": [
+      "To handle exceptions",
+      "To indicate that a method may throw an exception",
+      "To create a new exception",
+      "To catch exceptions"
+    ],
+    "answer": "To create a new exception",
+    "points": 2,
+    "topicName": "java",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "java_24",
+    "questionTitle": "What is the output of the following Java code snippet?<linebreak><linebreak><linebreak>public class Main {<linebreak>    public static void main(String[] args) {<linebreak>        int x = 5;<linebreak>        System.out.println(x++);<linebreak>    }<linebreak>}<linebreak>",
+    "options": ["5", "6", "Error", "No output"],
+    "answer": "5",
+    "points": 3,
+    "topicName": "java",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "java_25",
+    "questionTitle": "What is the purpose of the 'default' keyword in a Java switch statement?",
+    "options": [
+      "To specify a default case",
+      "To break out of the switch statement",
+      "To specify the starting value",
+      "To specify the ending value"
+    ],
+    "answer": "To specify a default case",
+    "points": 2,
+    "topicName": "java",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "java_26",
+    "questionTitle": "What is the purpose of the 'finally' block in Java exception handling?",
+    "options": [
+      "To execute code only if a condition is true",
+      "To specify the superclass",
+      "To declare a method that can be overridden",
+      "To ensure that certain code is always executed, regardless of whether an exception is thrown or not"
+    ],
+    "answer": "To ensure that certain code is always executed, regardless of whether an exception is thrown or not",
+    "points": 2,
+    "topicName": "java",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "java_27",
+    "questionTitle": "What is the purpose of the 'static' keyword in Java?",
+    "options": [
+      "To define a constant",
+      "To specify that a variable or method belongs to the class, rather than instances of the class",
+      "To prevent inheritance",
+      "To declare a method that can be overridden"
+    ],
+    "answer": "To specify that a variable or method belongs to the class, rather than instances of the class",
+    "points": 2,
+    "topicName": "java",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "java_28",
+    "questionTitle": "What is the purpose of the 'this' keyword in Java?",
+    "options": [
+      "To create a new object",
+      "To refer to the current instance of the class",
+      "To initialize variables",
+      "To access static variables"
+    ],
+    "answer": "To refer to the current instance of the class",
+    "points": 2,
+    "topicName": "java",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "java_29",
+    "questionTitle": "What is the purpose of the 'super' keyword in Java?",
+    "options": [
+      "To call the superclass constructor",
+      "To refer to the current instance of the class",
+      "To initialize variables",
+      "To access static variables"
+    ],
+    "answer": "To call the superclass constructor",
+    "points": 2,
+    "topicName": "java",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "java_30",
+    "questionTitle": "What is the output of the following Java code snippet?<linebreak><linebreak><linebreak>public class Main {<linebreak>    public static void main(String[] args) {<linebreak>        int i = 0;<linebreak>        while (i < 5) {<linebreak>            System.out.print(i + \" \");<linebreak>            i++;<linebreak>        }<linebreak>    }<linebreak>}<linebreak>",
+    "options": ["0 1 2 3 4", "1 2 3 4 5", "0 1 2 3 4 5", "1 2 3 4"],
+    "answer": "0 1 2 3 4",
+    "points": 3,
+    "topicName": "java",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "js_1",
+    "questionTitle": "What is the result of the following JavaScript expression: 2 + 2 + '2'?",
+    "options": ["42", "6", "22", "4"],
+    "answer": "42",
+    "points": 2,
+    "topicName": "javascript",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "js_2",
+    "questionTitle": "Which keyword is used to declare a variable in JavaScript?",
+    "options": ["var", "let", "const", "int"],
+    "answer": "var",
+    "points": 2,
+    "topicName": "javascript",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "js_3",
+    "questionTitle": "What does the '=== operator' do in JavaScript?",
+    "options": [
+      "Checks if two values are equal in value and data type",
+      "Checks if two values are equal in value, but not data type",
+      "Assigns a value to a variable",
+      "Performs strict inequality comparison"
+    ],
+    "answer": "Checks if two values are equal in value and data type",
+    "points": 2,
+    "topicName": "javascript",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "js_4",
+    "questionTitle": "Which of the following is NOT a valid JavaScript data type?",
+    "options": ["number", "string", "boolean", "float"],
+    "answer": "float",
+    "points": 2,
+    "topicName": "javascript",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "js_5",
+    "questionTitle": "What does the 'typeof' operator in JavaScript do?",
+    "options": [
+      "Checks if a variable is defined",
+      "Returns the data type of a variable",
+      "Performs mathematical operations",
+      "Checks if two values are equal"
+    ],
+    "answer": "Returns the data type of a variable",
+    "points": 2,
+    "topicName": "javascript",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "js_6",
+    "questionTitle": "Which method is used to add a new element to the end of an array in JavaScript?",
+    "options": ["push()", "pop()", "concat()", "shift()"],
+    "answer": "push()",
+    "points": 2,
+    "topicName": "javascript",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "js_7",
+    "questionTitle": "What will be the output of the following code?<linebreak><linebreak>```javascript<linebreak>console.log(5 == '5');<linebreak>```",
+    "options": ["true", "false", "undefined", "TypeError"],
+    "answer": "true",
+    "points": 2,
+    "topicName": "javascript",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "js_8",
+    "questionTitle": "Which event is triggered when a user clicks on an HTML element?",
+    "options": ["onchange", "onclick", "onmouseover", "onsubmit"],
+    "answer": "onclick",
+    "points": 2,
+    "topicName": "javascript",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "js_9",
+    "questionTitle": "What does the 'map' method do in JavaScript?",
+    "options": [
+      "Iterates over an array and returns a new array with modified elements",
+      "Iterates over an array and returns the first matching element",
+      "Iterates over an object and returns a new object with modified properties",
+      "Iterates over an object and returns the first matching property"
+    ],
+    "answer": "Iterates over an array and returns a new array with modified elements",
+    "points": 2,
+    "topicName": "javascript",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "js_10",
+    "questionTitle": "What does the 'isNaN' function in JavaScript do?",
+    "options": [
+      "Checks if a value is not a number",
+      "Checks if a value is a number",
+      "Converts a value to a number",
+      "Returns the index of the first occurrence of a specified value"
+    ],
+    "answer": "Checks if a value is not a number",
+    "points": 2,
+    "topicName": "javascript",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "js_11",
+    "questionTitle": "Which keyword is used to define a function in JavaScript?",
+    "options": ["function", "func", "define", "def"],
+    "answer": "function",
+    "points": 2,
+    "topicName": "javascript",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "js_12",
+    "questionTitle": "What is the output of the following code?<linebreak><linebreak>```javascript<linebreak>console.log(typeof(undefined));<linebreak>```",
+    "options": ["null", "undefined", "object", "TypeError"],
+    "answer": "undefined",
+    "points": 2,
+    "topicName": "javascript",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "js_13",
+    "questionTitle": "What is the purpose of the 'forEach' method in JavaScript?",
+    "options": [
+      "Iterates over an array and returns a new array with modified elements",
+      "Iterates over an array and returns the first matching element",
+      "Executes a provided function once for each array element",
+      "Creates a new array with all elements that pass a test"
+    ],
+    "answer": "Executes a provided function once for each array element",
+    "points": 3,
+    "topicName": "javascript",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "js_14",
+    "questionTitle": "What will be the output of the following code?<linebreak><linebreak>```javascript<linebreak>var x = 10;<linebreak>function foo() {<linebreak>  console.log(x);<linebreak>  var x = 20;<linebreak>}<linebreak>foo();<linebreak>```",
+    "options": ["10", "20", "undefined", "ReferenceError"],
+    "answer": "undefined",
+    "points": 3,
+    "topicName": "javascript",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "js_15",
+    "questionTitle": "What is the purpose of the 'filter' method in JavaScript?",
+    "options": [
+      "Iterates over an array and returns a new array with modified elements",
+      "Iterates over an array and returns the first matching element",
+      "Executes a provided function once for each array element",
+      "Creates a new array with all elements that pass a test"
+    ],
+    "answer": "Creates a new array with all elements that pass a test",
+    "points": 3,
+    "topicName": "javascript",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "js_16",
+    "questionTitle": "What does the 'reduce' method do in JavaScript?",
+    "options": [
+      "Iterates over an array and returns a new array with modified elements",
+      "Applies a function against an accumulator and each element in the array to reduce it to a single value",
+      "Executes a provided function once for each array element",
+      "Creates a new array with all elements that pass a test"
+    ],
+    "answer": "Applies a function against an accumulator and each element in the array to reduce it to a single value",
+    "points": 3,
+    "topicName": "javascript",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "js_17",
+    "questionTitle": "What is the output of the following code?<linebreak><linebreak>```javascript<linebreak>console.log(3 * '2');<linebreak>```",
+    "options": ["6", "32", "NaN", "TypeError"],
+    "answer": "6",
+    "points": 3,
+    "topicName": "javascript",
+    "difficultyLevel": "medium"
+  },
+  {
+    "questionId": "js_18",
+    "questionTitle": "What is the purpose of the 'apply' method in JavaScript?",
+    "options": [
+      "Executes a function once for each array element",
+      "Creates a new array with all elements that pass a test",
+      "Invokes a function with a given 'this' value and arguments provided as an array",
+      "Binds a function to a particular object, meaning that function will always have a particular 'this' value"
+    ],
+    "answer": "Invokes a function with a given 'this' value and arguments provided as an array",
+    "points": 4,
+    "topicName": "javascript",
+    "difficultyLevel": "hard"
+  },
+  {
+    "questionId": "js_19",
+    "questionTitle": "What will be the output of the following code?<linebreak><linebreak>```javascript<linebreak>function outer() {<linebreak>  var x = 10;<linebreak>  function inner() {<linebreak>    console.log(x);<linebreak>  }<linebreak>  return inner;<linebreak>}<linebreak>var closureFunction = outer();<linebreak>closureFunction();<linebreak>```",
+    "options": ["10", "undefined", "ReferenceError", "TypeError"],
+    "answer": "10",
+    "points": 4,
+    "topicName": "javascript",
+    "difficultyLevel": "hard"
+  },
+  {
+    "questionId": "js_20",
+    "questionTitle": "What does the 'bind' method do in JavaScript?",
+    "options": [
+      "Creates a new array with the results of calling a provided function on every element in the array",
+      "Binds a function to a particular object, meaning that function will always have a particular 'this' value",
+      "Executes a provided function once for each array element",
+      "Creates a new array with all elements that pass a test"
+    ],
+    "answer": "Binds a function to a particular object, meaning that function will always have a particular 'this' value",
+    "points": 4,
+    "topicName": "javascript",
+    "difficultyLevel": "hard"
+  },
+  {
+    "questionId": "js_21",
+    "questionTitle": "What is the purpose of the 'try...catch' statement in JavaScript?",
+    "options": [
+      "Declares a block of code, variables, or functions that can be executed later",
+      "Creates an asynchronous function",
+      "Handles runtime errors by catching exceptions",
+      "Performs a conditional test and executes a statement if the test passes"
+    ],
+    "answer": "Handles runtime errors by catching exceptions",
+    "points": 4,
+    "topicName": "javascript",
+    "difficultyLevel": "hard"
+  },
+  {
+    "questionId": "js_22",
+    "questionTitle": "What is the output of the following code?<linebreak><linebreak>```javascript<linebreak>console.log(typeof NaN);<linebreak>```",
+    "options": ["number", "string", "NaN", "undefined"],
+    "answer": "number",
+    "points": 4,
+    "topicName": "javascript",
+    "difficultyLevel": "hard"
+  },
+  {
+    "questionId": "js_23",
+    "questionTitle": "What is the purpose of the 'apply' method in JavaScript?",
+    "options": [
+      "Executes a function once for each array element",
+      "Creates a new array with all elements that pass a test",
+      "Invokes a function with a given 'this' value and arguments provided as an array",
+      "Binds a function to a particular object, meaning that function will always have a particular 'this' value"
+    ],
+    "answer": "Invokes a function with a given 'this' value and arguments provided as an array",
+    "points": 4,
+    "topicName": "javascript",
+    "difficultyLevel": "hard"
+  },
+  {
+    "questionId": "js_24",
+    "questionTitle": "What will be the output of the following code?<linebreak><linebreak>```javascript<linebreak>console.log(0.1 + 0.2 === 0.3);<linebreak>```",
+    "options": ["true", "false", "undefined", "TypeError"],
+    "answer": "false",
+    "points": 4,
+    "topicName": "javascript",
+    "difficultyLevel": "hard"
+  },
+  {
+    "questionId": "js_25",
+    "questionTitle": "What is the purpose of the 'typeof' operator in JavaScript?",
+    "options": [
+      "Checks if a variable is defined",
+      "Returns the data type of a variable",
+      "Performs mathematical operations",
+      "Checks if two values are equal"
+    ],
+    "answer": "Returns the data type of a variable",
+    "points": 2,
+    "topicName": "javascript",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "js_26",
+    "questionTitle": "Which keyword is used to define a block of code in JavaScript?",
+    "options": ["block", "begin", "blockify", "None of the above"],
+    "answer": "None of the above",
+    "points": 2,
+    "topicName": "javascript",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "js_27",
+    "questionTitle": "What is the output of the following code?<linebreak><linebreak>```javascript<linebreak>console.log(3 + 2 * 5);<linebreak>```",
+    "options": ["15", "25", "13", "11"],
+    "answer": "13",
+    "points": 2,
+    "topicName": "javascript",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "js_28",
+    "questionTitle": "What does the 'isNaN' function in JavaScript do?",
+    "options": [
+      "Checks if a value is not a number",
+      "Checks if a value is a number",
+      "Converts a value to a number",
+      "Returns the index of the first occurrence of a specified value"
+    ],
+    "answer": "Checks if a value is not a number",
+    "points": 2,
+    "topicName": "javascript",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "js_29",
+    "questionTitle": "Which of the following is NOT a valid JavaScript data type?",
+    "options": ["number", "string", "boolean", "character"],
+    "answer": "character",
+    "points": 2,
+    "topicName": "javascript",
+    "difficultyLevel": "easy"
+  },
+  {
+    "questionId": "js_30",
+    "questionTitle": "What is the output of the following code?<linebreak><linebreak>```javascript<linebreak>console.log('2' + 2);<linebreak>```",
+    "options": ["4", "22", "undefined", "TypeError"],
+    "answer": "22",
+    "points": 2,
+    "topicName": "javascript",
+    "difficultyLevel": "easy"
+  }
+]

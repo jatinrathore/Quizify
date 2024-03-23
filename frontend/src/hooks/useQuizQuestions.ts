@@ -10,9 +10,7 @@ interface FetchResponseType {
 const useQuizQuestions = (endpoint: string) => {
   const cookie = CookieManager.getCookie();
 
-  const url = `${
-    import.meta.env.VITE_QUIZIFY_SERVER_URL
-  }api/questions/quiz/${endpoint}`;
+  const url = `/api/questions/quiz/${endpoint}`;
 
   return useQuery({
     queryKey: ["quiz-question"],

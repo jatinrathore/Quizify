@@ -122,7 +122,7 @@ router.post("/forgot-password", async (req, res) => {
 
         await resetToken.save();
 
-        const url = `${process.env.CLIENT_URL}reset-password?token=${randomBytes}&id=${user._id}`;
+        const url = `${process.env.CLIENT_URL}/reset-password?token=${randomBytes}&id=${user._id}`;
 
         mailTransport().sendMail({
             from: "quizify.admin@gmail.com",

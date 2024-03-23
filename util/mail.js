@@ -105,7 +105,7 @@ exports.generateVerifyTemplate = (name) => {
           <h1><i class="fa fa-check-circle" aria-hidden="true" style="color: #E6A1C3;"></i> Email verified</h1>
           <p><span style="color: #9DA4DB;">${name}</span> your email is verified</p>
             <p>Your account is now fully activated, and you can enjoy all the benefits of our platform.</p>
-            <a href="${process.env.CLIENT_URL + "account-manage"}" class= "button">Go to app now</a>
+            <a href="${process.env.CLIENT_URL + "/account-manage"}" class= "button">Go to app now</a>
           </div>
           </div>
         <div class="container" id="web">
