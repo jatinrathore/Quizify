@@ -6,7 +6,6 @@ const app = express();
 const passport = require("passport");
 const path = require("path");
 require("./config/passport-setup");
-const { createProxyMiddleware } = require('http-proxy-middleware');
 
 
 const cookieParser = require('cookie-parser');
@@ -19,20 +18,11 @@ app.use(session({
   saveUninitialized: false
 }));
 app.use(express.json());
-// app.use(cors({
-//   origin: true,
-//   credentials: true
-// }));
 
-// Define the endpoint you want to proxy
-const apiProxy = createProxyMiddleware('/api', {
-  target: 'https://quizify-pt2a.onrender.com', // Change this to your backend URL
-  changeOrigin: true,
-  secure: false // Set it to true if your backend URL is HTTPS and has a valid certificate
-});
-
-// Proxy API requests
-app.use(apiProxy);
+app.use(cors({
+  origin: true,
+  credentials: true
+}));
 
 
 // Configure Passport strategies and routes...
