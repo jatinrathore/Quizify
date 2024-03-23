@@ -17,10 +17,10 @@ app.use(session({
   saveUninitialized: false
 }));
 app.use(express.json());
-app.use(cors({
-  origin: true,
-  credentials: true
-}));
+// app.use(cors({
+//   origin: true,
+//   credentials: true
+// }));
 
 
 // Configure Passport strategies and routes...
