@@ -19,12 +19,25 @@ app.use(session({
 }));
 app.use(express.json());
 
-app.use(cors({
-  origin: true,
-  credentials: true
-}));
+// app.use(cors({
+//   origin: true,
+//   credentials: true
+// }));
 
+// Allow requests from a specific domain
+const whitelist = ['https://quizify-learning.netlify.app'];
+const corsOptions = {
+  origin: function (origin, callback) {
+    if (whitelist.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
+};
 
+// Enable CORS with options
+app.use(cors(corsOptions));
 
 // Configure Passport strategies and routes...
 app.use(passport.initialize());
