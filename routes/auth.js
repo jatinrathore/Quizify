@@ -26,6 +26,7 @@ router.post("/", async (req, res) => {
 
         res.cookie("quizify-token", token, {
             maxAge: 24 * 60 * 60 * 1000,
+            sameSite: "none",
         }).status(200).send({
             data: token, message: "Logged in Successfully", response: {
                 status: 200
