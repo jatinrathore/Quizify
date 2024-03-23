@@ -2,7 +2,6 @@
   "name": "quizify",
   "private": true,
   "version": "0.0.0",
-  "proxy": "https://quizify-pt2a.onrender.com",
   "type": "module",
   "scripts": {
     "dev": "vite",
