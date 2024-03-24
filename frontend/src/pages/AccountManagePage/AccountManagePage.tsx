@@ -2,17 +2,17 @@ import NavBar from "../../components/NavBar";
 import GitFooter from "../../components/GitFooter";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import { CookieManager } from "../../services/handleCookies";
 import SignInSignUpForm from "../../components/SignInSignUpForm";
+import { TokenManager } from "../../services/handleToken";
 
 const AccountManagePage = () => {
   const navigate = useNavigate();
 
-  const cookieExists = CookieManager.isCookieSet();
+  const tokenExists = TokenManager.isToken();
 
   useEffect(() => {
-    if (cookieExists) navigate("/home");
-  }, [cookieExists]);
+    if (tokenExists) navigate("/home");
+  }, [tokenExists]);
 
   return (
     <>

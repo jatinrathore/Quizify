@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useQuery } from "@tanstack/react-query";
-import { CookieManager } from "../services/handleCookies";
 import useQuestionsStore from "../store";
 import QuestionsType from "../models/Questions";
+import { TokenManager } from "../services/handleToken";
 
 interface FetchResponseType {
   questions: QuestionsType[];
@@ -10,9 +10,9 @@ interface FetchResponseType {
 }
 
 const useQuestions = () => {
-  const cookie = CookieManager.getCookie();
+  const token = TokenManager.getToken();
 
-  const endpoint = `/api/questions`;
+  const endpoint = `${import.meta.env.VITE_QUIZIFY_SERVER_URL}/api/questions`;
 
   const { selectedGenre, page, pageSize } = useQuestionsStore();
 
@@ -26,7 +26,7 @@ const useQuestions = () => {
           topicName: selectedGenre,
         },
         headers: {
-          "quizify-auth-token": cookie,
+          "quizify-auth-token": token,
         },
       });
 

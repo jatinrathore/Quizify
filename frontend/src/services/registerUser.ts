@@ -1,7 +1,7 @@
 import axios from "axios";
 import { UserFormData } from "../models/Signup";
 
-const endpoint = "/api/users";
+const endpoint = `${import.meta.env.VITE_QUIZIFY_SERVER_URL}/api/users`;
 
 const registerUser = async (userData: UserFormData) => {
   try {

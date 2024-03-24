@@ -21,8 +21,9 @@ import {
 import loginUser from "../../services/loginUser";
 import { toast } from "react-toastify";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import "./signinform.css";
 import { FcGoogle } from "react-icons/fc";
+import { TokenManager } from "../../services/handleToken";
+import "./signinform.css";
 
 const SigninForm = () => {
   const [show, setShow] = useState(false);
@@ -94,6 +95,7 @@ const SigninForm = () => {
         showErrorAlert("Network error occurred. Please try again later.");
       } else if (data.response && data.response.status === 200) {
         //on successful data retrieval
+        TokenManager.setToken(data.data);
         navigate("/");
         toast.info("Logged in successfully!");
       }

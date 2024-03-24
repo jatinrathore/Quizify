@@ -6,13 +6,13 @@ import { Button, Text } from "@chakra-ui/react";
 import { GiSandsOfTime } from "react-icons/gi";
 import useQuestionsStore from "../../store";
 import { useNavigate } from "react-router-dom";
-import { CookieManager } from "../../services/handleCookies";
+import { TokenManager } from "../../services/handleToken";
 
 const QuizCarousel = () => {
   const [counter, setCounter] = useState(0);
   const navigate = useNavigate();
   const setSelectedEndpoint = useQuestionsStore((s) => s.setSelectedEndpoint);
-  const cookieExists = CookieManager.isCookieSet();
+  const tokenExists = TokenManager.isToken();
 
   let slideLength = 3;
 
@@ -32,7 +32,7 @@ const QuizCarousel = () => {
   };
 
   const handleClick = (endpoint: string) => {
-    if (!cookieExists) {
+    if (!tokenExists) {
       navigate("/account-manage");
     } else {
       setSelectedEndpoint(endpoint);

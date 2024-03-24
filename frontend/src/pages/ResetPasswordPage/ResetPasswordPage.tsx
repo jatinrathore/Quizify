@@ -64,7 +64,9 @@ const ResetPasswordPage = () => {
 
     try {
       const { data } = await axios.post(
-        `/api/users/reset-password?token=${token}&id=${id}`,
+        `${
+          import.meta.env.VITE_QUIZIFY_SERVER_URL
+        }/api/users/reset-password?token=${token}&id=${id}`,
         {
           password: inputFields.password,
         }

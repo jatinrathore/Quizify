@@ -12,8 +12,28 @@ import { RiEnglishInput } from "react-icons/ri";
 import QuizCarousel from "../../components/QuizCarousel";
 import "./dashboardpage.css";
 import PracticeCard from "../../components/PracticeCard";
+import { useLocation } from "react-router-dom";
+import { TokenManager } from "../../services/handleToken";
+import { toast } from "react-toastify";
 
 const DashboardPage = () => {
+  // Check for SignIn with Google and save token in local Storage
+
+  // Get the current location object
+  const location = useLocation();
+
+  // Parse the query parameters from the location
+  const queryParams = new URLSearchParams(location.search);
+
+  // Get the 'token' parameter value from the query parameters
+  const token = queryParams.get("token");
+
+  // Now save the 'token' variable in local storage
+  if (token) {
+    TokenManager.setToken(token);
+    toast.info("Logged in successfully!");
+  }
+
   return (
     <div>
       <NavBar />

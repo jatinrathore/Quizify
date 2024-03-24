@@ -4,21 +4,21 @@ import { Box, Link, Spinner, Text } from "@chakra-ui/react";
 import useTimer from "../../hooks/useTimer";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { CookieManager } from "../../services/handleCookies";
 import useQuestionsStore from "../../store";
 import QuizResult from "../../components/QuizResult";
+import { TokenManager } from "../../services/handleToken";
 import "./quizpage1.css";
 
 const QuizPage = () => {
   const navigate = useNavigate();
 
-  const cookieExists = CookieManager.isCookieSet();
+  const tokenExists = TokenManager.isToken();
 
   useEffect(() => {
-    if (!cookieExists) navigate("/");
+    if (!tokenExists) navigate("/");
 
     startTimer();
-  }, [cookieExists]);
+  }, [tokenExists]);
 
   const selectedEndpoint = useQuestionsStore((s) => s.selectedEndpoint);
 

@@ -41,9 +41,12 @@ const ForgotPassword = () => {
       );
 
     try {
-      const { data } = await axios.post(`/api/users/forgot-password`, {
-        email: emailField,
-      });
+      const { data } = await axios.post(
+        `${import.meta.env.VITE_QUIZIFY_SERVER_URL}/api/users/forgot-password`,
+        {
+          email: emailField,
+        }
+      );
 
       if (data.response.status === 200) {
         setEmailField("");

@@ -2,17 +2,17 @@ import { Grid, GridItem } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import NavBar from "../../components/NavBar";
-import { CookieManager } from "../../services/handleCookies";
 import LearningPage from "../LearningPage";
+import { TokenManager } from "../../services/handleToken";
 
 const HomePage = () => {
   const navigate = useNavigate();
 
-  const cookieExists = CookieManager.isCookieSet();
+  const tokenExists = TokenManager.isToken();
 
   useEffect(() => {
-    if (!cookieExists) navigate("/");
-  }, [cookieExists]);
+    if (!tokenExists) navigate("/");
+  }, [tokenExists]);
 
   return (
     <Grid

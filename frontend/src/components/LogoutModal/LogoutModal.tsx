@@ -15,18 +15,16 @@ import { GrCircleAlert } from "react-icons/gr";
 import { IoLogOutOutline } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { CookieManager } from "../../services/handleCookies";
 import "./logoutmodal.css";
+import { TokenManager } from "../../services/handleToken";
 
 const LogoutModal = () => {
   const navigate = useNavigate();
 
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const remove = CookieManager.removeCookie();
-
   const handleClick = () => {
-    remove();
+    TokenManager.removeToken();
     toast.info("Logged out Successfully!");
     navigate("/");
   };

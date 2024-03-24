@@ -1,13 +1,13 @@
 import { Box, Image } from "@chakra-ui/react";
 import scriptlyLogo from "../../assets/quizify-high-resolution-logo-transparent.png";
 import LogoutModal from "../LogoutModal";
-import { CookieManager } from "../../services/handleCookies";
 import { useNavigate } from "react-router-dom";
 import { FaUserAlt } from "react-icons/fa";
+import { TokenManager } from "../../services/handleToken";
 import "./navbar.css";
 
 const NavBar = () => {
-  const cookieExists = CookieManager.isCookieSet();
+  const tokenExists = TokenManager.isToken();
   const navigate = useNavigate();
 
   return (
@@ -27,13 +27,13 @@ const NavBar = () => {
         onClick={() => navigate("/")}
       />
       <Box className="navbar-right-box">
-        {cookieExists && (
+        {tokenExists && (
           <button className="profile-btn">
             <FaUserAlt />
           </button>
         )}
         <Box className="navbar-text">
-          {cookieExists ? (
+          {tokenExists ? (
             <LogoutModal />
           ) : (
             <button

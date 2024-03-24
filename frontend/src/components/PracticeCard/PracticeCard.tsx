@@ -2,8 +2,8 @@ import { Box } from "@chakra-ui/react";
 import "./practicecard.css";
 import { ReactNode } from "react";
 import { useNavigate } from "react-router-dom";
-import { CookieManager } from "../../services/handleCookies";
 import useQuestionsStore from "../../store";
+import { TokenManager } from "../../services/handleToken";
 
 interface Props {
   title: string;
@@ -13,13 +13,13 @@ interface Props {
 }
 const PracticeCard = ({ title, subtitle, children, genre }: Props) => {
   const navigate = useNavigate();
-  const cookieExists = CookieManager.isCookieSet();
+  const tokenExists = TokenManager.isToken();
   const setSelectedGenre = useQuestionsStore((s) => s.setSelectedGenre);
 
   const handleClick = () => {
-    console.log("Haanji " ,cookieExists);
+    console.log("Haanji ", tokenExists);
 
-    if (!cookieExists) {
+    if (!tokenExists) {
       navigate("/account-manage");
     } else {
       setSelectedGenre(genre);

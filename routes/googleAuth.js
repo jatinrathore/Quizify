@@ -8,11 +8,7 @@ router.get("/google/callback", passport.authenticate("google", { failureRedirect
     // Successful authentication, redirect home.
     const token = req.user.generateAuthToken();
     console.log("Token Generated");
-    res.cookie("quizify-token", token, {
-        maxAge: 24 * 60 * 60 * 1000,
-        sameSite: 'none', // Setting SameSite attribute to None
-        secure: true,     // Ensuring the cookie is sent over HTTPS
-    }).redirect(process.env.CLIENT_URL)
+    res.redirect(`${process.env.CLIENT_URL}/?token=${token}`)
 });
 
 

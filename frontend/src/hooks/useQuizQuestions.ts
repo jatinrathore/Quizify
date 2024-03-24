@@ -1,23 +1,25 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { CookieManager } from "../services/handleCookies";
 import QuestionsType from "../models/Questions";
+import { TokenManager } from "../services/handleToken";
 
 interface FetchResponseType {
   data: QuestionsType[];
   success: Boolean;
 }
 const useQuizQuestions = (endpoint: string) => {
-  const cookie = CookieManager.getCookie();
+  const token = TokenManager.getToken();
 
-  const url = `/api/questions/quiz/${endpoint}`;
+  const url = `${
+    import.meta.env.VITE_QUIZIFY_SERVER_URL
+  }/api/questions/quiz/${endpoint}`;
 
   return useQuery({
     queryKey: ["quiz-question"],
     queryFn: async () => {
       const res = await axios.get<FetchResponseType>(url, {
         headers: {
-          "quizify-auth-token": cookie,
+          "quizify-auth-token": token,
         },
       });
 
