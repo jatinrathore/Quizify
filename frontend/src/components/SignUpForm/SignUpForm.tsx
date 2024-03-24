@@ -101,7 +101,7 @@ const SignUpForm = () => {
         <div className="signup-input-fields--box">
           <Stack spacing={3}>
             <Text className="signup-input-fields--heading">
-              Join Scriptly today! Sign up now to get started.
+              Join Quizify today! Sign up now to get started.
             </Text>
             <InputGroup>
               <InputLeftElement pointerEvents="none">

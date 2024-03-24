@@ -116,7 +116,7 @@ const SigninForm = () => {
         <div className="input-fields--box">
           <Stack spacing={5}>
             <Text className="input-fields--heading">
-              Welcome to Scriptly! Login to your account.
+              Welcome to Quizify! Login to your account.
             </Text>
             <InputGroup>
               <InputLeftElement pointerEvents="none">
