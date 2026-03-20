@@ -45,6 +45,54 @@
   box-shadow: var(--card-hover-shadow);
 }
 
+.accordion-state-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 16px 8px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  text-align: center;
+  list-style: none;
+}
+
+.accordion-state-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-style: normal;
+}
+
+.accordion-state-icon.empty {
+  background: var(--bg-accent-soft);
+  color: var(--accent);
+}
+
+.accordion-state-icon.error {
+  background: #fcebeb;
+  color: #e24b4a;
+}
+
+.accordion-retry-btn {
+  font-size: 11px;
+  padding: 3px 10px;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+.accordion-retry-btn:hover {
+  background: var(--accent);
+  color: var(--text-on-accent);
+}
+
 @media only screen and (max-width: 800px) {
   .accordion-text {
     font-size: 0.7rem;

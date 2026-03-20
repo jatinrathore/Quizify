@@ -17,7 +17,7 @@ interface Props {
 }
 
 const TopicNameAccordion = ({ title, genre }: Props) => {
-  const { isLoading, data: { questions } = {} } = useQuestions();
+  const { isLoading, isError, data: { questions } = {} } = useQuestions();
   const setSelectedGenre = useQuestionsStore((s) => s.setSelectedGenre);
 
   const handleClickAccordion = () => {
@@ -65,6 +65,26 @@ const TopicNameAccordion = ({ title, genre }: Props) => {
                 className="accordion-list-item"
               />
             ))}
+
+          {isError && (
+            <li className="accordion-state-item">
+              <span className="accordion-state-icon error">✕</span>
+              <span>Failed to load</span>
+              <button
+                className="accordion-retry-btn"
+                onClick={() => window.location.reload()}
+              >
+                Retry
+              </button>
+            </li>
+          )}
+
+          {!isLoading && !isError && questions?.length === 0 && (
+            <li className="accordion-state-item">
+              <span className="accordion-state-icon empty">—</span>
+              <span>No questions available</span>
+            </li>
+          )}
           {questions?.map((qus, idx) => (
             <li key={idx} className="accordion-list-item">
               <a href={`#${qus.questionId}`}>

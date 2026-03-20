@@ -15,11 +15,12 @@ import { TbPlayerTrackPrev } from "react-icons/tb";
 import StringUtils from "../../services/handleStrings";
 import { useEffect } from "react";
 import "./questioncontainer1.css";
+import { MdErrorOutline } from "react-icons/md";
 
 const QuestionsContainer = () => {
   const { selectedGenre, page, setNextPage, setPrevPage } = useQuestionsStore();
 
-  const { isLoading, data: { questions, totalPages } = {} } = useQuestions();
+  const { isLoading, isError, data: { questions, totalPages } = {} } = useQuestions();
 
   useEffect(() => {
     window.scrollTo(0, 0); // Scroll to the top of the page when component mounts
@@ -62,6 +63,47 @@ const QuestionsContainer = () => {
         ))}
       </Stack>
     );
+
+  if (isError)
+    return (
+      <div className="state-container">
+        <div className="state-icon error">
+          <MdErrorOutline />
+        </div>
+        <p className="state-title">Something went wrong</p>
+        <p className="state-subtitle">Failed to load questions. Please try again.</p>
+        <button
+          className="retry-btn"
+          onClick={() => window.location.reload()}
+          style={{
+            marginTop: "8px",
+            padding: "8px 20px",
+            background: "var(--accent)",
+            color: "var(--text-on-accent)",
+            border: "none",
+            borderRadius: "8px",
+            cursor: "pointer",
+            fontSize: "14px",
+          }}
+        >
+          Retry
+        </button>
+      </div>
+    );
+
+  if (!questions || questions.length === 0)
+    return (
+      <div className="state-container">
+        <div className="state-icon empty">
+          <BiWorld />
+        </div>
+        <p className="state-title">No questions found</p>
+        <p className="state-subtitle">
+          There are no questions available for this topic yet.
+        </p>
+      </div>
+    );
+
   return (
     <>
       <div className="question-box">

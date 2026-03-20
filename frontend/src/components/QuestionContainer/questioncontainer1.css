@@ -21,3 +21,44 @@ html {
   display: flex;
   justify-content: space-between;
 }
+
+.state-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  gap: 10px;
+  background: var(--bg-surface);
+  border-radius: 10px;
+  border: 1px solid var(--bg-accent-soft);
+}
+
+.state-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.state-icon.empty { background: var(--bg-accent-soft); color: var(--accent); }
+.state-icon.error { background: #FCEBEB; color: #E24B4A; }
+
+.state-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.state-subtitle {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0;
+  max-width: 300px;
+}

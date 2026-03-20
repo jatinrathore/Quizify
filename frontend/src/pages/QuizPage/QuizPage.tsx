@@ -9,6 +9,7 @@ import QuizResult from "../../components/QuizResult";
 import { TokenManager } from "../../services/handleToken";
 import { GiBrain } from "react-icons/gi";
 import "./quizpage1.css";
+import { MdErrorOutline } from "react-icons/md";
 
 const QuizPage = () => {
   const navigate = useNavigate();
@@ -23,7 +24,7 @@ const QuizPage = () => {
 
   const selectedEndpoint = useQuestionsStore((s) => s.selectedEndpoint);
 
-  const { data, isLoading } = useQuizQuestions(selectedEndpoint);
+  const { data, isLoading, isError } = useQuizQuestions(selectedEndpoint);
 
   const [_, setSelectedOption] = useState<string>("");
   const { minutes, seconds, startTimer, timerRunning, stopTimer } = useTimer(5);
@@ -79,6 +80,81 @@ const QuizPage = () => {
           </div>
           <div className="loading-subtitle">
             Fetching brain-teasing questions...
+          </div>
+        </div>
+      </div>
+    );
+
+  if (isError)
+    return (
+      <div className="quiz-container">
+        <div className="qc-center-box quiz-state-box">
+          <div className="header">
+            <Link href="/home">
+              <span className="back-btn">
+                <IoIosArrowRoundBack size={24} />
+                <Text>Back</Text>
+              </span>
+            </Link>
+            <div className="timer">
+              <div className="timer-circle">--:--</div>
+            </div>
+          </div>
+          <div className="quiz-state-body">
+            <div className="quiz-state-icon error">
+              <MdErrorOutline />
+            </div>
+            <p className="quiz-state-title">Failed to load quiz</p>
+            <p className="quiz-state-sub">
+              Something went wrong while fetching your questions. Check your
+              connection and try again.
+            </p>
+            <div className="quiz-state-btns">
+              <button
+                className="quiz-state-btn primary"
+                onClick={() => window.location.reload()}
+              >
+                Retry
+              </button>
+              <button
+                className="quiz-state-btn outline"
+                onClick={() => navigate("/home")}
+              >
+                Go home
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+
+  if (!isLoading && (!data?.data || data.data.length === 0))
+    return (
+      <div className="quiz-container">
+        <div className="qc-center-box quiz-state-box">
+          <div className="header">
+            <Link href="/home">
+              <span className="back-btn">
+                <IoIosArrowRoundBack size={24} />
+                <Text>Back</Text>
+              </span>
+            </Link>
+          </div>
+          <div className="quiz-state-body">
+            <div className="quiz-state-icon empty">
+              <GiBrain />
+            </div>
+            <p className="quiz-state-title">No questions available</p>
+            <p className="quiz-state-sub">
+              This topic doesn't have any quiz questions yet. Try a different
+              topic.
+            </p>
+            <button
+              className="quiz-state-btn outline"
+              onClick={() => navigate("/home")}
+            >
+              Go home
+            </button>
           </div>
         </div>
       </div>
