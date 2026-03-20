@@ -31,14 +31,14 @@ const TopicNameAccordion = ({ title, genre }: Props) => {
       <h2>
         <AccordionButton
           _expanded={{
-            bg: "#D8B4F8",
+            bg: "var(--accent)",
             color: "white",
           }}
           onClick={handleClickAccordion}
           className="accordion-btn"
           padding="13px"
           _hover={{
-            bg: "#D8B4F8",
+            bg: "var(--accent)",
             color: "white",
           }}
         >
@@ -59,8 +59,8 @@ const TopicNameAccordion = ({ title, genre }: Props) => {
             skeletonArray.map((_, idx) => (
               <Skeleton
                 key={idx}
-                startColor="#f3ccf3"
-                endColor="#D8B4F8"
+                startColor="var(--bg-accent-soft)"
+                endColor="var(--accent)"
                 borderRadius="10px"
                 className="accordion-list-item"
               />

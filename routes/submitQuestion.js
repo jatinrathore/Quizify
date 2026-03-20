@@ -15,7 +15,7 @@ router.post("/", async (req, res) => {
 
         const alreadyInDB = await SubmitQuestions.find({ questionTitle: questionObject.questionTitle });
 
-        if (alreadyInDB) return res.status(409).send({ message: "Question Already In Database" });
+        if (alreadyInDB) return res.status(409).send({ message: "This question has already been submitted." });
 
         const question = new SubmitQuestions({
             owner: questionObject.owner,
@@ -39,7 +39,7 @@ router.post("/", async (req, res) => {
 
     } catch (error) {
         console.error(error);
-        res.status(500).send({ message: 'Internal Server Error - SubmitUser<Post>' });
+        res.status(500).send({ message: 'Something went wrong. Please try again later.' });
     }
 });
 

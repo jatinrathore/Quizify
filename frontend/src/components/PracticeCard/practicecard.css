@@ -3,13 +3,14 @@
   flex-direction: column;
   width: 12rem;
   padding: 15px;
-  background: linear-gradient(135deg, #f8b4eb, #f3ccf3);
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background: var(--gradient-accent-subtle);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
   transition: 0.4s ease-out;
   position: relative;
   left: 0px;
   cursor: pointer;
+  border: 1px solid var(--border);
 }
 
 .db-cc-card:not(:first-child) {
@@ -19,6 +20,7 @@
 .db-cc-card:hover {
   transform: translateY(-20px);
   transition: 0.6s ease-out;
+  box-shadow: var(--card-hover-shadow);
 }
 
 .db-cc-card:hover ~ .db-cc-card {
@@ -30,14 +32,14 @@
 .db-cc-title {
   font-size: 1.2rem;
   font-weight: 700;
-  color: #45474b;
+  color: var(--text-heading);
   margin-bottom: 8px;
 }
 
 .db-cc-subtitle {
   font-size: 0.8rem;
   font-weight: 500;
-  color: #45474bbb;
+  color: var(--text-secondary);
   margin-bottom: 1rem;
 }
 
@@ -48,18 +50,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, violet, pink);
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  background: var(--gradient-accent);
+  box-shadow: var(--shadow-sm);
   padding: 10px;
+  color: var(--text-on-accent);
 }
 
 .cc-card-btn {
-  color: #45474bbb;
-  background: linear-gradient(135deg, white, wheat);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
-    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  color: var(--text-on-accent);
+  background: var(--gradient-accent);
+  box-shadow: var(--shadow-md);
   padding: 10px;
-  border-radius: 10px;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
 }
 
 .cc-card-btn:active {
@@ -67,7 +72,8 @@
 }
 
 .cc-card-btn:hover {
-  color: black;
+  opacity: 0.9;
+  box-shadow: var(--card-hover-shadow);
 }
 
 .cc-btn-title {
@@ -75,8 +81,6 @@
 }
 
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
-  /* Styles for medium screens go here */
-
   .db-cc-card:not(:first-child) {
     margin-left: -65px;
   }
@@ -94,9 +98,7 @@
   }
 }
 
-/* Scrolling div for cards */
 @media only screen and (max-width: 1023px) {
-  /* Styles for screens less than 1024px wide go here */
   .db-cc-card:not(:first-child) {
     margin-left: 0;
   }
@@ -133,7 +135,6 @@
 }
 
 @media only screen and (max-width: 600px) {
-  /* Styles for small screens go here */
   .db-cc-title {
     display: none;
   }

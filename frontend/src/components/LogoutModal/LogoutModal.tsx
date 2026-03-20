@@ -55,9 +55,9 @@ const LogoutModal = () => {
 
           <ModalFooter>
             <Button
-              border="2px solid #DEDEDE"
+              border="2px solid var(--border)"
               onClick={onClose}
-              color="black"
+              color="var(--text-primary)"
               flex={1}
               mr={3}
             >

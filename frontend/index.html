@@ -15,6 +15,15 @@
 </head>
 
 <body>
+  <script>
+    // Prevent white flash: apply theme before any rendering
+    (function() {
+      var mode = localStorage.getItem('quizify-theme-mode');
+      if (!mode) mode = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', mode);
+      document.body.style.backgroundColor = mode === 'dark' ? '#0f172a' : '#f0f4f8';
+    })();
+  </script>
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
 </body>

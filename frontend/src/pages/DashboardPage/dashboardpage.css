@@ -15,18 +15,13 @@
   height: auto;
   max-height: max-content;
   padding: 20px 30px;
-  border-radius: 30px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
-  background: rgb(255, 230, 230);
-  background: linear-gradient(
-    90deg,
-    rgba(255, 230, 230, 1) 0%,
-    rgba(243, 204, 243, 1) 100%
-  );
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  background: var(--gradient-surface);
 }
 
 .db-title {
-  color: #45474b;
+  color: var(--text-heading);
   text-align: center;
   font-size: 1.7rem;
   font-weight: 600;
@@ -34,7 +29,7 @@
 }
 
 .db-subtitle {
-  color: #45474bbb;
+  color: var(--text-secondary);
   font-size: 1.2rem;
   font-weight: 500;
   text-align: center;
@@ -49,10 +44,10 @@
 
 .db-qc-container {
   width: 100%;
-  border-radius: 30px;
+  border-radius: var(--radius-xl);
   overflow: hidden;
   text-align: center;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  box-shadow: var(--shadow-lg);
 }
 
 .inner-container-two {
@@ -64,7 +59,7 @@
   font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
-  color: #45474b;
+  color: var(--text-heading);
 }
 
 .db-cards-container {
@@ -74,29 +69,25 @@
 }
 
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
-  /* Styles for medium screens go here */
   .inner-container-two {
     margin-top: 2rem;
   }
 }
 
-/* Scrolling div for cards */
 @media only screen and (max-width: 1023px) {
-  /* Styles for screens less than 1024px wide go here */
   .db-cards-container {
-    background-color: whitesmoke;
-    border-radius: 20px;
+    background-color: var(--bg-surface);
+    border-radius: var(--radius-lg);
     width: 100%;
     padding: 20px;
     gap: 10px;
-    overflow-x: auto; /* Add scrollbar horizontally */
-    overflow-y: hidden; /* Hide vertical scrollbar */
-    white-space: nowrap; /* Prevent cards from wrapping */
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  /* Styles for small screens go here */
   .db-inner-container {
     width: 90%;
     padding: 20px 20px;

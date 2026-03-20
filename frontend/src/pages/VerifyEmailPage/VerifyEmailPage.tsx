@@ -75,7 +75,7 @@ const VerifyEmailPage = () => {
 
             <label className="ev-box-label">OTP*</label>
             <Input
-              focusBorderColor="pink.400"
+              focusBorderColor="purple.400"
               placeholder="Enter your OTP"
               onChange={handleChange}
               value={OTP}

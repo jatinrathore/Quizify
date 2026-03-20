@@ -19,7 +19,7 @@ router.post("/", async (req, res) => {
 
         //Checking for existing user in database
         let user = await User.findOne({ email: req.body.email });
-        if (user) return res.status(409).send({ message: "User already registered!" });
+        if (user) return res.status(409).send({ message: "An account with this email address already exists." });
 
         //Creating new user and saving it in database
         user = new User({
@@ -46,12 +46,12 @@ router.post("/", async (req, res) => {
             html: generateTemplate(OTP),
         });
 
-        res.status(201).send({ message: "User created successfully", response: { status: 201 }, userId: user._id });
+        res.status(201).send({ message: "Account created successfully! Please check your email to verify.", response: { status: 201 }, userId: user._id });
 
     } catch (error) {
 
         console.error(error);
-        res.status(500).send({ message: 'Internal Server Error - Users<Post>' });
+        res.status(500).send({ message: 'Something went wrong. Please try again later.' });
 
     }
 });
@@ -62,21 +62,21 @@ router.post("/verify-email", async (req, res) => {
 
         const { userId, otp } = req.body;
 
-        if (!userId || !otp) return res.status(400).send({ message: "Invalid request: User ID or OTP is missing.", response: { status: 400 } });
+        if (!userId || !otp) return res.status(400).send({ message: "Please provide both User ID and OTP.", response: { status: 400 } });
 
-        if (!isValidObjectId(userId)) return res.status(400).send({ message: "Invalid User Id", response: { status: 400 } });
+        if (!isValidObjectId(userId)) return res.status(400).send({ message: "Invalid verification link. Please request a new one.", response: { status: 400 } });
 
         const user = await User.findOne({ _id: userId });
 
-        if (!user) return res.status(404).send({ message: "User not found", response: { status: 404 } });
+        if (!user) return res.status(404).send({ message: "We couldn't find your account. Please sign up again.", response: { status: 404 } });
 
         const tokenOwner = await OtpVerification.findOne({ owner: user._id });
 
-        if (!tokenOwner) return res.status(404).send({ message: "Owner<User> not found", response: { status: 404 } });
+        if (!tokenOwner) return res.status(404).send({ message: "Verification code has expired. Please request a new one.", response: { status: 404 } });
 
         const isMatched = await tokenOwner.compareToken(otp);
 
-        if (!isMatched) return res.status(401).send({ message: "Wrong OTP!", response: { status: 401 } });
+        if (!isMatched) return res.status(401).send({ message: "Incorrect OTP. Please check and try again.", response: { status: 401 } });
 
         user.verified = true;
 
@@ -90,12 +90,12 @@ router.post("/verify-email", async (req, res) => {
             html: generateVerifyTemplate(user.name),
         });
 
-        res.status(200).send({ message: "Email Verified", response: { status: 200 } })
+        res.status(200).send({ message: "Email verified successfully! You can now log in.", response: { status: 200 } })
 
     } catch (error) {
 
         console.error(error);
-        res.status(500).send({ message: 'Internal Server Error - Verify-Emails<Post>' });
+        res.status(500).send({ message: 'Something went wrong. Please try again later.' });
 
     }
 });
@@ -106,15 +106,15 @@ router.post("/forgot-password", async (req, res) => {
 
         const { email } = req.body;
 
-        if (!email) return res.status(204).send({ message: "Invalid request: email is missing.", response: { status: 204 } });
+        if (!email) return res.status(400).send({ message: "Please enter your email address.", response: { status: 400 } });
 
         const user = await User.findOne({ email });
 
-        if (!user) return res.status(404).send({ message: "User not found", response: { status: 404 } });
+        if (!user) return res.status(404).send({ message: "No account found with this email address.", response: { status: 404 } });
 
         const token = await ResetToken.findOne({ owner: user._id });
 
-        if (token) return res.status(409).send({ message: "Token already present, you can request for new one after one hour", response: { status: 409 } });
+        if (token) return res.status(409).send({ message: "A reset link was already sent. Please check your email or try again in one hour.", response: { status: 409 } });
 
         const randomBytes = await createRandomBytes();
 
@@ -131,11 +131,11 @@ router.post("/forgot-password", async (req, res) => {
             html: generateResetPasswordTemplate(url),
         });
 
-        res.status(200).send({ message: "Password reset link is sent", response: { status: 200 } });
+        res.status(200).send({ message: "Password reset link has been sent to your email.", response: { status: 200 } });
     } catch (error) {
 
         console.error(error);
-        res.status(500).send({ message: 'Internal Server Error - Forgot-Password<Post>' });
+        res.status(500).send({ message: 'Something went wrong. Please try again later.' });
     }
 });
 
@@ -144,13 +144,17 @@ router.post("/reset-password", isResetTokenValid, async (req, res) => {
     try {
         const { password } = req.body;
 
+        if (!password) return res.status(400).send({ message: "Please enter a new password." });
+
         const user = await User.findById(req.user._id);
 
-        if (!user) return res.status(404).send({ message: "User not found - Reset Password" });
+        if (!user) return res.status(404).send({ message: "Account not found. Please try again." });
 
         const isSamePassword = await bcrypt.compare(password, user.password);
 
-        if (isSamePassword) return res.status(400).send("New password must be different!");
+        if (isSamePassword) return res.status(400).send({ message: "New password must be different from your current password." });
+
+        if (password.trim().length < 8) return res.status(400).send({ message: "Password must be at least 8 characters long." });
 
         user.password = password.trim();
 
@@ -165,12 +169,12 @@ router.post("/reset-password", isResetTokenValid, async (req, res) => {
             html: generateSuccessTemplate(),
         });
 
-        res.status(200).send({ message: "Password Reset Successfully!", response: { status: 200 } });
+        res.status(200).send({ message: "Password has been reset successfully!", response: { status: 200 } });
 
     } catch (error) {
 
         console.error(error);
-        res.status(500).send({ message: 'Internal Server Error - Reset-Password<Post>' });
+        res.status(500).send({ message: 'Something went wrong. Please try again later.' });
     }
 });
 

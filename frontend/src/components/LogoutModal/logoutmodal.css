@@ -1,6 +1,8 @@
 .lm-content-card {
-  background: white;
-  color: black;
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
 }
 
 @media only screen and (max-width: 600px) {

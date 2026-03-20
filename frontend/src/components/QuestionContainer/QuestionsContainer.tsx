@@ -45,8 +45,8 @@ const QuestionsContainer = () => {
           <Box
             padding="6"
             boxShadow="lg"
-            bg="white"
-            backgroundColor="#f3ccf3"
+            bg="var(--bg-surface)"
+            backgroundColor="var(--bg-accent-soft)"
             borderRadius="10px"
             key={idx}
           >
@@ -55,8 +55,8 @@ const QuestionsContainer = () => {
               noOfLines={4}
               spacing="4"
               skeletonHeight="2"
-              startColor="#f3ccf3"
-              endColor="#D8B4F8"
+              startColor="var(--bg-accent-soft)"
+              endColor="var(--accent)"
             />
           </Box>
         ))}
@@ -81,26 +81,58 @@ const QuestionsContainer = () => {
       <div className="page-btn-group">
         <div className="prev-btn">
           {page !== 1 && (
-            <IconButton
-              variant="solid"
-              colorScheme="pink"
-              aria-label="Prev Page"
-              fontSize="20px"
-              icon={<TbPlayerTrackPrev />}
+            <button
               onClick={() => setPrevPage()}
-            />
+              style={{
+                background: "var(--accent)",
+                color: "var(--text-on-accent)",
+                border: "none",
+                borderRadius: "8px",
+                width: "40px",
+                height: "40px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: "20px",
+                cursor: "pointer",
+              }}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.background = "var(--accent-hover)")
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.background = "var(--accent)")
+              }
+            >
+              <TbPlayerTrackPrev />
+            </button>
           )}
         </div>
         <div className="next-btn">
           {page !== totalPages && (
-            <IconButton
-              variant="solid"
-              colorScheme="pink"
-              aria-label="Next Page"
-              fontSize="20px"
-              icon={<TbPlayerTrackNext />}
+            <button
               onClick={() => setNextPage()}
-            />
+              style={{
+                background: "var(--accent)",
+                color: "var(--text-on-accent)",
+                border: "none",
+                borderRadius: "8px",
+                width: "40px",
+                height: "40px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: "20px",
+                cursor: "pointer",
+              }}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.background = "var(--accent-hover)")
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.background = "var(--accent)")
+              }
+            >
+              <TbPlayerTrackNext />
+            </button>
           )}
         </div>
       </div>

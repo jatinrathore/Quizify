@@ -11,8 +11,8 @@ html {
 .box-skeleton-cards {
   margin-bottom: 10px;
   padding: 10px;
-  border-radius: 10px;
-  background-color: #f3ccf3;
+  border-radius: var(--radius-md);
+  background: var(--bg-accent-soft);
   height: 4rem;
 }
 

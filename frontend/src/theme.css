@@ -1,0 +1,158 @@
+/* ===== QUIZIFY THEME SYSTEM ===== */
+/* Color variables are applied dynamically by ThemeConfig.ts */
+/* This file contains structural tokens and global styles only. */
+
+:root {
+  /* Structural tokens (constant across all themes) */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 30px;
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Fallback colors (overridden by JS on load) */
+  --bg-primary: #f0f4f8;
+  --bg-surface: #ffffff;
+  --bg-surface-hover: #f8fafc;
+  --bg-accent-soft: #e0e7ff;
+  --bg-accent-soft-hover: #c7d2fe;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --text-on-accent: #ffffff;
+  --text-heading: #0f172a;
+  --accent: #6366f1;
+  --accent-hover: #4f46e5;
+  --accent-secondary: #06b6d4;
+  --accent-light: #a5b4fc;
+  --border: #e2e8f0;
+  --border-accent: #c7d2fe;
+  --gradient-accent: linear-gradient(135deg, #6366f1, #06b6d4);
+  --gradient-accent-subtle: linear-gradient(135deg, #e0e7ff, #cffafe);
+  --gradient-card: linear-gradient(135deg, #6366f1, #8b5cf6);
+  --gradient-surface: linear-gradient(90deg, #ede9fe, #e0e7ff);
+  --shadow-sm: 0 1px 2px rgba(99, 102, 241, 0.05);
+  --shadow-md: 0 4px 12px rgba(99, 102, 241, 0.08);
+  --shadow-lg: 0 10px 25px rgba(99, 102, 241, 0.12);
+  --shadow-xl: 0 20px 40px rgba(99, 102, 241, 0.15);
+  --card-hover-shadow: 0 8px 25px rgba(99, 102, 241, 0.2);
+  --success: #10b981;
+  --success-bg: #d1fae5;
+  --error: #ef4444;
+  --error-bg: #fee2e2;
+  --warning: #f59e0b;
+  --warning-bg: #fef3c7;
+  --slide-lang-bg: linear-gradient(248deg, #6366f1, #818cf8);
+  --slide-general-bg: linear-gradient(135deg, #f59e0b, #fbbf24);
+  --slide-web-bg: linear-gradient(96deg, #06b6d4, #22d3ee);
+  --footer-color: #6366f1;
+  --footer-hover: #4f46e5;
+}
+
+/* ===== GLOBAL RESETS ===== */
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  margin: 0;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-hover);
+}
+
+/* Selection color */
+::selection {
+  background: var(--accent);
+  color: var(--text-on-accent);
+}
+
+/* ===== CHAKRA UI DARK MODE COMPATIBILITY ===== */
+/* Override Chakra's default white backgrounds so dark mode works. */
+
+/* Base background for all Chakra components */
+.chakra-modal__content,
+.chakra-popover__content,
+.chakra-menu__menu-list,
+.chakra-alert {
+  background-color: var(--bg-surface) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Modal overlay backdrop */
+.chakra-modal__overlay {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Accordion panels and buttons */
+.chakra-accordion__panel {
+  background-color: var(--bg-surface) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Inputs, selects, textareas */
+.chakra-input,
+.chakra-select,
+.chakra-textarea,
+.chakra-numberinput__field {
+  background-color: var(--bg-surface) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border) !important;
+}
+
+.chakra-input::placeholder,
+.chakra-select::placeholder,
+.chakra-textarea::placeholder {
+  color: var(--text-secondary) !important;
+}
+
+/* Buttons — default variant uses white bg, override for dark mode */
+.chakra-button {
+  color: var(--text-primary);
+  background-color: var(--bg-surface-hover) !important;
+}
+
+.chakra-button:hover {
+  background-color: var(--bg-accent-soft) !important;
+}
+
+/* Skeleton loading */
+.chakra-skeleton {
+  --skeleton-start-color: var(--bg-accent-soft) !important;
+  --skeleton-end-color: var(--accent) !important;
+}
+
+/* Tooltip */
+.chakra-tooltip {
+  background-color: var(--bg-surface) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Divider */
+.chakra-divider {
+  border-color: var(--border) !important;
+}
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: none;
+}

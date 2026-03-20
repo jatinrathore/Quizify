@@ -74,7 +74,7 @@ const ForgotPassword = () => {
             </Text>
             <label className="fp-box-label">Email*</label>
             <Input
-              focusBorderColor="pink.400"
+              focusBorderColor="purple.400"
               placeholder="Abc@1234"
               onChange={handleChange}
               value={emailField}

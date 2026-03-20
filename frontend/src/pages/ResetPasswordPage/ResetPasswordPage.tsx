@@ -110,7 +110,7 @@ const ResetPasswordPage = () => {
                 pr="4.5rem"
                 type={show ? "text" : "password"}
                 placeholder="Ex : Abc@1234"
-                focusBorderColor="pink.400"
+                focusBorderColor="purple.400"
                 name="password"
                 value={inputFields.password}
                 onChange={handleChange}
@@ -129,7 +129,7 @@ const ResetPasswordPage = () => {
                 pr="4.5rem"
                 type={confirmShow ? "text" : "password"}
                 placeholder="same as password"
-                focusBorderColor="pink.400"
+                focusBorderColor="purple.400"
                 name="confirmPassword"
                 value={inputFields.confirmPassword}
                 onChange={handleChange}

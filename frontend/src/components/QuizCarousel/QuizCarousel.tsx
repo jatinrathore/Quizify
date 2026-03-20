@@ -2,7 +2,7 @@ import { GrNext } from "react-icons/gr";
 import { GrPrevious } from "react-icons/gr";
 import "./quizcarousel.css";
 import { useState } from "react";
-import { Button, Text } from "@chakra-ui/react";
+import { Text } from "@chakra-ui/react";
 import { GiSandsOfTime } from "react-icons/gi";
 import useQuestionsStore from "../../store";
 import { useNavigate } from "react-router-dom";
@@ -55,14 +55,12 @@ const QuizCarousel = () => {
             Dive into the world of programming with MCQs covering Java,
             JavaScript, and C++.
           </Text>
-          <Button
-            colorScheme="pink"
-            fontSize="20px"
+          <button
+            className="slide-cta-btn"
             onClick={() => handleClick("prog-lang")}
-            zIndex={1}
           >
             Take Quiz Now!
-          </Button>
+          </button>
         </div>
         <div className="qc-slide-icon">
           <GiSandsOfTime />
@@ -81,14 +79,12 @@ const QuizCarousel = () => {
             Test your knowledge in general knowledge, aptitude, and English with
             our comprehensive MCQs.
           </Text>
-          <Button
-            colorScheme="orange"
-            fontSize="20px"
+          <button
+            className="slide-cta-btn"
             onClick={() => handleClick("general")}
-            zIndex={1}
           >
             Take Quiz Now!
-          </Button>
+          </button>
         </div>
         <div className="qc-slide-icon">
           <GiSandsOfTime />
@@ -107,14 +103,12 @@ const QuizCarousel = () => {
             Explore HTML, CSS, and JavaScript concepts with interactive MCQs for
             web enthusiasts.
           </Text>
-          <Button
-            colorScheme="messenger"
-            fontSize="20px"
+          <button
+            className="slide-cta-btn"
             onClick={() => handleClick("web-dev")}
-            zIndex={1}
           >
             Take Quiz Now!
-          </Button>
+          </button>
         </div>
         <div className="qc-slide-icon">
           <GiSandsOfTime />

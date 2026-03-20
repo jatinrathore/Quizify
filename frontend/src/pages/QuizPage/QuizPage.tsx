@@ -1,12 +1,13 @@
 import useQuizQuestions from "../../hooks/useQuizQuestions";
 import { IoIosArrowRoundBack } from "react-icons/io";
-import { Box, Link, Spinner, Text } from "@chakra-ui/react";
+import { Box, Link, Text } from "@chakra-ui/react";
 import useTimer from "../../hooks/useTimer";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useQuestionsStore from "../../store";
 import QuizResult from "../../components/QuizResult";
 import { TokenManager } from "../../services/handleToken";
+import { GiBrain } from "react-icons/gi";
 import "./quizpage1.css";
 
 const QuizPage = () => {
@@ -62,14 +63,30 @@ const QuizPage = () => {
 
   if (isLoading)
     return (
-      <>
-        <div className="quiz-container">
-          <div className="qc-center-box">
-            <Spinner />
+      <div className="loading-container">
+        <div className="loading-card">
+          <div className="loading-icon">
+            <GiBrain />
+          </div>
+          <div className="loading-text">Preparing Your Quiz</div>
+          <div className="loading-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div className="loading-bar-container">
+            <div className="loading-bar"></div>
+          </div>
+          <div className="loading-subtitle">
+            Fetching brain-teasing questions...
           </div>
         </div>
-      </>
+      </div>
     );
+
+  const progressPercent = totalQuestions
+    ? ((index + 1) / totalQuestions) * 100
+    : 0;
 
   return (
     <div className="quiz-container">
@@ -77,7 +94,7 @@ const QuizPage = () => {
         <div className="header">
           <Link href="/home">
             <span className="back-btn">
-              <IoIosArrowRoundBack />
+              <IoIosArrowRoundBack size={24} />
               <Text>Back</Text>
             </span>
           </Link>
@@ -86,6 +103,18 @@ const QuizPage = () => {
               .toString()
               .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`}</div>
           </div>
+        </div>
+
+        <div className="quiz-progress">
+          <div className="quiz-progress-bar">
+            <div
+              className="quiz-progress-fill"
+              style={{ width: `${progressPercent}%` }}
+            ></div>
+          </div>
+          <span className="quiz-progress-text">
+            {index + 1}/{totalQuestions}
+          </span>
         </div>
 
         <div className="quiz-question-container">
@@ -107,28 +136,28 @@ const QuizPage = () => {
                 className={`ob-option`}
                 onClick={() => handleClick(questionObject?.options[0] || "")}
               >
-                <span style={{ marginRight: "10px" }}>A</span>
+                <span>A</span>
                 {questionObject?.options[0]}
               </span>
               <span
                 className={`ob-option`}
                 onClick={() => handleClick(questionObject?.options[1] || "")}
               >
-                <span style={{ marginRight: "10px" }}>B</span>
+                <span>B</span>
                 {questionObject?.options[1]}
               </span>
               <span
                 className={`ob-option`}
                 onClick={() => handleClick(questionObject?.options[2] || "")}
               >
-                <span style={{ marginRight: "10px" }}>C</span>
+                <span>C</span>
                 {questionObject?.options[2]}
               </span>
               <span
                 className={`ob-option`}
                 onClick={() => handleClick(questionObject?.options[3] || "")}
               >
-                <span style={{ marginRight: "10px" }}>D</span>
+                <span>D</span>
                 {questionObject?.options[3]}
               </span>
             </div>

@@ -46,13 +46,46 @@ userSchema.methods.generateAuthToken = function () {
 const User = mongoose.model("User", userSchema);
 
 function validateUser(user) {
-    const schema = {
-        name: Joi.string().required().min(4).max(50),
-        email: Joi.string().required().min(15).max(255).email(),
-        password: Joi.string().required().min(8).max(255),
-    };
+    const schema = Joi.object({
+        name: Joi.string()
+            .required()
+            .min(4)
+            .max(50)
+            .trim()
+            .label("Name")
+            .messages({
+                "string.empty": "Please enter your name",
+                "string.min": "Name must be at least {#limit} characters",
+                "string.max": "Name cannot exceed {#limit} characters",
+                "any.required": "Please enter your name",
+            }),
+        email: Joi.string()
+            .required()
+            .min(15)
+            .max(255)
+            .email()
+            .label("Email")
+            .messages({
+                "string.empty": "Email address is required",
+                "string.email": "Please enter a valid email address",
+                "string.min": "Email must be at least {#limit} characters",
+                "string.max": "Email cannot exceed {#limit} characters",
+                "any.required": "Email address is required",
+            }),
+        password: Joi.string()
+            .required()
+            .min(8)
+            .max(255)
+            .label("Password")
+            .messages({
+                "string.empty": "Password is required",
+                "string.min": "Password must be at least {#limit} characters",
+                "string.max": "Password cannot exceed {#limit} characters",
+                "any.required": "Password is required",
+            }),
+    });
 
-    return Joi.validate(user, schema);
+    return schema.validate(user);
 }
 
 exports.User = User;
