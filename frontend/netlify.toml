@@ -1,3 +1,6 @@
+[build.environment]
+  VITE_QUIZIFY_SERVER_URL = "quizify-production-2b1e.up.railway.app"
+
 [[redirects]]
 from = "/*"
 to = "/index.html"
