@@ -1,7 +1,6 @@
 import { Box } from "@chakra-ui/react";
 import LogoutModal from "../LogoutModal";
 import { useNavigate } from "react-router-dom";
-import { FaUserAlt } from "react-icons/fa";
 import { FiSun, FiMoon } from "react-icons/fi";
 import { IoColorPaletteOutline } from "react-icons/io5";
 import { HiOutlineLightBulb } from "react-icons/hi";
@@ -96,9 +95,8 @@ const NavBar = () => {
               {colorThemes.map((theme) => (
                 <button
                   key={theme.id}
-                  className={`theme-option ${
-                    colorTheme === theme.id ? "theme-option-active" : ""
-                  }`}
+                  className={`theme-option ${colorTheme === theme.id ? "theme-option-active" : ""
+                    }`}
                   onClick={(e) => handleSelectTheme(theme.id, e)}
                 >
                   <span
@@ -116,7 +114,6 @@ const NavBar = () => {
           )}
         </div>
 
-        {/* Dark/Light Mode Toggle */}
         <button
           className="theme-toggle-btn"
           onClick={handleToggleMode}
@@ -129,23 +126,17 @@ const NavBar = () => {
           )}
         </button>
 
-        {/* {tokenExists && (
-          <button className="profile-btn">
-            <FaUserAlt />
+        {tokenExists ? (
+          <LogoutModal />
+        ) : (
+          <button
+            onClick={() => navigate("/account-manage")}
+            style={{ fontWeight: "700" }}
+            className="navbar-text"
+          >
+            Log In
           </button>
-        )} */}
-        <Box className="navbar-text">
-          {tokenExists ? (
-            <LogoutModal />
-          ) : (
-            <button
-              onClick={() => navigate("/account-manage")}
-              style={{ fontWeight: "700" }}
-            >
-              Log In
-            </button>
-          )}
-        </Box>
+        )}
       </Box>
     </Box>
   );

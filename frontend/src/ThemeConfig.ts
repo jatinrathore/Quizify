@@ -317,6 +317,11 @@ export function applyThemeVariables(variables: Record<string, string>) {
   Object.entries(variables).forEach(([key, value]) => {
     root.style.setProperty(key, value);
   });
+
+  // Sync body background to match the theme immediately
+  if (variables["--bg-primary"]) {
+    document.body.style.backgroundColor = variables["--bg-primary"];
+  }
 }
 
 /**

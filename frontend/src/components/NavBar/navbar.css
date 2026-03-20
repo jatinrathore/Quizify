@@ -26,7 +26,7 @@
 }
 
 .navbar-text {
-  color: var(--accent);
+  color: var(--accent) !important; 
   box-shadow: var(--shadow-sm);
   cursor: pointer;
   margin-right: 1rem;

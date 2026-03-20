@@ -1,18 +1,16 @@
 import {
   useDisclosure,
-  Button,
   Modal,
   ModalOverlay,
   ModalContent,
-  ModalHeader,
   ModalBody,
   ModalFooter,
   Text,
-  Box,
   Heading,
+  Box,
 } from "@chakra-ui/react";
-import { GrCircleAlert } from "react-icons/gr";
 import { IoLogOutOutline } from "react-icons/io5";
+import { IoWarningOutline } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import "./logoutmodal.css";
@@ -20,7 +18,6 @@ import { TokenManager } from "../../services/handleToken";
 
 const LogoutModal = () => {
   const navigate = useNavigate();
-
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const handleClick = () => {
@@ -31,46 +28,34 @@ const LogoutModal = () => {
 
   return (
     <>
-      <Box onClick={onOpen} display="flex" alignItems="center">
-        <Text marginRight="8px" className="lm-logout-btn">
-          Log out
-        </Text>
-        <IoLogOutOutline size="22px" className="lm-logout-icon" />
-      </Box>
+      <button onClick={onOpen} className="lm-logout-btn">
+        <span>Log out</span>
+        <IoLogOutOutline size="22px" />
+      </button>
 
-      <Modal isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay />
-        <ModalContent className="lm-content-card" mt="200px">
-          <ModalHeader>
-            <GrCircleAlert color="red" fontSize={25} />
-          </ModalHeader>
-          <ModalBody>
-            <Heading fontSize={20} className="lm-heading">
-              Caution!
+      <Modal isOpen={isOpen} onClose={onClose} isCentered>
+        <ModalOverlay backdropFilter="blur(4px)" />
+        <ModalContent className="lm-content-card">
+          <ModalBody pt={8} pb={2} textAlign="center">
+            <Box className="lm-warning-icon-wrapper">
+              <IoWarningOutline size="36px" className="lm-warning-icon" />
+            </Box>
+            <Heading fontSize={20} mt={4} className="lm-heading">
+              Log out of Quizify?
             </Heading>
-            <Text mt={4} className="lm-subtext">
-              Are you sure you want to logout ?
+            <Text mt={3} className="lm-subtext">
+              Your progress on any active quiz will be saved. You can log back
+              in anytime to continue where you left off.
             </Text>
           </ModalBody>
 
-          <ModalFooter>
-            <Button
-              border="2px solid var(--border)"
-              onClick={onClose}
-              color="var(--text-primary)"
-              flex={1}
-              mr={3}
-            >
+          <ModalFooter gap={3} pb={6}>
+            <button onClick={onClose} className="lm-cancel-btn">
               Cancel
-            </Button>
-            <Button
-              bg="#FC5A5A"
-              flex={1}
-              _hover={{ bg: "#FC5A5A" }}
-              onClick={handleClick}
-            >
-              Yes
-            </Button>
+            </button>
+            <button onClick={handleClick} className="lm-confirm-btn">
+              Yes, log me out
+            </button>
           </ModalFooter>
         </ModalContent>
       </Modal>

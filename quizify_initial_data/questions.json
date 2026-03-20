@@ -1996,7 +1996,7 @@
   },
   {
     "questionId": "html_26",
-    "questionTitle": "What is the purpose of the <canvas> element in HTML5?",
+    "questionTitle": "What is the purpose of the `canvas` element in HTML5?",
     "options": [
       "To define a section of content",
       "To draw graphics or animations programmatically via JavaScript",
