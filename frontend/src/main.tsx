@@ -17,8 +17,6 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <ToastContainer
         position="top-center"
         rtl={false}
-        theme="colored"
-        toastStyle={{ backgroundColor: "#6366f1" }}
       />
     </QueryClientProvider>
   </ChakraProvider>

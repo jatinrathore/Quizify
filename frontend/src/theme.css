@@ -156,3 +156,26 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+/* ── Toastify theme sync ── */
+.Toastify__toast {
+  background: var(--accent) !important;
+  color: var(--text-on-accent) !important;
+}
+
+.Toastify__toast-icon svg {
+  fill: var(--text-on-accent) !important;
+}
+
+.Toastify__progress-bar {
+  background: var(--accent-light) !important;
+}
+
+.Toastify__close-button {
+  color: var(--text-on-accent) !important;
+  opacity: 0.8;
+}
+
+.Toastify__close-button:hover {
+  opacity: 1;
+}
