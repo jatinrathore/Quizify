@@ -3,11 +3,13 @@ const { validate, User } = require('../models/user');
 const router = express.Router();
 const bcrypt = require('bcrypt');
 const { OtpVerification } = require('../models/otpVerification');
-const { generateOTP, mailTransport, generateTemplate, generateVerifyTemplate, generateResetPasswordTemplate, generateSuccessTemplate } = require('../util/mail');
+const { generateOTP, generateTemplate, generateVerifyTemplate, generateResetPasswordTemplate, generateSuccessTemplate, sendEmail } = require('../util/mail');
 const { isValidObjectId } = require('mongoose');
 const { ResetToken } = require('../models/resetToken');
 const { createRandomBytes } = require('../util/helper');
 const { isResetTokenValid } = require('../middlewares/isResetTokenValid');
+
+
 
 router.post("/", async (req, res) => {
 
@@ -39,12 +41,7 @@ router.post("/", async (req, res) => {
         await otpVerifyToken.save();
         user = await user.save();
 
-        mailTransport().sendMail({
-            from: "quizify.admin@gmail.com",
-            to: user.email,
-            subject: "Activate Your Account - Verify Your Email",
-            html: generateTemplate(OTP),
-        });
+        await sendEmail(user.email, "Activate Your Account - Verify Your Email", generateTemplate(OTP))
 
         res.status(201).send({ message: "Account created successfully! Please check your email to verify.", response: { status: 201 }, userId: user._id });
 
@@ -83,12 +80,7 @@ router.post("/verify-email", async (req, res) => {
         await OtpVerification.findByIdAndDelete(tokenOwner._id);
         await user.save();
 
-        mailTransport().sendMail({
-            from: "quizify.admin@gmail.com",
-            to: user.email,
-            subject: "Your Email Address is Verified",
-            html: generateVerifyTemplate(user.name),
-        });
+        await sendEmail(user.email, "Your Email Address is Verified", generateVerifyTemplate(user.name));
 
         res.status(200).send({ message: "Email verified successfully! You can now log in.", response: { status: 200 } })
 
@@ -124,12 +116,7 @@ router.post("/forgot-password", async (req, res) => {
 
         const url = `${process.env.CLIENT_URL}/reset-password?token=${randomBytes}&id=${user._id}`;
 
-        mailTransport().sendMail({
-            from: "quizify.admin@gmail.com",
-            to: user.email,
-            subject: "Reset Password Request",
-            html: generateResetPasswordTemplate(url),
-        });
+        await sendEmail(user.email, "Reset Password Request", generateResetPasswordTemplate(url));
 
         res.status(200).send({ message: "Password reset link has been sent to your email.", response: { status: 200 } });
     } catch (error) {
@@ -162,12 +149,7 @@ router.post("/reset-password", isResetTokenValid, async (req, res) => {
 
         await ResetToken.findOneAndDelete({ owner: user._id });
 
-        mailTransport().sendMail({
-            from: "quizify.admin@gmail.com",
-            to: user.email,
-            subject: "Password Reset Successfully",
-            html: generateSuccessTemplate(),
-        });
+        await sendEmail(user.email, "Password Reset Successfully", generateSuccessTemplate());
 
         res.status(200).send({ message: "Password has been reset successfully!", response: { status: 200 } });
 

@@ -69,8 +69,7 @@ const VerifyEmailPage = () => {
           <div className="ev-details-box">
             <Text className="ev-box-heading">Verify your Email!</Text>
             <Text className="ev-box-text">
-              Please enter the 4-digit verification code that was sent to your
-              phone numberThe code is valid for 60 minutes.
+              Please enter the 4-digit verification code that was sent to your email. The code is valid for 30 minutes.
             </Text>
 
             <label className="ev-box-label">OTP*</label>

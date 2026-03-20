@@ -1,4 +1,4 @@
-const nodemailer = require('nodemailer');
+const SibApiV3Sdk = require("sib-api-v3-sdk");
 
 exports.generateOTP = () => {
 
@@ -11,15 +11,18 @@ exports.generateOTP = () => {
   return OTP;
 }
 
-exports.mailTransport = () => nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 465,
-  secure: true,
-  auth: {
-    user: process.env.MAILTRAP_USERNAME,
-    pass: process.env.MAILTRAP_PASSWORD,
-  }
-});
+const sibClient = SibApiV3Sdk.ApiClient.instance;
+sibClient.authentications["api-key"].apiKey = process.env.BREVO_API_KEY;
+const emailAPI = new SibApiV3Sdk.TransactionalEmailsApi();
+
+exports.sendEmail = async (to, subject, html) => {
+  await emailAPI.sendTransacEmail({
+    sender: { name: "Quizify", email: process.env.BREVO_SENDER_EMAIL },
+    to: [{ email: to }],
+    subject,
+    htmlContent: html,
+  });
+};
 
 exports.generateTemplate = (otpCode) => {
   return `<div style="font-family: Helvetica,Arial,sans-serif;min-width:700px;overflow:auto;line-height:2">
