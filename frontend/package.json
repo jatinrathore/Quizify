@@ -1,8 +1,7 @@
 {
   "engines": {
-    "node": "20.x"
+    "node": ">=18"
   },
-  
   "name": "quizify",
   "private": true,
   "version": "0.0.0",
