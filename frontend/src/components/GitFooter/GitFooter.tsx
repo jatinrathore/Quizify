@@ -4,6 +4,7 @@ import { Link, Text } from "@chakra-ui/react";
 import "./gitfooter1.css";
 
 const GitFooter = () => {
+  const year = new Date().getFullYear();
   return (
     <div className="git-footer-container">
       <Link
@@ -14,7 +15,7 @@ const GitFooter = () => {
       >
         <Text className="git-footer-text">
           <FaRegCopyright style={{ fontSize: "12px" }} />
-          2024 Quizify : @jatinrathore
+          {year} Quizify : @jatinrathore
         </Text>
       </Link>
       <Link

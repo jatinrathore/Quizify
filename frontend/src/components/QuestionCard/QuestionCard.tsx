@@ -43,6 +43,8 @@ const QuestionCard = ({
     if (selectedOption === option && question?.answer !== option) {
       return "crossed";
     }
+
+    return "";
   };
 
   return (
@@ -52,7 +54,7 @@ const QuestionCard = ({
         <p dangerouslySetInnerHTML={{ __html: formattedQuestion }}></p>
       </div>
       <div className="question-options">
-        <Box
+        <button
           className={`opt-area ${checkIfAnswer(options[0])}`}
           onClick={() => handleClick(options[0])}
         >
@@ -65,8 +67,8 @@ const QuestionCard = ({
               <TiTick />{" "}
             </p>
           </div>
-        </Box>
-        <Box
+        </button>
+        <button
           className={`opt-area ${checkIfAnswer(options[1])}`}
           onClick={() => handleClick(options[1])}
         >
@@ -79,8 +81,8 @@ const QuestionCard = ({
               <TiTick />{" "}
             </p>
           </div>
-        </Box>
-        <Box
+        </button>
+        <button
           className={`opt-area ${checkIfAnswer(options[2])}`}
           onClick={() => handleClick(options[2])}
         >
@@ -93,8 +95,8 @@ const QuestionCard = ({
               <TiTick />{" "}
             </p>
           </div>
-        </Box>
-        <Box
+        </button>
+        <button
           className={`opt-area ${checkIfAnswer(options[3])}`}
           onClick={() => handleClick(options[3])}
         >
@@ -107,7 +109,7 @@ const QuestionCard = ({
               <TiTick />{" "}
             </p>
           </div>
-        </Box>
+        </button>
       </div>
       <div className="question-card-bg-icon">{children}</div>
     </div>
