@@ -1,4 +1,3 @@
-import { Box } from "@chakra-ui/react";
 import useQuestions from "../../hooks/useQuestions";
 import { ReactNode, useState } from "react";
 import { TiTick } from "react-icons/ti";
