@@ -15,7 +15,6 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.0.4",
     "nodemailer": "^8.0.3",
-    "nodemon": "^3.0.2",
     "passport": "^0.7.0",
     "passport-google-oauth20": "^2.0.0",
     "react-query": "^3.39.3",
@@ -23,18 +22,19 @@
     "zustand": "^4.3.7"
   },
   "devDependencies": {
+    "nodemon": "^3.0.2",
     "@types/express": "^4.17.21",
     "@types/node": "^20.11.3",
     "typescript": "^5.4.2"
   },
   "name": "quizify",
   "version": "1.0.0",
-  "main": "index.ts",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "build": "npm install --legacy-peer-deps && npm install"
+    "build": "npm install --legacy-peer-deps"
   },
   "author": "",
   "license": "ISC",

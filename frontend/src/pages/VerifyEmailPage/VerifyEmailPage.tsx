@@ -43,6 +43,9 @@ const VerifyEmailPage = () => {
         {
           userId: id,
           otp: OTP,
+        },
+        {
+          withCredentials: true,
         }
       );
 
