@@ -19,8 +19,8 @@ const useQuizQuestions = (endpoint: string) => {
     queryFn: async () => {
       const res = await axios.get<FetchResponseType>(url, {
         headers: {
-          "quizify-auth-token": token,
-        },
+          "Authorization": `Bearer ${token}`,
+        }
       });
 
       return res.data;

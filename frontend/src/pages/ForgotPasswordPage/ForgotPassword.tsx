@@ -87,7 +87,7 @@ const ForgotPassword = () => {
               </button>
               <p>or</p>
               <button
-                className=" custom-btn fp-google-btn"
+                className="custom-btn fp-google-btn"
                 onClick={() =>
                   (window.location.href = import.meta.env.VITE_GOOGLE_AUTH_URL)
                 }
