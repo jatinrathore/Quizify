@@ -9,8 +9,6 @@ const { ResetToken } = require('../models/resetToken');
 const { createRandomBytes } = require('../util/helper');
 const { isResetTokenValid } = require('../middlewares/isResetTokenValid');
 
-
-
 router.post("/", async (req, res) => {
 
     try {

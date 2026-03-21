@@ -6,7 +6,7 @@ const loginUser = async (userData: LoginFormData) => {
 
   try {
     const { data: res } = await axios.post(endpoint, userData, {
-      withCredentials: true, // Enable sending cookies
+      withCredentials: true,
     });
 
     return res;
